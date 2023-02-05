@@ -1,0 +1,22 @@
+[project]
+name = "csst-l1doc"
+description = "CSST L1 Pipeline Documentation"
+version = "0.0.1"
+authors = [
+    { name = "CSST DAS", email = "csst_das@nao.cas.cn" }
+]
+#dependencies = [
+#    "pyspark[ml]",
+#    "sklearn"
+#]
+
+#[project.optional-dependencies]
+#dev = [
+#    "tox",
+#    "pre-commit",
+#    "bump2version"
+#]
+
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta:__legacy__"
