@@ -25,7 +25,53 @@ Welcome to csst-l1doc's documentation!
    :hidden:
 
    sls/sls2d.rst
+   sls/sls1d.rst
    sls/data_model.md
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: CPIC
+   :hidden:
+
+   mci/mci.rst
+   mci/data_model.md
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: CPIC
+   :hidden:
+
+   ifs/ifs.rst
+   ifs/data_model.md
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: CPIC
+   :hidden:
+
+   cpic/cpic.rst
+   cpic/data_model.md
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: THZ
+   :hidden:
+
+   thz/thz.rst
+   thz/data_model.md
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: OOC
+   :hidden:
+
+   ooc/ooc.rst
+   ooc/data_model.md
 
 
 
