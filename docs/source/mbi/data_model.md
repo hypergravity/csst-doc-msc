@@ -135,7 +135,14 @@
 | CCD_TEMP | 0.0 | Large CCD temperature variation in this field | -9999 | f32 | csst_ms_qc0 |
 | VER_QC0 | '0.0.1' | Pipeline version | '0.0.1' | str | csst_ms_qc0 | 
 
-
+#### Header of `csst_ms_qc0 qc1 check`
+| keyword    | value                     | comment                                        | fallback_value        | type | module                  |
+|------------|:--------------------------|------------------------------------------------|-----------------------|------|-------------------------|
+| QC1_S | 0 | QC1 Status (0/non-zero) | 1 | int | csst_ms_qc0 |
+| PROC_S | 0 | L1 Pipeline Status | 1 | int | csst_ms_qc0 |
+| ME_FWHM | 0.158212 | MEAN FWHM (in arcsec) | -9999 | f32 | csst_ms_qc0 |
+| WCS_OFF | T | WCS OFFSET (T/F) | F | bool | csst_ms_qc0 | 
+| VER_QC1 | '0.0.1' | Pipeline version | '0.0.1' | str | csst_ms_qc0 |
 
 
 ## File: *_cat.fits
