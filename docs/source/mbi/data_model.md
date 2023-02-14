@@ -109,6 +109,34 @@
 | FLUX_V    |  '1.3     '               | version of calibration code                   |     | str  | csst_ms_mbi_flux   |
 | FLUX_TOL= |  '2022-12-30 18:36:05'    | flux calibration operation time               |     | str  | csst_ms_mbi_flux   |
 
+#### Header of `csst_ms_qc0 qc0 check`
+| keyword    | value                     | comment                                        | fallback_value        | type | module                  |
+|------------|--------------------------|------------------------------------------------|-----------------------|------|-------------------------|
+| CRCCHECK | T | CRC validation | F | bool | csst_ms_qc0 |
+| PRIPARAM | 0 | Primary parameters verification | 1 | int| csst_ms_qc0 |
+| SECPARAM | 0 | Secondary parameters verification | 1 | int | csst_ms_qc0 |
+| QC0_S | 0 | QC0 Status (0/non-zero) | > 0 | int | csst_ms_qc0 |
+| DATAERR | F | indicating data error | T | bool | csst_ms_qc0 |
+| IMGERR | F | indicating image error  | T | bool | csst_ms_qc0 |
+| SHUTTER | F | indicating shutter error | T | bool | csst_ms_qc0 
+| FAILGUID | F | missing guiding stars | T | bool | csst_ms_qc0 |
+| FAILCOOL | F | indicating system cooling error | T | bool | csst_ms_qc0 |
+| GUID_OFF | 0.0 | guiding stars offset (arcsec) | -9999 | f32 | csst_ms_qc0 |
+| DEAD_CCD | F | indicating dead CCD | T | bool | csst_ms_qc0 |
+| NOIS_CCD | F | indicating higher CCD noise level | T | bool | csst_ms_qc0 |
+| FF_PETAL | F | indicating image diffraction pattern | T | bool | csst_ms_qc0 |
+| GUID_ERR | F | indicating larger guiding offset | T | bool | csst_ms_qc0 |
+| CROSTALK | F | indicating significant image crosstalk | T | bool | csst_ms_qc0 |
+| BADPIXFR | 0.0 | CCD bad pixel fraction (unitless) | -9999 | f32 | csst_ms_qc0 |
+| PSF_SIZE | 0.0 | Best-fit PSF size from guider | -9999 | f32 | csst_ms_qc0 |
+| STRLIGHT | F | Significant stray light effect in this field | T | bool | csst_ms_qc0 |
+| BAD_ROT | F | indicating bad rotation effect in this field | T | bool | csst_ms_qc0 |
+| BRI_STAR | F | Significant bright star in this field | T | bool | csst_ms_qc0 |
+| CCD_TEMP | 0.0 | Large CCD temperature variation in this field | -9999 | f32 | csst_ms_qc0 |
+| VER_QC0 | '0.0.1' | Pipeline version | '0.0.1' | str | csst_ms_qc0 | 
+
+
+
 
 ## File: *_cat.fits
 
