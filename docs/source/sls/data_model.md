@@ -15,7 +15,7 @@
 
 | keyword | value | comment       | fallback_value | type | module    |
 | ------- | :---- | ------------- | -------------- | ---- | --------- |
-| SIMPLE  | True  | Fits standard |  True          | bool | csst_ms_sls_instrument |
+| SIMPLE  | T    | Fits standard |  T          | bool | csst_ms_sls_instrument |
 | BITPIX   | 8                     | array data value                            | 8              | i8   | csst_ms_sls_instrument|            
 | NAXIS    | 0                     | Number of axes                              |  0             | i8   |csst_ms_sls_instrument|             
 | EXTEND   | T                     | file may contain standard extensions        |   T           | bool | csst_ms_sls_instrument|             
