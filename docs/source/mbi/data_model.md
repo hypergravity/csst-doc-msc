@@ -272,3 +272,72 @@
 | P5_ FOCUS | 28025.63452           | parameter 5 of focal length (in mm)                                                                                                    |                | f32  | csst_ooc_psf_strategy_crds |
 | P6_ FOCUS | 28025.63452           | parameter 6 of focal length (in mm)                                                                                                    |                | f32  | csst_ooc_psf_strategy_crds |
 | FSM_STAT  | T                     | working state of fast-steering mirror (FSM)                                                                                            |                | bool | csst_ooc_psf_strategy_crds |
+#### Header of `csst_ms_mbi_astrometry`
+
+| keyword   | value                     | comment                       | fallback_value | type | module                  |
+|-----------|:--------------------------|-------------------------------|----------------|------|-------------------------|
+| CCRSCAL   |  1                         |  Completion degree of relative astrometric solution in CCRS       | 3                     | i8  |csst_ms_mbi_astrometry  |
+| CCRSVE    |  "v2023.01"                |  Version of CSST relative Astrometry soft in CCRS                 | "v2023.01"            | str |csst_ms_mbi_astrometry  |
+| CCRSGATE  |  "  "                      |  Camera shutter information                                       | "   "                 | str |csst_ms_mbi_astrometry  |
+| CCRSCONF  |  "  "                      |  Configuration file for astrometry                                | "   "                 | str |csst_ms_mbi_astrometry  |
+| CCRSIM    |  " mormal"                 |  Image classification for CSST Astrometry                         | " normal "            | str |csst_ms_mbi_astrometry  |
+| CCRSTM    |  2023:02:03-12:03:04       |  Time of last CSST Astrometry in CCRS                             | 2023:02:03-12:03:04   | str |csst_ms_mbi_astrometry  |
+| CCRSREF   |  "Gaia dr3 v01"            |  Reference Catalogue for CSST Astrometry in CCRS                  | "Gaia dr3 v01"        | str |csst_ms_mbi_astrometry  |
+| CCRSHIS   |  1                         |  Astrometric solution Record for CCRS                             | 1                     | i8  |csst_ms_mbi_astrometry  |
+| DELT_RA   |  0.3                       |  The difference between the initial central RA and the measured central RA for CCRS in unit degree   | 361|f32 |csst_ms_mbi_astrometry  |
+| DELT_dec  |  0.3                       |  The difference between the initial central DEC and the measured central DEC for CCRS in unit degree | 181|f32 |csst_ms_mbi_astrometry  |
+| DELT_ps   |  0.3                       |  The difference between the the initial pixelscale and the measured pixelscale  for CCRS in unit arcsecond per pixel | 99999 |f32 |csst_ms_mbi_astrometry  |
+| CCDALCE   |  3468                      |  CCD Centroid   along  coordinate for CCRS                        | 3345                  | f32 |csst_ms_mbi_astrometry  |
+| CCDALCEE  |  3                         |  CCD Centroid   along coordinate Error for CCRS                   | 9999                  | f32 |csst_ms_mbi_astrometry  |
+| CCDACCE   |  3468                      |  CCD Centroid   along  coordinate for CCRS                        | 3345                  | f32 |csst_ms_mbi_astrometry  |
+| CCDACCEE  |  3                         |  CCD Centroid   across  coordinate Error for CCRS                 | 9999                  | f32 |csst_ms_mbi_astrometry  |
+| CCD_ROW   |  2                         |  CCD Row for CCRS                                                 | 2                     | i8  |csst_ms_mbi_astrometry  |
+| CCD_COL   |  2                         |  CCD Column for CCRS                                              | 2                     | i8  |csst_ms_mbi_astrometry  |
+| CEQUINOX  |  2000                      |  Reference epoch for CCRS                                         | 2000                  | f32 |csst_ms_mbi_astrometry  |
+| CRADESYS  |  "CCRS"                    |  Reference coordinate system for CCRS                             | "CCRS"                | str |csst_ms_mbi_astrometry  |
+| C_CTYPE1  |  'RA---TPV'                |  WCS projection type for this axis                                | 'RA---TPV'            | str |csst_ms_mbi_astrometry  |
+| C_CTYPE2  |  'DEC--TPV'                |  WCS projection type for this axis                                | 'DEC--TPV'            | str |csst_ms_mbi_astrometry  | 
+| C_CUNIT1  |  'deg     '                |  Axis unit                                                        | 'deg     '            | str |csst_ms_mbi_astrometry  |
+| C_CUNIT2  |  'deg     '                |  Axis unit                                                        | 'deg     '            | str |csst_ms_mbi_astrometry  |
+| C_CRVAL1  |  9.030599852245E+01        |  World coordinate on this axis                                    | Read from level 0 data| f32 |csst_ms_mbi_astrometry  |
+| C_CRVAL2  |  2.438488373039E+01        |  World coordinate on this axis                                    | Read from level 0 data| f32 |csst_ms_mbi_astrometry  | 
+| C_CRPIX1  |  4.694923673820E+03        |  Reference pixel on this axis                                     | Read from level 0 data| f32 |csst_ms_mbi_astrometry  |
+| C_CRPIX2  |  4.619541250822E+03        |  Reference pixel on this axis                                     | Read from level 0 data| f32 |csst_ms_mbi_astrometry  |
+| C_CD1_1   |  -8.151272405944E-06 | Linear projection matrix                                                | Read from level 0 data| f32 |csst_ms_mbi_astrometry  |
+| C_CD1_2   |  -1.872449650544E-05 | Linear projection matrix                                                | Read from level 0 data| f32 |csst_ms_mbi_astrometry  |
+| C_CD2_1   |  1.876564643792E-05  | Linear projection matrix                                                | Read from level 0 data| f32 |csst_ms_mbi_astrometry  |
+| C_CD2_2   |  -8.133840508591E-06 | Linear projection matrix                                                | Read from level 0 data| f32 |csst_ms_mbi_astrometry  |
+| C_PV1_0   |   5.170560041120E-06 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_1   |   9.998597063949E-01 | Projection distortion parameter               | 1 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_2   |  -2.639332324050E-05 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_4   |  -2.036180144002E-03 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_5   |  -9.700979957371E-03 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_6   |   2.985621009586E-03 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_7   |   1.352911042189E-02 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_8   |  -2.059801280272E-02 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_9   |   1.720680837477E-02 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_10  |   9.773972553669E-03 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_12  |  -1.447093954841E-01 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_13  |   3.877149836968E-01 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_14  |  -5.851518938865E-01 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_15  |   3.482309631134E-01 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV1_16  |  -2.183057017500E-01 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_0   |   1.728529121022E-05 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_1   |   9.999804628736E-01 | Projection distortion parameter               | 1 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_2   |  -6.335240164790E-05 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_4   |  -5.966442744430E-03 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_5   |   6.203002956354E-03 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_6   |  -3.553022699090E-03 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_7   |  -3.813262941731E-03 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_8   |   5.844942621588E-02 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_9   |   4.675092996504E-03 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_10  |  -7.886221100639E-03 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_12  |   3.250659874395E-01 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_13  |  -4.054835390976E-01 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_14  |   7.550500477228E-01 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_15  |  -2.401706541249E-02 | Projection distortion parameter               | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_PV2_16  |   3.205340695247E-01 | Projection distortion parameter              | 0 | f32 |csst_ms_mbi_astrometry  |
+| C_IRMS1   | 0.000000000000E+00        | Astrom. dispersion RMS (intern., high S/N) |   9999       | f32  | csst_ms_mbi_astrometry  | 
+| C_IRMS2   | 0.000000000000E+00        | Astrom. dispersion RMS (intern., high S/N) |   9999       | f32  | csst_ms_mbi_astrometry  |
+| C_RRMS1   | 6.458653303335E-06        | Astrom. dispersion RMS (ref., high S/N)    |   9999       | f32  | csst_ms_mbi_astrometry  |
+| C_RRMS2   | 8.724734011714E-06        | Astrom. dispersion RMS (ref., high S/N)    |   9999       | f32  | csst_ms_mbi_astrometry  |
