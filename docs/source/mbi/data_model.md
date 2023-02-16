@@ -108,15 +108,15 @@
 | FWHM      |                2.147      | FWHM in pixel                                 |  -1   | f32  | csst_ms_mbi_flux   |
 | RAOFF     |             -0.188        | median positional offset from GAIA, in arcsec |  -1   | f32  | csst_ms_mbi_flux   |
 | DECOFF    |            -0.1061        | median positional offset from GAIA, in arcsec |  -1   | f32  | csst_ms_mbi_flux   | 
-| NSTAR     |                 49        | total number of stars detected                |       | i8   | csst_ms_mbi_flux   | 
+| NSTAR     |                 49        | total number of stars detected                |  0    | i8   | csst_ms_mbi_flux   | 
 | NMATCH    |                 25        | total number of matched stars in 2 arcsec     |  -1   | i8   | csst_ms_mbi_flux   |
-| MDNCOL    |                0.0        | median (BP-RP)_GAIA of matched stars          |       | f32  | csst_ms_mbi_flux   |
-| SKY       |             0.0359        | (e-/s per pixel)                              |       | f32  | csst_ms_mbi_flux   |                 
-| SKYRMS    |             0.1766        | rms/pixel of the sky in unit of e-/s          |       | f32  | csst_ms_mbi_flux   | 
+| MDNCOL    |                0.0        | median (BP-RP)_GAIA of matched stars          |   0.0    | f32  | csst_ms_mbi_flux   |
+| SKY       |             0.0359        | (e-/s per pixel)                              |  0.0359     | f32  | csst_ms_mbi_flux   |                 
+| SKYRMS    |             0.1766        | rms/pixel of the sky in unit of e-/s          |  0.1766     | f32  | csst_ms_mbi_flux   | 
 | MLIM      |              21.83        | magnitude limiting of 5-sigma galaxy detection| -1    | f32  | csst_ms_mbi_flux   | 
 | FLUX_S    |                  0        | flux calibration status                       |  1    | i8   | csst_ms_mbi_flux   |                       
-| FLUX_V    |  '1.3     '               | version of calibration code                   |     | str  | csst_ms_mbi_flux   |
-| FLUX_TOL= |  '2022-12-30 18:36:05'    | flux calibration operation time               |     | str  | csst_ms_mbi_flux   |
+| FLUX_V    |  '1.3     '               | version of calibration code                   | '1.3'   | str  | csst_ms_mbi_flux   |
+| FLUX_TOL= |  '2022-12-30 18:36:05'    | flux calibration operation time               | '2022-12-30 18:36:05'        | str  | csst_ms_mbi_flux   |
 
 #### Header of `csst_ms_qc0 qc0 check`
 | keyword    | value                     | comment                                        | fallback_value        | type | module                  |
