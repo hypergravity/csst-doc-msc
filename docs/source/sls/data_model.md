@@ -1,6 +1,6 @@
 # L1-MBI Data model
 
-## File: \*\_img_L1_1.fits
+## File: \*\_*_L1_1.fits
 
 ### File contents
 
@@ -15,27 +15,48 @@
 
 | keyword | value | comment       | fallback_value | type | module    |
 | ------- | :---- | ------------- | -------------- | ---- | --------- |
-| SIMPLE  | True  | Fits standard | True           | bool | csst_sims |
+| SIMPLE  | True  | Fits standard |  True          | bool | csst_ms_sls_instrument |
+| BITPIX   | 8                     | array data value                            | 8              | i8   | csst_ms_sls_instrument|            
+| NAXIS    | 0                     | Number of axes                              |  0             | i8   |csst_ms_sls_instrument|             
+| EXTEND   | T                     | file may contain standard extensions        |   T           | bool | csst_ms_sls_instrument|             
+| NEXTEND  | 3                     | Number of file extensions                   |   3            | i8   | csst_ms_sls_instrument |
+| CRDS_VER | '0.0.1 '              | Version of CRDS file selection software used|   '0.0.1 '     | str  | csst_ms_sls_instrument |
+| R_GAIN   | '*.gain.fits'         | Gain reference file name                    |   'N/A'        | str  | csst_ms_sls_instrument |
+| R_READN  | '*.rn.fits'           | Read noise reference file name              |      'N/A'     | str  | csst_ms_sls_instrument |
+| R_SATURA | '*.sat.fits'          | Saturation reference file name              |      'N/A'     | str  | csst_ms_sls_instrument |
+| R_MASK   | '*.msk.fits'          | Mask reference file name                    |       'N/A'    | str  | csst_ms_sls_instrument |
+| R_BIAS   | '*bias.fits'          | SuperBias reference file name               |      'N/A'     | str  | csst_ms_sls_instrument |
+| R_DARK   | '*dark.fits'          | Dark reference file name                    |       'N/A'    | str  | csst_ms_sls_instrument |
+| R_DFLAT  | '*flat.fits'          | Detector Flat reference file name           |         'N/A'  | str  | csst_ms_sls_instrument |
+| R_SFLAT  | '*flat.fits'          | Spectrograph Flat reference file name       |        'N/A'   | str  | csst_ms_sls_instrument |
+| S_DQINI  | T                  | Data Quality Initialization                 |    F            | bool | csst_ms_sls_instrument |
+| S_SATURA | T                  | Saturation Checking                         |    F           | bool | csst_ms_sls_instrument |
+| S_ERRINI | T                  | Error Initialization                        |     F          | bool | csst_ms_sls_instrument |
+| S_BIAS   | T                  | Bias correction                             |    F            | bool | csst_ms_sls_instrument |
+| S_DARK   | T                  | Dark correction                             |     F           | bool | csst_ms_sls_instrument |
+| S_FLAT   | T                  | Flat field correction                       |       F         | bool | csst_ms_sls_instrument |
+| DCP_VER  | '0.0.1 '              | detector-level calibration pipeline version |   '0.0.1 '    | str  | csst_ms_sls_instrument |
+| DCP_TIME | '2022-12-30T10:18:53' | pipeline processing time                    |    '2022-12-30T10:18:53'  | str  | csst_ms_sls_instrument |
+| HISTORY  |'**step complete.'     | record processing message                   |       'null'       | str  | csst_ms_sls_instrument |
 
 ### HDU1
 
 #### Header of `csst_ms_sls_instrument`
 
-| keyword  | value                 | comment                                        | fallback_value | type | module                 |
-| -------- | :-------------------- | ---------------------------------------------- | -------------- | ---- | ---------------------- |
-| INST_V   | '0.0.1 '              | instrument correction pipeline version         |                | str  | csst_ms_sls_instrument |
-| INST_TOL | '2022-12-30T10:18:53' | Time of last modification                      |                | str  | csst_ms_sls_instrument |
-| DATASUM  | '1352015684'          | Integrity check of data records                |                | str  | csst_ms_sls_instrument |
-| NGOODPIX | 84794368              | number of good pixels                          |                | f32  | csst_ms_sls_instrument |
-| SDQFLAGS | 31743                 | serious data quality flags                     |                | i16  | csst_ms_sls_instrument |
-| GOODMAX  | 260.0                 | maxmum value of good pixels                    |                | f32  | csst_ms_sls_instrument |
-| GOODMIN  | -0.001                | minmum value of good pixels                    |                | f32  | csst_ms_sls_instrument |
-| GOODMEAN | 0.3                   | mean value of good pixels                      |                | f32  | csst_ms_sls_instrument |
-| SNRMIN   | 187.4                 | minmum signal to noise of good pixels          |                | f32  | csst_ms_sls_instrument |
-| SNRMAX   | 1.2                   | maxmum signal to noise of good pixels          |                | f32  | csst_ms_sls_instrument |
-| SNRMEAN  | 3.38                  | average of the dark values subtracted          |                | f32  | csst_ms_sls_instrument |
-| BUNIT    | electrons/s           | brightness units                               |                | str  | csst_ms_sls_instrument |
-| EXTNAEM  | SCI                   | extension name                                 |                | str  | csst_ms_sls_instrument |
+| keyword  | value                 | comment                                     | fallback_value | type | module                 |
+| -------- | :-------------------- | ------------------------------------------- | -------------- | ---- | ---------------------- |
+| EXTNAEM  | SCI                   | extension name                              |   SCI          | str  | csst_ms_sls_instrument |
+| EXTVER   | 1                     | extension version number                    |   1            | i8   | csst_ms_sls_instrument |
+| BUNIT    | electrons/s           | brightness units                            |   electrons/s  | str  | csst_ms_sls_instrument |
+| NGOODPIX | 84794368              | number of good pixels                       |    0            | f32  | csst_ms_sls_instrument |
+| SDQFLAGS | 31743                 | serious data quality flags                  |    0           | i16  | csst_ms_sls_instrument |
+| GOODMAX  | 260.0                 | maxmum value of good pixels                 |    0            | f32  | csst_ms_sls_instrument |
+| GOODMIN  | -0.001                | minmum value of good pixels                 |    0            | f32  | csst_ms_sls_instrument |
+| GOODMEAN | 0.3                   | mean value of good pixels                   |    0            | f32  | csst_ms_sls_instrument |
+| SNRMIN   | 187.4                 | minmum signal to noise of good pixels       |    0            | f32  | csst_ms_sls_instrument |
+| SNRMAX   | 1.2                   | maxmum signal to noise of good pixels       |    0            | f32  | csst_ms_sls_instrument |
+| SNRMEAN  | 3.38                  | average of the dark values subtracted       |    0            | f32  | csst_ms_sls_instrument |
+
 
 
 #### Header of `csst_ms_sls_position`
@@ -61,16 +82,56 @@
 | PV2_4      | 0.07961855240788976  |                              | 0              | f32  | csst_ms_sls_position |
 | PV2_5      | -0.2009224365497067  |                              | 0              | f32  | csst_ms_sls_position |
 | PV2_6      | 0.1741954691884874   |                              | 0              | f32  | csst_ms_sls_position |
-| FIT_STAR   | 10                   |                              | 0              | i8   | csst_ms_sls_position |
+| STAR_FIT   | 10                   | number of the stars          | 0              | i8   | csst_ms_sls_position |
 | RA_OFF     | -0.0                 | mas in unit                  | -99            | f32  | csst_ms_sls_position |
 | DEC_OFF    | 0.0                  | mas in unit                  | -99            | f32  | csst_ms_sls_position |
-| RA_STD     | 127.1                | mas in unit                  | -99            | f32  | csst_ms_sls_position |
-| DEC_STD    | 60.4                 | mas in unit                  | -99            | f32  | csst_ms_sls_position |
-| FIT_S　　　 | 0                    | 0 for success, 1 for failure | 1              | i8   | csst_ms_sls_position |
+| RA_RMS     | 127.1                | mas in unit                  | -99            | f32  | csst_ms_sls_position |
+| DEC_RMS    | 60.4                 | mas in unit                  | -99            | f32  | csst_ms_sls_position |
+| RA_CEN     | 193.299027           | center of detector in ra     | 0              | f32  | csst_ms_sls_position |
+| DEC_CEN    | 26.08851             | center of detector in dec    | 0              | f32  | csst_ms_sls_position |
+| VER_DIST   | '1.0'                | version of distortion        | '1.0'          | str  | csst_ms_sls_position |
+| TOL_DIST   | '2023-02-16 12:15:16'| time of last modification    |                | str  | csst_ms_sls_position |
+| STA_DIST   | 0                    | 0 for done, 1 for failure    | 1              | i8   | csst_ms_sls_position |
+
 
 #### Header of `csst_ms_sls_qc1`
 | keyword    | value                | comment                      | fallback_value | type | module               |
 | ---------- | :------------------- | ---------------------------- | -------------- | ---- | -------------------- |
 | QC1_S 　　　| 0                    | 0 for success, 1 for failure | 1              | i8   | csst_ms_sls_qc1      |
+| VER_QC1    | '0.0.1'              | QC1 pipeline version         | '0.0.1'        | str  | csst_ms_sls_qc1      |
+| QC1_FLAG   | 0                    | quality flags                | -99            | i16  | csst_ms_sls_qc1      |
 
+### HDU2
+
+#### Header of `csst_ms_sls_instrument`
+
+| keyword  | value       | comment                     | fallback_value | type   | module                 |
+| -------- | ----------- | --------------------------- | -------------- | -----  | ---------------------- |
+| XTENSION | IMAGE       | Image extension             |      IAMGE          | str    | csst_ms_sls_instrument |
+| BITPIX   | -32         | bits per data value         |         -32       | i8     | csst_ms_sls_instrument |                 
+| NAXIS    | 2           | Number of array dimensions  |           2     | i8     | csst_ms_sls_instrument |                 
+| NAXIS1   | 9216        | Size of the axis            |           9216     | i8     | csst_ms_sls_instrument |                 
+| NAXIS2   | 9232        | Size of the axis            |           9232     | i8     | csst_ms_sls_instrument |
+| PCOUNT   | 0           | number of parameters        |            0    | i8     | csst_ms_sls_instrument |                         
+| GCOUNT   | 1           | number of groups            |          1  | i8     |csst_ms_sls_instrument|                                       
+| EXTNAME  | ERR         | extension name              |          ERR      | str    | csst_ms_sls_instrument |
+| EXTVER   | 1           | extension version number    |           1     | i8     | csst_ms_sls_instrument |
+| BUNIT    | electrons/s | brightness units            |      electrons/s    | str    | csst_ms_sls_instrument |
+
+### HDU3
+
+#### Header of `csst_ms_sls_instrument`
+
+| keyword  | value       | comment                     | fallback_value | type | module                 |
+| -------- | ----------- | --------------------------- | -------------- | ---- | ---------------------- |
+| XTENSION | IMAGE       | Image extension             |      IAMGE          | str  | csst_ms_sls_instrument |
+| BITPIX   | 16          | bits per data value         |      16          | i8   | csst_ms_sls_instrument |                 
+| NAXIS    | 2           | Number of array dimensions  |        2        | i8   | csst_ms_sls_instrument |                 
+| NAXIS1   | 9216        | Size of the axis            |        9216        | i8   | csst_ms_sls_instrument |                 
+| NAXIS2   | 9232        | Size of the axis            |        9232        | i8   | csst_ms_sls_instrument |
+| PCOUNT   | 0           | number of parameters        |          0      | i8   | csst_ms_sls_instrument |                         
+| GCOUNT   | 1           | number of groups            |        1      | i8   |csst_ms_sls_instrument|                                       
+| EXTNAME  | DQ          | extension name              |        DQ      | str  | csst_ms_sls_instrument |
+| EXTVER   | 1           | extension version number    |         1       | i8   | csst_ms_sls_instrument |
+| BUNIT    | unitless    | brightness units            |         unitless     | str  | csst_ms_sls_instrument |
 
