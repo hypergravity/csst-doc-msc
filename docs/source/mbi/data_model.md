@@ -1,5 +1,10 @@
 # L1-MBI Data model
 
+- 每一个模块的结果单独开一个section，以COMMENT分隔（参考0级数据）
+- 精简、丰富、修改每个关键字定义的comment
+- 流量定标用的位置信息是哪个版本
+- `---`表示在模块算法失败的情况下按照实际情况填写，比如无论模块是否成功，时间戳都应该填写实际值
+
 ## File: *_{img/wht/flg}_L1_1.fits
 
 ### File contents
@@ -17,106 +22,106 @@
 ### HDU1
 
 #### Header of `csst_ms_mbi_instrument`
-| keyword     | value                 | comment                                         | fallback_value        | type | module                  |
-|-------------|:----------------------|-------------------------------------------------|-----------------------|------|-------------------------|
-| *L1STATBIAS | 0                     | Status flag for bias frame correction           | 1                     | i8   | csst_ms_mbi_instrument  |
-| *L1STATDA   | 0                     | Status flag for dark frame correction           | 1                     | i8   | csst_ms_mbi_instrument  |
-| *L1STATFL   | 0                     | Status flag for flat frame correction           | 1                     | i8   | csst_ms_mbi_instrument  |
-| *SKY_RMS    | 10.0                  | *Standard dev of frame background (ADU) -> e-/s | -99                   | f32  | csst_ms_mbi_instrument  |        
-| *SKY        | 0.1                   | Estimated sky brightness (e-/s per pixel)       | -99                   | f32  | csst_ms_mbi_instrument  |
-| SATURATE    | 1833.333333333333     | The flux limit of saturated pixel (e-/s)        | -99                   | f32  | csst_ms_mbi_instrument  |
-| HASCTE      | *T                    | Has CTE correction                              | F                     | bool | csst_ms_mbi_instrument  |
-| HASSAT      | *T                    | Has satellite correction                        | F                     | bool | csst_ms_mbi_instrument  |
-| HASCR       | *T                    | Has cosmic rays mask                            | F                     | bool | csst_ms_mbi_instrument  |
-| CRCOUNT     | 66791                 | Cosmic rays counts                              | -99                   | i8   | csst_ms_mbi_instrument  |
-| VER_INST    | '0.0.1   '            | Version of instrument processing                | '0.0.1   '            | str  | csst_ms_mbi_instrument  |
-| *TOL_INST   | '2022-12-30T10:18:53' | Time of last modification                       | '2022-12-30T10:18:53' | str  | csst_ms_mbi_instrument  |
-| STA_DIST    | 0                     | 0=done 1=wrong                                  | 1                     | i8   | csst_ms_mbi_distortion  | 
-| DATASUM     | '1352015684'          | *data unit checksum updated 2022-10-28T19:29:10 | '1352015684'          | str  | csst_ms_mbi_instrument  |
+| keyword  | value                 | comment                                         | fallback_value | type | module                   |
+|----------|:----------------------|-------------------------------------------------|----------------|------|--------------------------|
+| STA_BIAS | 0                     | Status flag for bias frame correction           | 1              | i8   | csst_ms_mbi_instrument   |
+| STA_DARK | 0                     | Status flag for dark frame correction           | 1              | i8   | csst_ms_mbi_instrument   |
+| STA_FLAT | 0                     | Status flag for flat frame correction           | 1              | i8   | csst_ms_mbi_instrument   |
+| SKY_BKG  | 0.1                   | Estimated sky background (e-/s per pixel)       | -9999          | f32  | csst_ms_mbi_instrument   |
+| SKY_RMS  | 10.0                  | *Standard dev of frame background (ADU) -> e-/s | -9999          | f32  | csst_ms_mbi_instrument   |        
+| SATURATE | 1833.333333333333     | The flux limit of saturated pixel (e-/s)        | -9999          | f32  | csst_ms_mbi_instrument   |
+| STA_CTE  | 0                     | Has CTE correction                              | 1              | bool | csst_ms_mbi_instrument   |
+| STA_SAT  | 0                     | Has satellite correction                        | 1              | bool | csst_ms_mbi_instrument   |
+| STA_CRS  | 0                     | Has cosmic rays mask                            | 1              | bool | csst_ms_mbi_instrument   |
+| CRCOUNT  | 66791                 | Cosmic rays counts                              | -9999          | i8   | csst_ms_mbi_instrument   |
+| VER_INST | '0.0.1   '            | Version of instrument processing                | '0.0.1   '     | str  | csst_ms_mbi_instrument   |
+| STM_INST | '2022-12-30T10:18:53' | Time stamp of instrument processing             | ---            | str  | csst_ms_mbi_instrument   |
+| STA_DIST | 0                     | 0=done 1=wrong                                  | 1              | i8   | csst_ms_mbi_distortion   | 
+| DATASUM  | '1352015684'          | *data unit checksum updated 2022-10-28T19:29:10 | ---            | str  | csst_ms_mbi_instrument   |
 
 #### Header of `csst_ms_mbi_distortion`
 
-| keyword           | value                     | comment                                | fallback_value        | type | module                 |
-|-------------------|:--------------------------|----------------------------------------|-----------------------|------|------------------------|
-| *RADESYS          | 'ICRS    '                | Should be always 'ICRS'                | 'ICRS'                | str  | csst_ms_mbi_distortion |
-| *NS_DIST STAR_FIT | 11                        | The number of stars used in fitting    | 0.0                   | i8   | csst_ms_mbi_distortion | 
-| PV1_0             | 0.003205383944913964      |                                        | 1.0                   | f32  | csst_ms_mbi_distortion |
-| PV1_1             | 0.8673020820536499        |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV1_2             | -0.2011989871377834       |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV1_3             | -0.2597214229472611       |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV1_4             | 0.4353828741811097        |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV1_5             | -0.5054216569802673       |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV1_6             | 0.1951474426617432        |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV2_0             | 0.00109803885992697       |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV2_1             | 0.9171065857705857        |                                        | 1.0                   | f32  | csst_ms_mbi_distortion |
-| PV2_2             | -0.04908256792722099      |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV2_3             | -0.09860562038448289      |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV2_4             | 0.07961855240788976       |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV2_5             | -0.2009224365497067       |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| PV2_6             | 0.1741954691884874        |                                        | 0.0                   | f32  | csst_ms_mbi_distortion |
-| RA_OFF            | -0.0                      | mas in unit                            | -99                   | f32  | csst_ms_mbi_distortion |
-| DEC_OFF           | 0.0                       | mas in unit                            | -99                   | f32  | csst_ms_mbi_distortion |
-| RA_RMS            | 127.1                     | mas in unit                            | -99                   | f32  | csst_ms_mbi_distortion |
-| DEC_RMS           | 60.4                      | mas in unit                            | -99                   | f32  | csst_ms_mbi_distortion |
-| RA_CEN            | 192.1940713422841         | The center of detector in ra           | 192.1940713422841     | f32  | csst_ms_mbi_distortion |
-| DEC_CEN           | 26.72643742371229         | The center of detector in dec          | 26.72643742371229     | f32  | csst_ms_mbi_distortion |
-| VER_DIST          | '1.0     '                | Version of distortion                  | '1.0'                 | str  | csst_ms_mbi_distortion |
-| *TOL_DIST         | '2022-12-29T16:36:47'     | Time of last modification              | '2022-12-29T16:36:47' | str  | csst_ms_mbi_distortion |
-| STA_DIST          |                   0       | 0=done 1=wrong                         | 1                     | i8   | csst_ms_mbi_distortion | 
+| keyword  | value                 | comment                             | fallback_value | type | module                 |
+|----------|:----------------------|-------------------------------------|----------------|------|------------------------|
+| *RADESYS | 'ICRS    '            | Should be always 'ICRS'             | '?'            | str  | csst_ms_mbi_distortion |
+| *NS_DIST | 11                    | The number of stars used in fitting | ---            | i8   | csst_ms_mbi_distortion | 
+| PV1_0    | 0.003205383944913964  |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV1_1    | 0.8673020820536499    |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV1_2    | -0.2011989871377834   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV1_3    | -0.2597214229472611   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV1_4    | 0.4353828741811097    |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV1_5    | -0.5054216569802673   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV1_6    | 0.1951474426617432    |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV2_0    | 0.00109803885992697   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV2_1    | 0.9171065857705857    |                                     | 1.0            | f32  | csst_ms_mbi_distortion |
+| PV2_2    | -0.04908256792722099  |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV2_3    | -0.09860562038448289  |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV2_4    | 0.07961855240788976   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV2_5    | -0.2009224365497067   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV2_6    | 0.1741954691884874    |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| RA_OFF   | -0.0                  | RA offset (mas)                     | -9999          | f32  | csst_ms_mbi_distortion |
+| DEC_OFF  | 0.0                   | Dec offset (mas)                    | -9999          | f32  | csst_ms_mbi_distortion |
+| RA_RMS   | 127.1                 | RA RMS (mas)                        | -9999          | f32  | csst_ms_mbi_distortion |
+| DEC_RMS  | 60.4                  | Dec RMS (mas)                       | -9999          | f32  | csst_ms_mbi_distortion |
+| RA_CEN   | 192.1940713422841     | The center of detector in ra        | ---            | f32  | csst_ms_mbi_distortion |
+| DEC_CEN  | 26.72643742371229     | The center of detector in dec       | ---            | f32  | csst_ms_mbi_distortion |
+| VER_DIST | '1.0     '            | Version of distortion               | '1.0'          | str  | csst_ms_mbi_distortion |
+| STM_DIST | '2022-12-29T16:36:47' | Time of last modification           | ---            | str  | csst_ms_mbi_distortion |
+| STA_DIST | 0                     | 0=done 1=wrong                      | 1              | i8   | csst_ms_mbi_distortion | 
 
 #### Header of `csst_ms_mbi_position`
 
-| keyword    | value                       | comment                                    | fallback_value | type | module                  |
-|------------|:----------------------------|--------------------------------------------|----------------|------|-------------------------|
-| RADESYS    | 'ICRS    '                  | should be always 'ICRS'                    | 'ICRS'         | str  | csst_ms_mbi_position    |                             
-| PV1_0      | -7.032303876526E-04         |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV1_1      | 9.986639936274E-01          |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV1_2      | -3.506141592607E-03         |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV1_4      | -2.342575913122E-03         |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV1_5      | -2.216829433925E-03         |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV1_6      | -5.122207406521E-03         |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV2_0      | -6.939462894407E-04         |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV2_1      | 9.988294486003E-01          |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV2_2      | -1.687802061938E-03         |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV2_4      | 1.561587727533E-03          |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV2_5      | -4.159618376671E-03         |                                            | 0              | f32  | csst_ms_mbi_position    |
-| PV2_6      | 3.398895060382E-03          |                                            | 0              | f32  | csst_ms_mbi_position    |
-| *FGROUPNO  | 1                           | SCAMP field group label                    |                | i8   | csst_ms_mbi_position    |
-| ASTIRMS1   | 0.000000000000E+00          | Astrom. dispersion RMS (intern., high S/N) |                | f32  | csst_ms_mbi_position    |    
-| ASTIRMS2   | 0.000000000000E+00          | Astrom. dispersion RMS (intern., high S/N) |                | f32  | csst_ms_mbi_position    |
-| ASTRRMS1   | 6.458653303335E-06          | Astrom. dispersion RMS (ref., high S/N)    |                | f32  | csst_ms_mbi_position    |
-| ASTRRMS2   | 8.724734011714E-06          | Astrom. dispersion RMS (ref., high S/N)    |                | f32  | csst_ms_mbi_position    |       
-| ASTINST    | 1                           | SCAMP astrometric instrument label         |                | i8   | csst_ms_mbi_position    |
-| FLXSCALE   | 1.000000000000E+00          | SCAMP relative flux scale                  |                | f32  | csst_ms_mbi_position    |                     
-| MAGZEROP   | 0.00000000                  | SCAMP zero-point                           |                | f32  | csst_ms_mbi_position    |                               
-| PHOTIRMS   | 0.00000000                  | mag dispersion RMS (internal, high S/N)    |                | f32  | csst_ms_mbi_position    |
-| PHOTINST   | 1                           | SCAMP photometric instrument label         |                | i8   | csst_ms_mbi_position    |
-| PHOTLINK   | F                           | True if linked to a photometric field      |                | bool | csst_ms_mbi_position    |
-| *WCS_S     | 0                           | 0=done                                     |                | i8   | csst_ms_mbi_position    | 
-| *WCS_V     | '2.0.4   '                  | Version of WCS calibration                 |                | str  | csst_ms_mbi_position    |        
-| *WCS_P     | 'default.scamp'             | Configure file name of WCS                 |                | str  | csst_ms_mbi_position    |                    
-| *WCS_TOL   | '2022-12-30 18:32:46 PM'    | Time of last wcs calibration               |                | str  | csst_ms_mbi_position    |             
+| keyword   | value                       | comment                                    | fallback_value | type | module                  |
+|-----------|:----------------------------|--------------------------------------------|----------------|------|-------------------------|
+| RADESYS   | 'ICRS    '                  | should be always 'ICRS'                    | '?'            | str  | csst_ms_mbi_position    |                             
+| PV1_0     | -7.032303876526E-04         |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV1_1     | 9.986639936274E-01          |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV1_2     | -3.506141592607E-03         |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV1_4     | -2.342575913122E-03         |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV1_5     | -2.216829433925E-03         |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV1_6     | -5.122207406521E-03         |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV2_0     | -6.939462894407E-04         |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV2_1     | 9.988294486003E-01          |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV2_2     | -1.687802061938E-03         |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV2_4     | 1.561587727533E-03          |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV2_5     | -4.159618376671E-03         |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| PV2_6     | 3.398895060382E-03          |                                            | -9999          | f32  | csst_ms_mbi_position    |
+| -FGROUPNO | 1                           | SCAMP field group label                    |                | i8   | csst_ms_mbi_position    |
+| -ASTIRMS1 | 0.000000000000E+00          | Astrom. dispersion RMS (intern., high S/N) |                | f32  | csst_ms_mbi_position    |    
+| -ASTIRMS2 | 0.000000000000E+00          | Astrom. dispersion RMS (intern., high S/N) |                | f32  | csst_ms_mbi_position    |
+| *ASTRRMS1 | 6.458653303335E-06          | Astrom. dispersion RMS (ref., high S/N)    |                | f32  | csst_ms_mbi_position    |
+| *ASTRRMS2 | 8.724734011714E-06          | Astrom. dispersion RMS (ref., high S/N)    |                | f32  | csst_ms_mbi_position    |       
+| -ASTINST  | 1                           | SCAMP astrometric instrument label         |                | i8   | csst_ms_mbi_position    |
+| -FLXSCALE | 1.000000000000E+00          | SCAMP relative flux scale                  |                | f32  | csst_ms_mbi_position    |                     
+| -MAGZEROP | 0.00000000                  | SCAMP zero-point                           |                | f32  | csst_ms_mbi_position    |                               
+| -PHOTIRMS | 0.00000000                  | mag dispersion RMS (internal, high S/N)    |                | f32  | csst_ms_mbi_position    |
+| -PHOTINST | 1                           | SCAMP photometric instrument label         |                | i8   | csst_ms_mbi_position    |
+| -PHOTLINK | F                           | True if linked to a photometric field      |                | bool | csst_ms_mbi_position    |
+| *STA_POSI | 0                           | 0=done                                     |                | i8   | csst_ms_mbi_position    | 
+| *VER_POSI | '2.0.4   '                  | Version of WCS calibration                 |                | str  | csst_ms_mbi_position    |        
+| *CFG_POSI | 'default.scamp'             | Configure file name of WCS                 |                | str  | csst_ms_mbi_position    |                    
+| *STM_POSI | '2022-12-30 18:32:46 PM'    | Time of last wcs calibration               | ---            | str  | csst_ms_mbi_position    |             
 
 #### Header of `csst_ms_mbi_flux`
 
-| keyword            | value                 | comment                                        | fallback_value               | type | module             |
-|--------------------|:----------------------|------------------------------------------------|------------------------------|------|--------------------|
-| *REF_FLUX CALI_REF | 'GAIA    '            | the reference database for calibration         | 'GAIA'                       | str  | csst_ms_mbi_flux   |
-| ZP                 | 23.8435               | photometric zero point in magnitude            | -1                           | f32  | csst_ms_mbi_flux   |
-| ZPRMS              | 0.0101                | zpt rms of the matched objects                 | -1                           | f32  | csst_ms_mbi_flux   |                
-| APER_R             | 10                    | (pixels) photo-aperture radius                 | 10                           | i8   | csst_ms_mbi_flux   |            
-| FWHM               | 2.147                 | FWHM in pixel                                  | -1                           | f32  | csst_ms_mbi_flux   |
-| *RA_OFF            | -0.188                | median positional offset from GAIA, in arcsec  | -1                           | f32  | csst_ms_mbi_flux   |
-| *DEC_OFF           | -0.1061               | median positional offset from GAIA, in arcsec  | -1                           | f32  | csst_ms_mbi_flux   | 
-| *NS_FLUX           | 49                    | total number of stars detected                 | 0                            | i8   | csst_ms_mbi_flux   | 
-| *NS_MATCH          | 25                    | total number of matched stars in 2 arcsec      | -1                           | i8   | csst_ms_mbi_flux   |
-| *MED_CLR           | 0.0                   | median (BP-RP)_GAIA of matched stars           | 0.0                          | f32  | csst_ms_mbi_flux   |
-| *SKY1              | 0.0359                | (e-/s per pixel)                               | 0.0359                       | f32  | csst_ms_mbi_flux   |                 
-| *SKY_RMS1          | 0.1766                | rms/pixel of the sky in unit of e-/s           | 0.1766                       | f32  | csst_ms_mbi_flux   | 
-| *MAG_LIM           | 21.83                 | magnitude limiting of 5-sigma galaxy detection | -1                           | f32  | csst_ms_mbi_flux   | 
-| *STA_FLUX FLUX_S   | 0                     | flux calibration status                        | 1                            | i8   | csst_ms_mbi_flux   |                       
-| *VER_FLUX FLUX_V   | '1.3     '            | version of calibration code                    | '1.3'                        | str  | csst_ms_mbi_flux   |
-| *STM_FLUX FLUX_TOL | '2022-12-30 18:36:05' | flux calibration operation time                | '2022-12-30 18:36:05'        | str  | csst_ms_mbi_flux   |
+| keyword     | value                 | comment                                        | fallback_value | type | module             |
+|-------------|:----------------------|------------------------------------------------|----------------|------|--------------------|
+| REF_FLUX    | 'GAIA_DR3  '          | the reference database for calibration         | '?'            | str  | csst_ms_mbi_flux   |
+| ZP          | 23.8435               | photometric zero point in magnitude            | -9999          | f32  | csst_ms_mbi_flux   |
+| ZPRMS       | 0.0101                | zpt rms of the matched objects                 | -9999          | f32  | csst_ms_mbi_flux   |                
+| APER_R      | 10                    | (pixels) photo-aperture radius                 | 10             | i8   | csst_ms_mbi_flux   |            
+| FWHM        | 2.147                 | FWHM in pixel                                  | -9999          | f32  | csst_ms_mbi_flux   |
+| *RA_OFF1    | -0.188                | median positional offset from GAIA, in arcsec  | -9999          | f32  | csst_ms_mbi_flux   |
+| *DEC_OFF1   | -0.1061               | median positional offset from GAIA, in arcsec  | -9999          | f32  | csst_ms_mbi_flux   | 
+| *NS_FLUX    | 49                    | total number of stars detected                 | ---            | i8   | csst_ms_mbi_flux   | 
+| *NS_MATCH   | 25                    | total number of matched stars in 2 arcsec      | ---            | i8   | csst_ms_mbi_flux   |
+| *MED_CLR    | 0.0                   | median (BP-RP)_GAIA of matched stars           | -9999          | f32  | csst_ms_mbi_flux   |
+| *SKY_MAG    | 0.0359                | mag/arcsec^2                                   | -9999          | f32  | csst_ms_mbi_flux   |                 
+| -SKY_RMS1   | 0.1766                | rms/pixel of the sky in unit of e-/s           | -9999          | f32  | csst_ms_mbi_flux   | 
+| *MAG_LIM    | 21.83                 | magnitude limiting of 5-sigma galaxy detection | -9999          | f32  | csst_ms_mbi_flux   | 
+| *STA_FLUX   | 0                     | flux calibration status                        | 1              | i8   | csst_ms_mbi_flux   |                       
+| *VER_FLUX   | '1.3     '            | version of calibration code                    | '1.3'          | str  | csst_ms_mbi_flux   |
+| *STM_FLUX   | '2022-12-30 18:36:05' | flux calibration operation time                | ---            | str  | csst_ms_mbi_flux   |
 
 #### Header of `csst_ms_qc0 qc0 check`
 | keyword   | value   | comment                                       | fallback_value | type  | module        |

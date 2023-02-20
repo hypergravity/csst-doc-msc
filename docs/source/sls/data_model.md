@@ -11,89 +11,106 @@
 | HDU2  | reduced ERR (9k x 9k)   | ImageHDU    |
 | HDU3  | reduced DQ (9k x 9k)    | ImageHDU    |
 
+- 关键字 comment大写开头
+- 
+
 ### *HDU0 --> HDU1
 
-| keyword            | value                  | comment                                      | fallback_value        | type   | module                  |
-|--------------------|:-----------------------|----------------------------------------------|-----------------------|--------|-------------------------|
-| SIMPLE             | T                      | Fits standard                                | T                     | bool   | csst_ms_sls_instrument  |
-| BITPIX             | 8                      | array data value                             | 8                     | i8     | csst_ms_sls_instrument  |            
-| NAXIS              | 0                      | Number of axes                               | 0                     | i8     | csst_ms_sls_instrument  |             
-| EXTEND             | T                      | file may contain standard extensions         | T                     | bool   | csst_ms_sls_instrument  |             
-| NEXTEND            | 3                      | Number of file extensions                    | 3                     | i8     | csst_ms_sls_instrument  |
-| *VER_CRDS          | '0.0.1 '               | Version of CRDS file selection software used | '0.0.1 '              | str    | csst_ms_sls_instrument  |
-| R_GAIN             | '*.gain.fits'          | Gain reference file name                     | 'N/A'                 | str    | csst_ms_sls_instrument  |
-| R_READN            | '*.rn.fits'            | Read noise reference file name               | 'N/A'                 | str    | csst_ms_sls_instrument  |
-| R_SATURA           | '*.sat.fits'           | Saturation reference file name               | 'N/A'                 | str    | csst_ms_sls_instrument  |
-| R_MASK             | '*.msk.fits'           | Mask reference file name                     | 'N/A'                 | str    | csst_ms_sls_instrument  |
-| R_BIAS             | '*bias.fits'           | SuperBias reference file name                | 'N/A'                 | str    | csst_ms_sls_instrument  |
-| R_DARK             | '*dark.fits'           | Dark reference file name                     | 'N/A'                 | str    | csst_ms_sls_instrument  |
-| R_DFLAT            | '*flat.fits'           | Detector Flat reference file name            | 'N/A'                 | str    | csst_ms_sls_instrument  |
-| R_SFLAT            | '*flat.fits'           | Spectrograph Flat reference file name        | 'N/A'                 | str    | csst_ms_sls_instrument  |
-| S_DQINI            | T                      | Data Quality Initialization                  | F                     | bool   | csst_ms_sls_instrument  |
-| S_SATURA           | T                      | Saturation Checking                          | F                     | bool   | csst_ms_sls_instrument  |
-| S_ERRINI           | T                      | Error Initialization                         | F                     | bool   | csst_ms_sls_instrument  |
-| S_BIAS             | T                      | Bias correction                              | F                     | bool   | csst_ms_sls_instrument  |
-| S_DARK             | T                      | Dark correction                              | F                     | bool   | csst_ms_sls_instrument  |
-| S_FLAT             | T                      | Flat field correction                        | F                     | bool   | csst_ms_sls_instrument  |
-| *VER_INST DCP_VER  | '0.0.1 '               | detector-level calibration pipeline version  | '0.0.1 '              | str    | csst_ms_sls_instrument  |
-| *STM_INST DCP_TIME | '2022-12-30T10:18:53'  | pipeline processing time                     | '2022-12-30T10:18:53' | str    | csst_ms_sls_instrument  |
-| HISTORY            | '**step complete.'     | record processing message                    | 'null'                | str    | csst_ms_sls_instrument  |
+HDU0 修改 `NEXTEND=3`
+模块之间用COMMENT隔开，例如
+```
+COMMENT ==================================================================      
+COMMENT QC0 CHECK                                                               
+COMMENT ==================================================================  
+```
+精简每个关键字的comment
+`-`表示不可能失败，不会使用fallback_value
+
+
+### HDU1-1 (先不管)
+
+| keyword            | value                  | comment                                       | fallback_value        | type   | module                  |
+|--------------------|:-----------------------|-----------------------------------------------|-----------------------|--------|-------------------------|
+| VER_CRDS           | '0.0.1 '               | Version of CRDS file selection software used  | -                     | str    | csst_ms_sls_instrument  |
+| R_GAIN             | '*.gain.fits'          | Gain reference file name                      | 'N/A'                 | str    | csst_ms_sls_instrument  |
+| R_READN            | '*.rn.fits'            | Read noise reference file name                | 'N/A'                 | str    | csst_ms_sls_instrument  |
+| R_SATURA           | '*.sat.fits'           | Saturation reference file name                | 'N/A'                 | str    | csst_ms_sls_instrument  |
+| R_MASK             | '*.msk.fits'           | Mask reference file name                      | 'N/A'                 | str    | csst_ms_sls_instrument  |
+| R_BIAS             | '*bias.fits'           | SuperBias reference file name                 | 'N/A'                 | str    | csst_ms_sls_instrument  |
+| R_DARK             | '*dark.fits'           | Dark reference file name                      | 'N/A'                 | str    | csst_ms_sls_instrument  |
+| R_DFLAT            | '*flat.fits'           | Detector Flat reference file name             | 'N/A'                 | str    | csst_ms_sls_instrument  |
+| R_SFLAT            | '*flat.fits'           | Spectrograph Flat reference file name         | 'N/A'                 | str    | csst_ms_sls_instrument  |
+| S_DQINI            | T                      | Data Quality Initialization                   | F                     | bool   | csst_ms_sls_instrument  |
+| S_SATURA           | T                      | Saturation Checking                           | F                     | bool   | csst_ms_sls_instrument  |
+| S_ERRINI           | T                      | Error Initialization                          | F                     | bool   | csst_ms_sls_instrument  |
+| S_BIAS             | T                      | Bias correction                               | F                     | bool   | csst_ms_sls_instrument  |
+| S_DARK             | T                      | Dark correction                               | F                     | bool   | csst_ms_sls_instrument  |
+| S_FLAT             | T                      | Flat field correction                         | F                     | bool   | csst_ms_sls_instrument  |
+| VER_INST           | '0.0.1 '               | detector-level calibration pipeline version   | -                     | str    | csst_ms_sls_instrument  |
+| *STM_INST DCP_TIME | '2022-12-30T10:18:53'  | pipeline processing time                      | '2022-12-30T10:18:53' | str    | csst_ms_sls_instrument  |
+| HISTORY            | '**step complete.'     | record processing message                     | 'null'                | str    | csst_ms_sls_instrument  |
 
 ### HDU1
 
 #### Header of `csst_ms_sls_instrument`
 
-| keyword   | value    | comment                                   | fallback_value | type  | module                   |
-|-----------|:---------|-------------------------------------------|----------------|-------|--------------------------|
-| EXTNAME   | SCI      | extension name                            | SCI            | str   | csst_ms_sls_instrument   |
-| EXTVER    | 1        | extension version number                  | 1              | i8    | csst_ms_sls_instrument   |
-| BUNIT     | *e-/s    | brightness units                          | *e-/s          | str   | csst_ms_sls_instrument   |
-| *NGOODPIX | 84794368 | number of good pixels                     | 0              | f32   | csst_ms_sls_instrument   |
-| SDQFLAGS  | 31743    | serious data quality flags                | 0              | i16   | csst_ms_sls_instrument   |
-| *GOODMAX  | 260.0    | maxmum value of good pixels               | 0              | f32   | csst_ms_sls_instrument   |
-| GOODMIN   | -0.001   | minmum value of good pixels               | 0              | f32   | csst_ms_sls_instrument   |
-| GOODMEAN  | 0.3      | mean value of good pixels                 | 0              | f32   | csst_ms_sls_instrument   |
-| SNRMIN    | 187.4    | minmum signal to noise of good pixels     | 0              | f32   | csst_ms_sls_instrument   |
-| SNRMAX    | 1.2      | maxmum signal to noise of good pixels     | 0              | f32   | csst_ms_sls_instrument   |
-| SNRMEAN   | 3.38     | average of the dark values subtracted     | 0              | f32   | csst_ms_sls_instrument   |
+`IMAGE STATISTICS AND DATA QUALITY FLAGS` 需要修改成为标准格式，首字母大写
+增加宇宙线证认相关关键字
 
-VER_INST
-STA_INST
-STM_INST
+| keyword   | value    | comment                                 | fallback_value | type | module                   |
+|-----------|:---------|-----------------------------------------|----------------|------|--------------------------|
+| EXTNAME   | SCI      | extension name                          | SCI            | str  | csst_ms_sls_instrument   |
+| EXTVER    | 1        | extension version number                | 1              | i8   | csst_ms_sls_instrument   |
+| BUNIT     | *e-/s    | brightness units                        | *e-/s          | str  | csst_ms_sls_instrument   |
+| *NGOODPIX | 84794368 | number of good pixels                   | -9999          | i32  | csst_ms_sls_instrument   |
+| *SDQFLAGS | 31743    | *serious data quality flags             | -9999          | i32  | csst_ms_sls_instrument   |
+| GOODMAX   | 260.0    | maxmum value of good pixels             | -9999          | f32  | csst_ms_sls_instrument   |
+| GOODMIN   | -0.001   | minmum value of good pixels             | -9999          | f32  | csst_ms_sls_instrument   |
+| GOODMEAN  | 0.3      | mean value of good pixels               | -9999          | f32  | csst_ms_sls_instrument   |
+| SNRMIN    | 187.4    | minmum signal to noise of good pixels   | -9999          | f32  | csst_ms_sls_instrument   |
+| SNRMAX    | 1.2      | maxmum signal to noise of good pixels   | -9999          | f32  | csst_ms_sls_instrument   |
+| SNRMEAN   | 3.38     | average of the dark values subtracted   | -9999          | f32  | csst_ms_sls_instrument   |
+
+VER_INST 仪器改正版本号
+STA_INST 仪器改正状态
+STM_INST 仪器改正时间戳
 
 #### Header of `csst_ms_sls_position`
 
-| keyword          | value                 | comment                      | fallback_value | type   | module                |
-|------------------|:----------------------|------------------------------|----------------|--------|-----------------------|
-| CTYPE1           | 'RA---TPV'            |                              | 'RA---TPV'     | str    | csst_ms_sls_position  |
-| CTYPE2           | 'DEC--TPV'            |                              | 'DEC--TPV'     | str    | csst_ms_sls_position  |
-| CUNIT1           | 'deg  '               |                              | 'deg'          | str    | csst_ms_sls_position  |
-| CUNIT2           | 'deg  '               |                              | 'deg'          | str    | csst_ms_sls_position  |
-| RADESYS          | 'ICRS '               |                              | 'ICRS'         | str    | csst_ms_sls_position  |
-| PV1_0            | 0.003205383944913964  |                              | 0              | f32    | csst_ms_sls_position  |
-| PV1_1            | 0.8673020820536499    |                              | 0              | f32    | csst_ms_sls_position  |
-| PV1_2            | -0.2011989871377834   |                              | 0              | f32    | csst_ms_sls_position  |
-| PV1_3            | -0.2597214229472611   |                              | 0              | f32    | csst_ms_sls_position  |
-| PV1_4            | 0.4353828741811097    |                              | 0              | f32    | csst_ms_sls_position  |
-| PV1_5            | -0.5054216569802673   |                              | 0              | f32    | csst_ms_sls_position  |
-| PV1_6            | 0.1951474426617432    |                              | 0              | f32    | csst_ms_sls_position  |
-| PV2_0            | 0.00109803885992697   |                              | 0              | f32    | csst_ms_sls_position  |
-| PV2_1            | 0.9171065857705857    |                              | 0              | f32    | csst_ms_sls_position  |
-| PV2_2            | -0.04908256792722099  |                              | 0              | f32    | csst_ms_sls_position  |
-| PV2_3            | -0.09860562038448289  |                              | 0              | f32    | csst_ms_sls_position  |
-| PV2_4            | 0.07961855240788976   |                              | 0              | f32    | csst_ms_sls_position  |
-| PV2_5            | -0.2009224365497067   |                              | 0              | f32    | csst_ms_sls_position  |
-| PV2_6            | 0.1741954691884874    |                              | 0              | f32    | csst_ms_sls_position  |
-| *NS_POS STAR_FIT | 10                    | number of the stars          | 0              | i8     | csst_ms_sls_position  |
-| RA_OFF           | -0.0                  | mas in unit                  | -99            | f32    | csst_ms_sls_position  |
-| DEC_OFF          | 0.0                   | mas in unit                  | -99            | f32    | csst_ms_sls_position  |
-| RA_RMS           | 127.1                 | mas in unit                  | -99            | f32    | csst_ms_sls_position  |
-| DEC_RMS          | 60.4                  | mas in unit                  | -99            | f32    | csst_ms_sls_position  |
-| RA_CEN           | 193.299027            | center of detector in ra     | 0              | f32    | csst_ms_sls_position  |
-| DEC_CEN          | 26.08851              | center of detector in dec    | 0              | f32    | csst_ms_sls_position  |
-| *VER_POS         | '1.0'                 | version of distortion        | '1.0'          | str    | csst_ms_sls_position  |
-| *STM_POS         | '2023-02-16 12:15:16' | time of last modification    |                | str    | csst_ms_sls_position  |
-| *STA_POS         | 0                     | 0 for done, 1 for failure    | 1              | i8     |  csst_ms_sls_position |
+位置定标信息新开一节
+CD1_1等系数在修改后挪到这一节
+
+| keyword  | value                 | comment                      | fallback_value | type   | module                |
+|----------|:----------------------|------------------------------|----------------|--------|-----------------------|
+| CTYPE1   | 'RA---TPV'            |                              | 'RA---TAN'     | str    | csst_ms_sls_position  |
+| CTYPE2   | 'DEC--TPV'            |                              | 'DEC--TAN'     | str    | csst_ms_sls_position  |
+| CUNIT1   | 'deg  '               |                              | 'deg'          | str    | csst_ms_sls_position  |
+| CUNIT2   | 'deg  '               |                              | 'deg'          | str    | csst_ms_sls_position  |
+| RADESYS  | 'ICRS '               |                              | '?'            | str    | csst_ms_sls_position  |
+| PV1_0    | 0.003205383944913964  |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV1_1    | 0.8673020820536499    |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV1_2    | -0.2011989871377834   |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV1_3    | -0.2597214229472611   |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV1_4    | 0.4353828741811097    |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV1_5    | -0.5054216569802673   |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV1_6    | 0.1951474426617432    |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV2_0    | 0.00109803885992697   |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV2_1    | 0.9171065857705857    |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV2_2    | -0.04908256792722099  |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV2_3    | -0.09860562038448289  |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV2_4    | 0.07961855240788976   |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV2_5    | -0.2009224365497067   |                              | -9999          | f32    | csst_ms_sls_position  |
+| PV2_6    | 0.1741954691884874    |                              | -9999          | f32    | csst_ms_sls_position  |
+| *NS_POS  | 10                    | number of the stars          | --             | i8     | csst_ms_sls_position  |
+| RA_OFF   | -0.0                  | mas in unit                  | -9999          | f32    | csst_ms_sls_position  |
+| DEC_OFF  | 0.0                   | mas in unit                  | -9999          | f32    | csst_ms_sls_position  |
+| RA_RMS   | 127.1                 | mas in unit                  | -9999          | f32    | csst_ms_sls_position  |
+| DEC_RMS  | 60.4                  | mas in unit                  | -9999          | f32    | csst_ms_sls_position  |
+| RA_CEN   | 193.299027            | center of detector in ra     | --             | f32    | csst_ms_sls_position  |
+| DEC_CEN  | 26.08851              | center of detector in dec    | --             | f32    | csst_ms_sls_position  |
+| *VER_POS | '1.0'                 | version of distortion        | '1.0'          | str    | csst_ms_sls_position  |
+| *STM_POS | '2023-02-16 12:15:16' | time of last modification    | --             | str    | csst_ms_sls_position  |
+| *STA_POS | 0                     | 0 for done, 1 for failure    | 1              | i8     |  csst_ms_sls_position |
 
 
 #### Header of `csst_ms_sls_qc1`
