@@ -46,19 +46,19 @@
 | *RADESYS | 'ICRS    '            | Should be always 'ICRS'             | '?'            | str  | csst_ms_mbi_distortion |
 | *NS_DIST | 11                    | The number of stars used in fitting | ---            | i8   | csst_ms_mbi_distortion | 
 | PV1_0    | 0.003205383944913964  |                                     | -9999          | f32  | csst_ms_mbi_distortion |
-| PV1_1    | 0.8673020820536499    |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV1_2    | -0.2011989871377834   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV1_3    | -0.2597214229472611   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV1_4    | 0.4353828741811097    |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV1_5    | -0.5054216569802673   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV1_6    | 0.1951474426617432    |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV2_0    | 0.00109803885992697   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV2_1    | 0.9171065857705857    |                                     | 1.0            | f32  | csst_ms_mbi_distortion |
-| PV2_2    | -0.04908256792722099  |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV2_3    | -0.09860562038448289  |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV2_4    | 0.07961855240788976   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV2_5    | -0.2009224365497067   |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
-| PV2_6    | 0.1741954691884874    |                                     | 0.0            | f32  | csst_ms_mbi_distortion |
+| PV1_1    | 0.8673020820536499    |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV1_2    | -0.2011989871377834   |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV1_3    | -0.2597214229472611   |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV1_4    | 0.4353828741811097    |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV1_5    | -0.5054216569802673   |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV1_6    | 0.1951474426617432    |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV2_0    | 0.00109803885992697   |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV2_1    | 0.9171065857705857    |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV2_2    | -0.04908256792722099  |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV2_3    | -0.09860562038448289  |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV2_4    | 0.07961855240788976   |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV2_5    | -0.2009224365497067   |                                     | -9999          | f32  | csst_ms_mbi_distortion |
+| PV2_6    | 0.1741954691884874    |                                     | -9999          | f32  | csst_ms_mbi_distortion |
 | RA_OFF   | -0.0                  | RA offset (mas)                     | -9999          | f32  | csst_ms_mbi_distortion |
 | DEC_OFF  | 0.0                   | Dec offset (mas)                    | -9999          | f32  | csst_ms_mbi_distortion |
 | RA_RMS   | 127.1                 | RA RMS (mas)                        | -9999          | f32  | csst_ms_mbi_distortion |
@@ -66,7 +66,7 @@
 | RA_CEN   | 192.1940713422841     | The center of detector in ra        | ---            | f32  | csst_ms_mbi_distortion |
 | DEC_CEN  | 26.72643742371229     | The center of detector in dec       | ---            | f32  | csst_ms_mbi_distortion |
 | VER_DIST | '1.0     '            | Version of distortion               | '1.0'          | str  | csst_ms_mbi_distortion |
-| STM_DIST | '2022-12-29T16:36:47' | Time of last modification           | ---            | str  | csst_ms_mbi_distortion |
+| STM_DIST | '2022-12-29T16:36:47' | Time stamp of distortion            | ---            | str  | csst_ms_mbi_distortion |
 | STA_DIST | 0                     | 0=done 1=wrong                      | 1              | i8   | csst_ms_mbi_distortion | 
 
 #### Header of `csst_ms_mbi_position`
