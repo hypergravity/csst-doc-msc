@@ -43,7 +43,7 @@
 
 | keyword  | value                 | comment                             | fallback_value | type | module                 |
 |----------|:----------------------|-------------------------------------|----------------|------|------------------------|
-| *RADESYS | 'ICRS    '            | Should be always 'ICRS'             | '?'            | str  | csst_ms_mbi_distortion |
+| *RADESYS | 'ICRS    '            |                                     | '?'            | str  | csst_ms_mbi_distortion |
 | *NS_DIST | 11                    | The number of stars used in fitting | ---            | i8   | csst_ms_mbi_distortion | 
 | PV1_0    | 0.003205383944913964  |                                     | -9999          | f32  | csst_ms_mbi_distortion |
 | PV1_1    | 0.8673020820536499    |                                     | -9999          | f32  | csst_ms_mbi_distortion |
