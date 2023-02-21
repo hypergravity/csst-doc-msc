@@ -31,7 +31,7 @@ Welcome to csst-l1doc's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: CPIC
+   :caption: MCI
    :hidden:
 
    mci/mci.rst
@@ -40,7 +40,7 @@ Welcome to csst-l1doc's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: CPIC
+   :caption: IFS
    :hidden:
 
    ifs/ifs.rst
@@ -58,7 +58,7 @@ Welcome to csst-l1doc's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: THZ
+   :caption: HSTDM
    :hidden:
 
    thz/thz.rst
