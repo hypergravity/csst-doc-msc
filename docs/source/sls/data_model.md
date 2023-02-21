@@ -39,7 +39,6 @@ COMMENT ==================================================================
 | R_BIAS             | '*bias.fits'           | SuperBias reference file name                 | 'N/A'                 | str    | C7  |
 | R_DARK             | '*dark.fits'           | Dark reference file name                      | 'N/A'                 | str    | C7  |
 | R_DFLAT            | '*flat.fits'           | Detector Flat reference file name             | 'N/A'                 | str    | C7  |
-| R_SFLAT            | '*flat.fits'           | Spectrograph Flat reference file name         | 'N/A'                 | str    | C7  |
 | S_DQINI            | 1                     | Data Quality Initialization                   | 0                     | int  | C7  |
 | S_SATURA           | 1                      | Saturation Checking                           | 0                     | int   | C7  |
 | S_ERRINI           | 1                      | Error Initialization                          | 0                     | int   | C7  |
