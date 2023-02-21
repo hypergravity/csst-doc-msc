@@ -126,16 +126,16 @@ CD1_1等系数在修改后挪到这一节
 
 | keyword  | value         | comment                    | fallback_value | type    | module                  |
 |----------|---------------|----------------------------|----------------|---------|-------------------------|
-| XTENSION | IMAGE         | Image extension            | IMAGE          | str     | csst_ms_sls_instrument  |
+| XTENSION | 'IMAGE'         | Image extension            | 'IMAGE'          | str     | csst_ms_sls_instrument  |
 | BITPIX   | -32           | Bits per data value        | -32            | int      | csst_ms_sls_instrument  |                 
 | NAXIS    | 2             | Number of array dimensions | 2              | int      | csst_ms_sls_instrument  |                 
 | NAXIS1   | 9216          | Size of the axis           | 9216           | int      | csst_ms_sls_instrument  |                 
 | NAXIS2   | 9232          | Size of the axis           | 9232           | int      | csst_ms_sls_instrument  |
 | PCOUNT   | 0             | Number of parameters       | 0              | int      | csst_ms_sls_instrument  |                         
 | GCOUNT   | 1             | Number of groups           | 1              | int      | csst_ms_sls_instrument  |                                       
-| EXTNAME  | ERR           | Extension name             | ERR            | str     | csst_ms_sls_instrument  |
+| EXTNAME  | 'ERR'           | Extension name             | 'ERR'            | str     | csst_ms_sls_instrument  |
 | EXTVER   | 1             | Extension version number   | 1              | int      | csst_ms_sls_instrument  |
-| BUNIT   | e-/s   | Brightness units           | e-/s    | str     | csst_ms_sls_instrument  |
+| BUNIT   | 'e-/s'   | Brightness units           | 'e-/s'    | str     | csst_ms_sls_instrument  |
 
 ### HDU3
 
@@ -143,14 +143,14 @@ CD1_1等系数在修改后挪到这一节
 
 | keyword   | value       | comment                    | fallback_value | type   | module                 |
 |-----------|-------------|----------------------------|----------------|--------|------------------------|
-| XTENSION  | IMAGE       | Image extension            | IMAGE          | str    | csst_ms_sls_instrument |
+| XTENSION  | 'IMAGE'       | Image extension            | 'IMAGE'          | str    | csst_ms_sls_instrument |
 | BITPIX    | 16          | Bits per data value        | 16             | int     | csst_ms_sls_instrument |                 
 | NAXIS     | 2           | Number of array dimensions | 2              | int     | csst_ms_sls_instrument |                 
 | NAXIS1    | 9216        | Size of the axis           | 9216           | int     | csst_ms_sls_instrument |                 
 | NAXIS2    | 9232        | Size of the axis           | 9232           | int     | csst_ms_sls_instrument |
 | PCOUNT    | 0           | Number of parameters       | 0              | int     | csst_ms_sls_instrument |                         
 | GCOUNT    | 1           | Number of groups           | 1              | int     | csst_ms_sls_instrument |
-| EXTNAME   | DQ          | Extension name             | DQ             | str    | csst_ms_sls_instrument |
+| EXTNAME   | 'DQ'          | Extension name             | 'DQ'             | str    | csst_ms_sls_instrument |
 | EXTVER    | 1           | Extension version number   | 1              | int     | csst_ms_sls_instrument |
-| BUNIT    | unitless    | Brightness units           | unitless       | str    | csst_ms_sls_instrument |
+| BUNIT    | 'unitless'    | Brightness units           | 'unitless'       | str    | csst_ms_sls_instrument |
 
