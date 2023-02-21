@@ -59,17 +59,16 @@ COMMENT ==================================================================
 
 | keyword   | value    | comment                                 | fallback_value | type | module                   |
 |-----------|:---------|-----------------------------------------|----------------|------|--------------------------|
-| EXTNAME   | SCI      | extension name                          | SCI            | str  | csst_ms_sls_instrument   |
-| EXTVER    | 1        | extension version number                | 1              | i8   | csst_ms_sls_instrument   |
-| BUNIT     | *e-/s    | brightness units                        | *e-/s          | str  | csst_ms_sls_instrument   |
-| *NGOODPIX | 84794368 | number of good pixels                   | -9999          | i32  | csst_ms_sls_instrument   |
-| *SDQFLAGS | 31743    | *serious data quality flags             | -9999          | i32  | csst_ms_sls_instrument   |
-| GOODMAX   | 260.0    | maxmum value of good pixels             | -9999          | f32  | csst_ms_sls_instrument   |
-| GOODMIN   | -0.001   | minmum value of good pixels             | -9999          | f32  | csst_ms_sls_instrument   |
-| GOODMEAN  | 0.3      | mean value of good pixels               | -9999          | f32  | csst_ms_sls_instrument   |
-| SNRMIN    | 187.4    | minmum signal to noise of good pixels   | -9999          | f32  | csst_ms_sls_instrument   |
-| SNRMAX    | 1.2      | maxmum signal to noise of good pixels   | -9999          | f32  | csst_ms_sls_instrument   |
-| SNRMEAN   | 3.38     | average of the dark values subtracted   | -9999          | f32  | csst_ms_sls_instrument   |
+| EXTNAME   | SCI      | Extension name                          | SCI            | str  | csst_ms_sls_instrument   |
+| EXTVER    | 1        | Extension version number                | 1              | int   | csst_ms_sls_instrument   |
+| BUNIT     | e-/s    | Brightness units                        | e-/s          | str  | csst_ms_sls_instrument   |
+| NGOODPIX | 84794368 | Number of good pixels                   | -9999          | int  | csst_ms_sls_instrument   |
+| GOODMAX   | 260.0    | Maxmum value of good pixels             | -9999          | float  | csst_ms_sls_instrument   |
+| GOODMIN   | -0.001   | Minmum value of good pixels             | -9999          | float  | csst_ms_sls_instrument   |
+| GOODMEAN  | 0.3      | Mean value of good pixels               | -9999          | float  | csst_ms_sls_instrument   |
+| SNRMIN    | 187.4    | Minmum signal to noise of good pixels   | -9999          | float  | csst_ms_sls_instrument   |
+| SNRMAX    | 1.2      | Maxmum signal to noise of good pixels   | -9999          | float  | csst_ms_sls_instrument   |
+| SNRMEAN   | 3.38     | Average of the dark values subtracted   | -9999          | float  | csst_ms_sls_instrument   |
 
 VER_INST 仪器改正版本号
 STA_INST 仪器改正状态
@@ -127,16 +126,16 @@ CD1_1等系数在修改后挪到这一节
 
 | keyword  | value         | comment                    | fallback_value | type    | module                  |
 |----------|---------------|----------------------------|----------------|---------|-------------------------|
-| XTENSION | IMAGE         | Image extension            | IAMGE          | str     | csst_ms_sls_instrument  |
-| BITPIX   | -32           | bits per data value        | -32            | i8      | csst_ms_sls_instrument  |                 
-| NAXIS    | 2             | Number of array dimensions | 2              | i8      | csst_ms_sls_instrument  |                 
-| NAXIS1   | 9216          | Size of the axis           | 9216           | i8      | csst_ms_sls_instrument  |                 
-| NAXIS2   | 9232          | Size of the axis           | 9232           | i8      | csst_ms_sls_instrument  |
-| PCOUNT   | 0             | number of parameters       | 0              | i8      | csst_ms_sls_instrument  |                         
-| GCOUNT   | 1             | number of groups           | 1              | i8      | csst_ms_sls_instrument  |                                       
-| EXTNAME  | ERR           | extension name             | ERR            | str     | csst_ms_sls_instrument  |
-| EXTVER   | 1             | extension version number   | 1              | i8      | csst_ms_sls_instrument  |
-| *BUNIT   | electrons/s   | brightness units           | electrons/s    | str     | csst_ms_sls_instrument  |
+| XTENSION | IMAGE         | Image extension            | IMAGE          | str     | csst_ms_sls_instrument  |
+| BITPIX   | -32           | Bits per data value        | -32            | int      | csst_ms_sls_instrument  |                 
+| NAXIS    | 2             | Number of array dimensions | 2              | int      | csst_ms_sls_instrument  |                 
+| NAXIS1   | 9216          | Size of the axis           | 9216           | int      | csst_ms_sls_instrument  |                 
+| NAXIS2   | 9232          | Size of the axis           | 9232           | int      | csst_ms_sls_instrument  |
+| PCOUNT   | 0             | Number of parameters       | 0              | int      | csst_ms_sls_instrument  |                         
+| GCOUNT   | 1             | Number of groups           | 1              | int      | csst_ms_sls_instrument  |                                       
+| EXTNAME  | ERR           | Extension name             | ERR            | str     | csst_ms_sls_instrument  |
+| EXTVER   | 1             | Extension version number   | 1              | int      | csst_ms_sls_instrument  |
+| BUNIT   | e-/s   | Brightness units           | e-/s    | str     | csst_ms_sls_instrument  |
 
 ### HDU3
 
@@ -144,14 +143,14 @@ CD1_1等系数在修改后挪到这一节
 
 | keyword   | value       | comment                    | fallback_value | type   | module                 |
 |-----------|-------------|----------------------------|----------------|--------|------------------------|
-| XTENSION  | IMAGE       | Image extension            | IAMGE          | str    | csst_ms_sls_instrument |
-| BITPIX    | 16          | bits per data value        | 16             | i8     | csst_ms_sls_instrument |                 
-| NAXIS     | 2           | Number of array dimensions | 2              | i8     | csst_ms_sls_instrument |                 
-| NAXIS1    | 9216        | Size of the axis           | 9216           | i8     | csst_ms_sls_instrument |                 
-| NAXIS2    | 9232        | Size of the axis           | 9232           | i8     | csst_ms_sls_instrument |
-| PCOUNT    | 0           | number of parameters       | 0              | i8     | csst_ms_sls_instrument |                         
-| GCOUNT    | 1           | number of groups           | 1              | i8     | csst_ms_sls_instrument |
-| EXTNAME   | DQ          | extension name             | DQ             | str    | csst_ms_sls_instrument |
-| EXTVER    | 1           | extension version number   | 1              | i8     | csst_ms_sls_instrument |
-| *BUNIT    | unitless    | brightness units           | unitless       | str    | csst_ms_sls_instrument |
+| XTENSION  | IMAGE       | Image extension            | IMAGE          | str    | csst_ms_sls_instrument |
+| BITPIX    | 16          | Bits per data value        | 16             | int     | csst_ms_sls_instrument |                 
+| NAXIS     | 2           | Number of array dimensions | 2              | int     | csst_ms_sls_instrument |                 
+| NAXIS1    | 9216        | Size of the axis           | 9216           | int     | csst_ms_sls_instrument |                 
+| NAXIS2    | 9232        | Size of the axis           | 9232           | int     | csst_ms_sls_instrument |
+| PCOUNT    | 0           | Number of parameters       | 0              | int     | csst_ms_sls_instrument |                         
+| GCOUNT    | 1           | Number of groups           | 1              | int     | csst_ms_sls_instrument |
+| EXTNAME   | DQ          | Extension name             | DQ             | str    | csst_ms_sls_instrument |
+| EXTVER    | 1           | Extension version number   | 1              | int     | csst_ms_sls_instrument |
+| BUNIT    | unitless    | Brightness units           | unitless       | str    | csst_ms_sls_instrument |
 
