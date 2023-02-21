@@ -59,9 +59,9 @@ COMMENT ==================================================================
 
 | keyword   | value    | comment                                 | fallback_value | type | module                   |
 |-----------|:---------|-----------------------------------------|----------------|------|--------------------------|
-| EXTNAME   | SCI      | Extension name                          | SCI            | str  | csst_ms_sls_instrument   |
+| EXTNAME   | 'SCI'      | Extension name                          | 'SCI'            | str  | csst_ms_sls_instrument   |
 | EXTVER    | 1        | Extension version number                | 1              | int   | csst_ms_sls_instrument   |
-| BUNIT     | e-/s    | Brightness units                        | e-/s          | str  | csst_ms_sls_instrument   |
+| BUNIT     | 'e-/s'    | Brightness units                        | 'e-/s'          | str  | csst_ms_sls_instrument   |
 | NGOODPIX | 84794368 | Number of good pixels                   | -9999          | int  | csst_ms_sls_instrument   |
 | GOODMAX   | 260.0    | Maxmum value of good pixels             | -9999          | float  | csst_ms_sls_instrument   |
 | GOODMIN   | -0.001   | Minmum value of good pixels             | -9999          | float  | csst_ms_sls_instrument   |
