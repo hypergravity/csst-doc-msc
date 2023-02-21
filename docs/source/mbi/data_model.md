@@ -2,8 +2,11 @@
 
 - 每一个模块的结果单独开一个section，以COMMENT分隔（参考0级数据）
 - 精简、丰富、修改每个关键字定义的comment
-- 流量定标用的位置信息是哪个版本
 - `---`表示在模块算法失败的情况下按照实际情况填写，比如无论模块是否成功，时间戳都应该填写实际值
+- keyword开头是“-”号的，根据理解和最终的产品无关，建议去掉
+- keyword开头是“*”号的，表示有所修改，请检查是否需要，并完善注释，并检查对fallback_value的设置是否合理
+- flux模块中的天光背景测量已经移动到instrumens，请把该数值利用zp转换为SKY_MAG（单位mag/arcsed^2）
+- 版本，完成时间，状态三个参数的name进行了统一，分别以VER_，STM，STA开头
 
 ## File: *_{img/wht/flg}_L1_1.fits
 
@@ -24,19 +27,19 @@
 #### Header of `csst_ms_mbi_instrument`
 | keyword  | value                 | comment                                         | fallback_value | type | module                   |
 |----------|:----------------------|-------------------------------------------------|----------------|------|--------------------------|
-| STA_BIAS | 0                     | Status flag for bias frame correction           | 1              | i8   | csst_ms_mbi_instrument   |
-| STA_DARK | 0                     | Status flag for dark frame correction           | 1              | i8   | csst_ms_mbi_instrument   |
-| STA_FLAT | 0                     | Status flag for flat frame correction           | 1              | i8   | csst_ms_mbi_instrument   |
-| SKY_BKG  | 0.1                   | Estimated sky background (e-/s per pixel)       | -9999          | f32  | csst_ms_mbi_instrument   |
-| SKY_RMS  | 10.0                  | *Standard dev of frame background (ADU) -> e-/s | -9999          | f32  | csst_ms_mbi_instrument   |        
+| *STA_BIAS | 0                     | Status flag for bias frame correction           | 1              | i8   | csst_ms_mbi_instrument   |
+| *STA_DARK | 0                     | Status flag for dark frame correction           | 1              | i8   | csst_ms_mbi_instrument   |
+| *STA_FLAT | 0                     | Status flag for flat frame correction           | 1              | i8   | csst_ms_mbi_instrument   |
+| *SKY_BKG  | 0.1                   | Estimated sky background (e-/s per pixel)       | -9999          | f32  | csst_ms_mbi_instrument   |
+| *SKY_RMS  | 10.0                  | *Standard dev of frame background (ADU) -> e-/s | -9999          | f32  | csst_ms_mbi_instrument   |        
 | SATURATE | 1833.333333333333     | The flux limit of saturated pixel (e-/s)        | -9999          | f32  | csst_ms_mbi_instrument   |
-| STA_CTE  | 0                     | Has CTE correction                              | 1              | bool | csst_ms_mbi_instrument   |
-| STA_SAT  | 0                     | Has satellite correction                        | 1              | bool | csst_ms_mbi_instrument   |
-| STA_CRS  | 0                     | Has cosmic rays mask                            | 1              | bool | csst_ms_mbi_instrument   |
+| *STA_CTE  | 0                     | Has CTE correction                              | 1              | bool | csst_ms_mbi_instrument   |
+| *STA_SAT  | 0                     | Has satellite correction                        | 1              | bool | csst_ms_mbi_instrument   |
+| *STA_CRS  | 0                     | Has cosmic rays mask                            | 1              | bool | csst_ms_mbi_instrument   |
 | CRCOUNT  | 66791                 | Cosmic rays counts                              | -9999          | i8   | csst_ms_mbi_instrument   |
-| VER_INST | '0.0.1   '            | Version of instrument processing                | '0.0.1   '     | str  | csst_ms_mbi_instrument   |
-| STM_INST | '2022-12-30T10:18:53' | Time stamp of instrument processing             | ---            | str  | csst_ms_mbi_instrument   |
-| STA_DIST | 0                     | 0=done 1=wrong                                  | 1              | i8   | csst_ms_mbi_distortion   | 
+| *VER_INST | '0.0.1   '            | Version of instrument processing                | '0.0.1   '     | str  | csst_ms_mbi_instrument   |
+| *STM_INST | '2022-12-30T10:18:53' | Time stamp of instrument processing             | ---            | str  | csst_ms_mbi_instrument   |
+| *STA_INST | 0                     | 0=done 1=wrong                                  | 1              | i8   | csst_ms_mbi_distortion   | 
 | DATASUM  | '1352015684'          | *data unit checksum updated 2022-10-28T19:29:10 | ---            | str  | csst_ms_mbi_instrument   |
 
 #### Header of `csst_ms_mbi_distortion`
