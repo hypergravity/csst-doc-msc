@@ -101,8 +101,8 @@
 | -PHOTINST | 1                           | SCAMP photometric instrument label         |                | i8   | csst_ms_mbi_position    |
 | -PHOTLINK | F                           | True if linked to a photometric field      |                | bool | csst_ms_mbi_position    |
 | *STA_POSI | 0                           | 0=done                                     |                | i8   | csst_ms_mbi_position    | 
-| *VER_POSI | '2.0.4   '                  | Version of WCS calibration                 |                | str  | csst_ms_mbi_position    |        
-| *CFG_POSI | 'default.scamp'             | Configure file name of WCS                 |                | str  | csst_ms_mbi_position    |                    
+| *VER_POSI | '2.0.4   '                  | Version of WCS calibration                 | '2.0.4   '     | str  | csst_ms_mbi_position    |        
+| *CFG_POSI | 'default.scamp'             | Configure file name of WCS                 | ---            | str  | csst_ms_mbi_position    |                    
 | *STM_POSI | '2022-12-30 18:32:46 PM'    | Time of last wcs calibration               | ---            | str  | csst_ms_mbi_position    |             
 
 #### Header of `csst_ms_mbi_flux`
