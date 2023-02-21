@@ -40,15 +40,15 @@ COMMENT ==================================================================
 | R_DARK             | '*dark.fits'           | Dark reference file name                      | 'N/A'                 | str    | csst_ms_sls_instrument  |
 | R_DFLAT            | '*flat.fits'           | Detector Flat reference file name             | 'N/A'                 | str    | csst_ms_sls_instrument  |
 | R_SFLAT            | '*flat.fits'           | Spectrograph Flat reference file name         | 'N/A'                 | str    | csst_ms_sls_instrument  |
-| S_DQINI            | T                      | Data Quality Initialization                   | F                     | bool   | csst_ms_sls_instrument  |
-| S_SATURA           | T                      | Saturation Checking                           | F                     | bool   | csst_ms_sls_instrument  |
-| S_ERRINI           | T                      | Error Initialization                          | F                     | bool   | csst_ms_sls_instrument  |
-| S_BIAS             | T                      | Bias correction                               | F                     | bool   | csst_ms_sls_instrument  |
-| S_DARK             | T                      | Dark correction                               | F                     | bool   | csst_ms_sls_instrument  |
-| S_FLAT             | T                      | Flat field correction                         | F                     | bool   | csst_ms_sls_instrument  |
-| VER_INST           | '0.0.1 '               | detector-level calibration pipeline version   | -                     | str    | csst_ms_sls_instrument  |
-| *STM_INST DCP_TIME | '2022-12-30T10:18:53'  | pipeline processing time                      | '2022-12-30T10:18:53' | str    | csst_ms_sls_instrument  |
-| HISTORY            | '**step complete.'     | record processing message                     | 'null'                | str    | csst_ms_sls_instrument  |
+| S_DQINI            | 1                     | Data Quality Initialization                   | 0                     | int  | csst_ms_sls_instrument  |
+| S_SATURA           | 1                      | Saturation Checking                           | 0                     | int   | csst_ms_sls_instrument  |
+| S_ERRINI           | 1                      | Error Initialization                          | 0                     | int   | csst_ms_sls_instrument  |
+| S_BIAS             | 1                      | Bias correction                               | 0                     | int   | csst_ms_sls_instrument  |
+| S_DARK             | 1                     | Dark correction                               | 0                     | int   | csst_ms_sls_instrument  |
+| S_FLAT             | 1                      | Flat field correction                         | 0                     | int   | csst_ms_sls_instrument  |
+| VER_INST           | '0.0.1 '               | Instrument calibration pipeline version   | -                     | str    | csst_ms_sls_instrument  |
+| STM_INST | '2022-12-30T10:18:53'  | Instrument pipeline processing time                      | '2022-12-30T10:18:53' | str    | csst_ms_sls_instrument  |
+| HISTORY            | '**step complete.'     | Record processing message                     | -              | str    | csst_ms_sls_instrument  |
 
 ### HDU1
 
