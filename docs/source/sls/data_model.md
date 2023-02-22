@@ -67,7 +67,6 @@ COMMENT ==================================================================
 | SNRMIN    | 187.4    | Minmum signal to noise of good pixels   | -9999          | float  | C7   |
 | SNRMAX    | 1.2      | Maxmum signal to noise of good pixels   | -9999          | float  | C7  |
 | SNRMEAN   | 3.38     | Average of the dark values subtracted   | -9999          | float  | C7   |
-| CRCOUNT | 89898 | Cosmic ray counts | -9999 | float | C7 |
 
 VER_INST 仪器改正版本号
 STA_INST 仪器改正状态
@@ -78,37 +77,37 @@ STM_INST 仪器改正时间戳
 位置定标信息新开一节
 CD1_1等系数在修改后挪到这一节
 
-| keyword  | value                 | comment                      | fallback_value | type   | module                |
-|----------|:----------------------|------------------------------|----------------|--------|-----------------------|
-| CTYPE1   | 'RA---TPV'            |                              | 'RA---TAN'     | str    | csst_ms_sls_position  |
-| CTYPE2   | 'DEC--TPV'            |                              | 'DEC--TAN'     | str    | csst_ms_sls_position  |
-| CUNIT1   | 'deg  '               |                              | 'deg'          | str    | csst_ms_sls_position  |
-| CUNIT2   | 'deg  '               |                              | 'deg'          | str    | csst_ms_sls_position  |
-| RADESYS  | 'ICRS '               |                              | '?'            | str    | csst_ms_sls_position  |
-| PV1_0    | 0.003205383944913964  |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV1_1    | 0.8673020820536499    |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV1_2    | -0.2011989871377834   |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV1_3    | -0.2597214229472611   |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV1_4    | 0.4353828741811097    |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV1_5    | -0.5054216569802673   |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV1_6    | 0.1951474426617432    |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV2_0    | 0.00109803885992697   |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV2_1    | 0.9171065857705857    |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV2_2    | -0.04908256792722099  |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV2_3    | -0.09860562038448289  |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV2_4    | 0.07961855240788976   |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV2_5    | -0.2009224365497067   |                              | -9999          | f32    | csst_ms_sls_position  |
-| PV2_6    | 0.1741954691884874    |                              | -9999          | f32    | csst_ms_sls_position  |
-| *NS_POS  | 10                    | number of the stars          | --             | i8     | csst_ms_sls_position  |
-| RA_OFF   | -0.0                  | mas in unit                  | -9999          | f32    | csst_ms_sls_position  |
-| DEC_OFF  | 0.0                   | mas in unit                  | -9999          | f32    | csst_ms_sls_position  |
-| RA_RMS   | 127.1                 | mas in unit                  | -9999          | f32    | csst_ms_sls_position  |
-| DEC_RMS  | 60.4                  | mas in unit                  | -9999          | f32    | csst_ms_sls_position  |
-| RA_CEN   | 193.299027            | center of detector in ra     | --             | f32    | csst_ms_sls_position  |
-| DEC_CEN  | 26.08851              | center of detector in dec    | --             | f32    | csst_ms_sls_position  |
-| *VER_POS | '1.0'                 | version of distortion        | '1.0'          | str    | csst_ms_sls_position  |
-| *STM_POS | '2023-02-16 12:15:16' | time of last modification    | --             | str    | csst_ms_sls_position  |
-| *STA_POS | 0                     | 0 for done, 1 for failure    | 1              | i8     |  csst_ms_sls_position |
+| keyword  | value                 | comment                      | fallback_value | type   | module                | last modified |
+|----------|:----------------------|------------------------------|----------------|--------|-----------------------|------|
+| CTYPE1   | 'RA---TPV'            | type of ra                   | 'RA---TAN'     | str    | csst_ms_sls_position  | C7   |
+| CTYPE2   | 'DEC--TPV'            | type of dec                  | 'DEC--TAN'     | str    | csst_ms_sls_position  | C7   |
+| CUNIT1   | 'deg  '               | unit of ra                   | 'deg'          | str    | csst_ms_sls_position  | C7   |
+| CUNIT2   | 'deg  '               | unit of dec                  | 'deg'          | str    | csst_ms_sls_position  | C7   |
+| RADESYS  | 'ICRS '               | international celestial reference system | -  | str    | csst_ms_sls_position  | C7   |
+| PV1_0    | 0.003205383944913964  | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV1_1    | 0.8673020820536499    | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV1_2    | -0.2011989871377834   | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV1_3    | -0.2597214229472611   | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV1_4    | 0.4353828741811097    | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV1_5    | -0.5054216569802673   | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV1_6    | 0.1951474426617432    | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV2_0    | 0.00109803885992697   | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV2_1    | 0.9171065857705857    | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV2_2    | -0.04908256792722099  | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV2_3    | -0.09860562038448289  | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV2_4    | 0.07961855240788976   | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV2_5    | -0.2009224365497067   | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| PV2_6    | 0.1741954691884874    | pv coefficients              | -9999          | f32    | csst_ms_sls_position  | C7   |
+| NS_POS   | 10                    | number of the stars          | --             | i8     | csst_ms_sls_position  | C7   |
+| RA_OFF   | -0.0                  | mas in unit                  | -9999          | f32    | csst_ms_sls_position  | C7   |
+| DEC_OFF  | 0.0                   | mas in unit                  | -9999          | f32    | csst_ms_sls_position  | C7   |
+| RA_RMS   | 127.1                 | mas in unit                  | -9999          | f32    | csst_ms_sls_position  | C7   |
+| DEC_RMS  | 60.4                  | mas in unit                  | -9999          | f32    | csst_ms_sls_position  | C7   |
+| RA_CEN   | 193.299027            | center of detector in ra     | --             | f32    | csst_ms_sls_position  | C7   |
+| DEC_CEN  | 26.08851              | center of detector in dec    | --             | f32    | csst_ms_sls_position  | C7   |
+| VER_POS  | '1.0'                 | version of distortion        | '1.0'          | str    | csst_ms_sls_position  | C7   |
+| STM_POS  | '2023-02-16 12:15:16' | time of last modification    | --             | str    | csst_ms_sls_position  | C7   |
+| STA_POS  | 0                     | 0 for done, 1 for failure    | 1              | i8     |  csst_ms_sls_position | C7   |
 
 
 #### Header of `csst_ms_sls_qc1`
@@ -153,3 +152,4 @@ CD1_1等系数在修改后挪到这一节
 | EXTVER    | 1           | Extension version number   | 1              | int     | C7 |
 | BUNIT    | 'unitless'    | Brightness units           | 'unitless'       | str    | C7 |
 
+ C7   |
