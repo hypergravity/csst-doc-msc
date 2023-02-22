@@ -152,4 +152,3 @@ CD1_1等系数在修改后挪到这一节
 | EXTVER    | 1           | Extension version number   | 1              | int     | C7 |
 | BUNIT    | 'unitless'    | Brightness units           | 'unitless'       | str    | C7 |
 
- C7   |
