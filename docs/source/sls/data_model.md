@@ -39,12 +39,12 @@ COMMENT ==================================================================
 | R_BIAS             | '*bias.fits'           | SuperBias reference file name                 | 'N/A'                 | str    | C7  |
 | R_DARK             | '*dark.fits'           | Dark reference file name                      | 'N/A'                 | str    | C7  |
 | R_DFLAT            | '*flat.fits'           | Detector Flat reference file name             | 'N/A'                 | str    | C7  |
-| STA_DQINI            | 1                     | Data Quality Initialization status             | 0                     | int  | C7  |
-| STA_SATURA           | 1                      | Saturation Checking status                 | 0                     | int   | C7  |
-| STA_ERRINI           | 1                      | Error Initialization status                 | 0                     | int   | C7  |
-| STA_BIAS             | 1                      | Bias correction status                      | 0                     | int   | C7  |
-| STA_DARK             | 1                     | Dark correction status                       | 0                     | int   | C7  |
-| STA_FLAT             | 1                      | Flat field correction status                 | 0                     | int   | C7  |
+| STA_DQINI            | 0                     | Data Quality Initialization status             | 1                     | int  | C7  |
+| STA_SATURA           | 0                      | Saturation Checking status                 | 1                    | int   | C7  |
+| STA_ERRINI           | 0                      | Error Initialization status                 | 1                     | int   | C7  |
+| STA_BIAS             | 0                      | Bias correction status                      | 1                     | int   | C7  |
+| STA_DARK             | 0                     | Dark correction status                       | 1                     | int   | C7  |
+| STA_FLAT             | 0                      | Flat field correction status                 | 1                     | int   | C7  |
 | VER_INST           | '0.0.1 '               | Instrument calibration pipeline version   | -                     | str    | C7 |
 | STA_INST        | 1  | Instrument calibration status | 0 | int | C7 |
 | STM_INST | '2022-12-30T10:18:53'  | Instrument pipeline processing time             | -  | str    | C7  |
