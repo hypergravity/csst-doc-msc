@@ -111,12 +111,12 @@ CD1_1等系数在修改后挪到这一节
 
 
 #### Header of `csst_ms_sls_qc1`
-| keyword        | value                    | comment                      | fallback_value         | type  | last modified |
-|----------------|:-------------------------|------------------------------|------------------------|-------|---------------|
-| STA_QC1        | 0                        | 0 for success, 1 for failure | 1                      | i8    | C7            |
-| VER_QC1        | '0.0.1'                  | QC1 pipeline version         | '0.0.1'                | str   | C7            |
-| QC1_FLAG       | 0                        | Quality flags                | -99                    | i16   | C7            |
-| STM_QC1        | '2023-02-16T12:15:16'    | QC1 pipeline processing time | '2023-02-16T12:15:16'  | str   | C7            | 
+| keyword        | value                    | comment                      | fallback_value | type  | last modified |
+|----------------|:-------------------------|------------------------------|----------------|-------|---------------|
+| STA_QC1        | 0                        | 0 for success, 1 for failure | -              | i8    | C7            |
+| VER_QC1        | '0.0.1'                  | QC1 pipeline version         | -              | str   | C7            |
+| QC1_FLAG       | 0                        | Quality flags                | -99            | i16   | C7            |
+| STM_QC1        | '2023-02-16T12:15:16'    | QC1 pipeline processing time | -              | str   | C7            | 
  
 ### HDU2
 
