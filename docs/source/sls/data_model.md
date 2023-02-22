@@ -121,13 +121,13 @@ CD1_1等系数在修改后挪到这一节
 
 | keyword  | value         | comment                    | fallback_value | type    | last modified                  |
 |----------|---------------|----------------------------|----------------|---------|-------------------------|
-| XTENSION | 'IMAGE'         | Image extension            | 'IMAGE'          | str     | C7  |
-| BITPIX   | -32           | Bits per data value        | -32            | int      | C7  |                 
-| NAXIS    | 2             | Number of array dimensions | 2              | int      | C7  |                 
-| NAXIS1   | 9216          | Size of the axis           | 9216           | int      | C7  |                 
-| NAXIS2   | 9232          | Size of the axis           | 9232           | int      | C7  |
-| PCOUNT   | 0             | Number of parameters       | 0              | int      | C7  |                         
-| GCOUNT   | 1             | Number of groups           | 1              | int      | C7 |                                       
+| XTENSION | 'IMAGE'         | Image extension            | -          | str     | C7  |
+| BITPIX   | -32           | Bits per data value        | -            | int      | C7  |                 
+| NAXIS    | 2             | Number of array dimensions | -              | int      | C7  |                 
+| NAXIS1   | 9216          | Size of the axis           | -          | int      | C7  |                 
+| NAXIS2   | 9232          | Size of the axis           | -           | int      | C7  |
+| PCOUNT   | 0             | Number of parameters       | -              | int      | C7  |                         
+| GCOUNT   | 1             | Number of groups           | -              | int      | C7 |                                       
 | EXTNAME  | 'ERR'           | Extension name             | 'ERR'            | str     | C7  |
 | EXTVER   | 1             | Extension version number   | 1              | int      | C7  |
 | BUNIT   | 'e-/s'   | Brightness units           | 'e-/s'    | str     | C7  |
@@ -138,13 +138,13 @@ CD1_1等系数在修改后挪到这一节
 
 | keyword   | value       | comment                    | fallback_value | type   | last modified                |
 |-----------|-------------|----------------------------|----------------|--------|------------------------|
-| XTENSION  | 'IMAGE'       | Image extension            | 'IMAGE'          | str    | C7 |
-| BITPIX    | 16          | Bits per data value        | 16             | int     | C7 |                 
-| NAXIS     | 2           | Number of array dimensions | 2              | int     | C7 |                 
-| NAXIS1    | 9216        | Size of the axis           | 9216           | int     | C7 |                 
-| NAXIS2    | 9232        | Size of the axis           | 9232           | int     | C7 |
-| PCOUNT    | 0           | Number of parameters       | 0              | int     | C7 |                         
-| GCOUNT    | 1           | Number of groups           | 1              | int     | C7 |
+| XTENSION  | 'IMAGE'       | Image extension            | -         | str    | C7 |
+| BITPIX    | 16          | Bits per data value        | -             | int     | C7 |                 
+| NAXIS     | 2           | Number of array dimensions | -              | int     | C7 |                 
+| NAXIS1    | 9216        | Size of the axis           |-           | int     | C7 |                 
+| NAXIS2    | 9232        | Size of the axis           | -          | int     | C7 |
+| PCOUNT    | 0           | Number of parameters       | -              | int     | C7 |                         
+| GCOUNT    | 1           | Number of groups           | -              | int     | C7 |
 | EXTNAME   | 'DQ'          | Extension name             | 'DQ'             | str    | C7 |
 | EXTVER    | 1           | Extension version number   | 1              | int     | C7 |
 | BUNIT    | 'unitless'    | Brightness units           | 'unitless'       | str    | C7 |
