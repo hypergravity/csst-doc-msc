@@ -54,8 +54,6 @@ COMMENT ==================================================================
 
 #### Header of `csst_ms_sls_instrument`
 
-`IMAGE STATISTICS AND DATA QUALITY FLAGS` 需要修改成为标准格式，首字母大写
-增加宇宙线证认相关关键字
 
 | keyword   | value    | comment                                 | fallback_value | type | last modified                   |
 |-----------|:---------|-----------------------------------------|----------------|------|--------------------------|
