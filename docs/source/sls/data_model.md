@@ -67,8 +67,8 @@ COMMENT ==================================================================
 | SNRMIN    | 187.4    | Minmum signal to noise of good pixels   | -9999          | float  | C7   |
 | SNRMAX    | 1.2      | Maxmum signal to noise of good pixels   | -9999          | float  | C7  |
 | SNRMEAN   | 3.38     | Average of the dark values subtracted   | -9999          | float  | C7   |
-
-VER_INST 仪器改正版本号
+| CRCOUNT  | 88988 | Cosmic ray counts | -9999 | float | C7 |
+VER_INST 仪器改正版本号 
 STA_INST 仪器改正状态
 STM_INST 仪器改正时间戳
 
