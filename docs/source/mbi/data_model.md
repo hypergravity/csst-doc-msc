@@ -137,27 +137,20 @@
 | *STA_QC0  | 0       | QC0 Status (0/1/2)                            | -1         | int   | csst_ms_qc0   |
 | VER_QC0   | '0.0.1' | Pipeline version                              | '0.0.1'    | str   | csst_ms_qc0   |
 | STM_QC0   | '2022-12-30T18:36:05' | QC0 operation time| --- | str | csst_ms_qc0 |
-| *CRCCHECK | 0       | CRC check                                     | 1          | bool  | csst_ms_qc0   |
-| FLG_DET   | 0       | Detector flag (0/bit)                         | ?          | int   | csst_ms_qc0   |
-| FLG_TEL   | 0       | Telescope flag (0/bit)                        | ?          | int   | csst_ms_qc0   |
-| FLG_GUID  | 0       | Guider flag (0/bit)                           | ?          | int   | csst_ms_qc0   |
-| *DATAERR  | 1       | indicating data error                         | 0          | bool  | csst_ms_qc0   |
-| *IMGERR   | 1       | indicating image error                        | 0          | bool  | csst_ms_qc0   |
-| SHUTTER   | 1       | indicating shutter error                      | 0          | bool  | csst_ms_qc0   |
-| FAILGUID  | 1       | missing guiding stars                         | 0          | bool  | csst_ms_qc0   |
-| FAILCOOL  | 1       | indicating system cooling error               | 0          | bool  | csst_ms_qc0   |
-| GUID_OFF  | 0.0     | guiding stars offset (arcsec)                 | -9999      | f32   | csst_ms_qc0   |
-| DEAD_CCD  | 1       | indicating dead CCD                           | 0          | bool  | csst_ms_qc0   |
-| NOIS_CCD  | 1       | indicating higher CCD noise level             | 0          | bool  | csst_ms_qc0   |
-| FF_PETAL  | 1       | indicating image diffraction pattern          | 0          | bool  | csst_ms_qc0   |
-| GUID_ERR  | 1       | indicating larger guiding offset              | 0          | bool  | csst_ms_qc0   |
-| CROSTALK  | 1       | indicating significant image crosstalk        | 0          | bool  | csst_ms_qc0   |
-| BADPIXFR  | 0.0     | CCD bad pixel fraction (unitless)             | -9999      | f32   | csst_ms_qc0   |
-| PSF_SIZE  | 0.0     | Best-fit PSF size from guider                 | -9999      | f32   | csst_ms_qc0   |
-| STRLIGHT  | 1       | Significant stray light effect in this field  | 0          | bool  | csst_ms_qc0   |
-| BAD_ROT   | 1       | indicating bad rotation effect in this field  | 0          | bool  | csst_ms_qc0   |
-| BRI_STAR  | 1       | Significant bright star in this field         | 0          | bool  | csst_ms_qc0   |
-| CCD_TEMP  | 0.0     | Large CCD temperature variation in this field | -9999      | f32   | csst_ms_qc0   |
+| S_CHKSUM | 0       | CRC checksum                                     | 1          | int  | csst_ms_qc0   |
+| F_TELSCP   | 0       | Telescope flag (0/bit)                        | ?          | int   | csst_ms_qc0   |
+| S_SHUTTR   | 0       | indicating shutter status                      | 1          | int  | csst_ms_qc0   |
+| S_COOLNG  | 0       | indicating system cooling status              | 1          | int  | csst_ms_qc0   |
+| F_GUIDER  | 0       | Guider flag (0/bit)                           | ?          | int   | csst_ms_qc0   |
+| S_GUIDER  | 0       | indicating guiding stars status                        | 1          | int  | csst_ms_qc0   |
+| F_DETECT   | 0       | Detector flag (0/bit)                         | ?          | int   | csst_ms_qc0   |
+| S_DTDEAD  | 0       | indicating dead detector                           | 1          | int  | csst_ms_qc0   |
+| S_DTNOIS  | 0       | indicating higher detector noise level             | 1          | int  | csst_ms_qc0   |
+| S_DIFPAT  | 0       | indicating image diffraction pattern          | 1          | int  | csst_ms_qc0   |
+| S_XTALK  | 0       | indicating significant image crosstalk        | 1          | int  | csst_ms_qc0   |
+| S_BADPIX  | 0     | CCD bad pixel fraction > 3 sigma             | 1      | int   | csst_ms_qc0   |
+| S_BRIBKG  | 0       | Significant stray light effect in this field  | 1          | int  | csst_ms_qc0   |
+| S_DTTEMP  | 0    | Large CCD temperature variation in this field | 1      | int   | csst_ms_qc0   |
 
 #### Header of `csst_ms_qc0 qc1 check`
 
@@ -166,8 +159,8 @@
 | STA_QC1 | 0         | QC1 Status (0/non-zero) | -1            | int   | csst_ms_qc0   |
 | VER_QC1  | '0.0.1'   | Pipeline version        | '0.0.1'       | str   | csst_ms_qc0   |
 | STM_QC0   | '2022-12-30T18:36:05' | QC0 operation time| --- | str | csst_ms_qc0 |
-| STA_FOCS  | 0  | focus status    | 1      | int   | csst_ms_qc0   |
-| STA_WCS  | 0         | WCS Calibration status         | 1             | int  | csst_ms_qc0   | 
+| S_FOCUS  | 0  | focus status    | 1      | int   | csst_ms_qc0   |
+| S_WCS  | 0         | WCS Calibration status         | 1             | int  | csst_ms_qc0   | 
 
 
 ## File: *_cat.fits
