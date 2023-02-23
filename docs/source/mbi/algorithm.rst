@@ -30,9 +30,3 @@ Astrometry
 ----------
 
 `csst_ms_mbi_astrometry` package.
-
-
-API
----
-
-TODO
