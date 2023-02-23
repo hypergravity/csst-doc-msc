@@ -135,9 +135,10 @@
 | keyword   | value   | comment                                       | fill value | type  | module        |
 |-----------|---------|-----------------------------------------------|------------|-------|---------------|
 | *CRCCHECK | T       | CRC check                                     | F          | bool  | csst_ms_qc0   |
-| PRIPARAM  | 0       | Primary parameters verification               | 1          | int   | csst_ms_qc0   |
-| SECPARAM  | 0       | Secondary parameters verification             | 1          | int   | csst_ms_qc0   |
-| *STA_QC0  | 0       | QC0 Status (0/non-zero)                       | -1         | int   | csst_ms_qc0   |
+| *STA_QC0  | 0       | QC0 Status (0/1/2)                            | -1         | int   | csst_ms_qc0   |
+| FLG_DET   | 0       | Detector flag (0/bit)                         | ?          | int   | csst_ms_qc0   |
+| FLG_TEL   | 0       | Telescope flag (0/bit)                        | ?          | int   | csst_ms_qc0   |
+| FLG_GUID  | 0       | Guider flag (0/bit)                           | ?          | int   | csst_ms_qc0   |
 | *DATAERR  | F       | indicating data error                         | T          | bool  | csst_ms_qc0   |
 | *IMGERR   | F       | indicating image error                        | T          | bool  | csst_ms_qc0   |
 | SHUTTER   | F       | indicating shutter error                      | T          | bool  | csst_ms_qc0   |
