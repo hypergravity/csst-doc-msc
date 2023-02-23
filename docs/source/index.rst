@@ -15,8 +15,9 @@ Welcome to csst-l1doc's documentation!
    :caption: MBI
    :hidden:
 
-   mbi/mbi.rst
+   mbi/algorithm.rst
    mbi/data_model.md
+   mbi/api.rst
 
 
 .. toctree::
@@ -24,9 +25,9 @@ Welcome to csst-l1doc's documentation!
    :caption: SLS
    :hidden:
 
-   sls/sls2d.rst
-   sls/sls1d.rst
+   sls/algorithm.rst
    sls/data_model.md
+   sls/api.rst
 
 
 .. toctree::
@@ -34,7 +35,7 @@ Welcome to csst-l1doc's documentation!
    :caption: MCI
    :hidden:
 
-   mci/mci.rst
+   mci/algorithm.rst
    mci/data_model.md
 
 
@@ -43,7 +44,7 @@ Welcome to csst-l1doc's documentation!
    :caption: IFS
    :hidden:
 
-   ifs/ifs.rst
+   ifs/algorithm.rst
    ifs/data_model.md
 
 
@@ -52,7 +53,7 @@ Welcome to csst-l1doc's documentation!
    :caption: CPIC
    :hidden:
 
-   cpic/cpic.rst
+   cpic/algorithm.rst
    cpic/data_model.md
 
 
@@ -61,8 +62,8 @@ Welcome to csst-l1doc's documentation!
    :caption: HSTDM
    :hidden:
 
-   thz/thz.rst
-   thz/data_model.md
+   hstdm/algorithm.rst
+   hstdm/data_model.md
 
 
 .. toctree::
@@ -70,7 +71,7 @@ Welcome to csst-l1doc's documentation!
    :caption: OOC
    :hidden:
 
-   ooc/ooc.rst
+   ooc/algorithm.rst
    ooc/data_model.md
 
 

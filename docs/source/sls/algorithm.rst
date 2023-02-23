@@ -1,5 +1,5 @@
-SLS-2D pipeline
-===============
+SLS pipeline
+============
 
 
 Instrument correction
