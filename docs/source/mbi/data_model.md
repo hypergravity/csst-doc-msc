@@ -35,10 +35,12 @@
 | *SKY_BKG  | 0.1                   | Estimated sky background (e-/s per pixel)       | -9999        | f32  | csst_ms_mbi_instrument   |
 | *SKY_RMS  | 10.0                  | *Standard dev of frame background (ADU) -> e-/s | -9999        | f32  | csst_ms_mbi_instrument   |        
 | SATURATE  | 1833.333333333333     | The flux limit of saturated pixel (e-/s)        | -9999        | f32  | csst_ms_mbi_instrument   |
-| *STA_CTE  | 0                     | Has CTE correction                              | 1            | bool | csst_ms_mbi_instrument   |
-| *STA_SAT  | 0                     | Has satellite correction                        | 1            | bool | csst_ms_mbi_instrument   |
-| *STA_CRS  | 0                     | Has cosmic rays mask                            | 1            | bool | csst_ms_mbi_instrument   |
+| *STA_CTE  | 0                     | Status flag for CTE correction                  | 1            | bool | csst_ms_mbi_instrument   |
+| *STA_SAT  | 0                     | Status flag for satellite correction            | 1            | bool | csst_ms_mbi_instrument   |
+| *STA_CRS  | 0                     | Status flag for cosmic rays mask                | 1            | bool | csst_ms_mbi_instrument   |
 | CRCOUNT   | 66791                 | Cosmic rays counts                              | -9999        | i8   | csst_ms_mbi_instrument   |
+| *STA_NLIN | 0                     | Status flag for non-linear correction           | 1            | bool | csst_ms_mbi_instrument   |
+| *STA_SHUT | 0                     | Status flag for shutter effect correction       | 1            | bool | csst_ms_mbi_instrument   |
 | *VER_INST | '0.0.1   '            | Version of instrument processing                | '0.0.1   '   | str  | csst_ms_mbi_instrument   |
 | *STM_INST | '2022-12-30T10:18:53' | Time stamp of instrument processing             | ---          | str  | csst_ms_mbi_instrument   |
 | *STA_INST | 0                     | 0=done 1=wrong                                  | 1            | i8   | csst_ms_mbi_distortion   | 
