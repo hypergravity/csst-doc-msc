@@ -293,7 +293,7 @@
 | VER_CCRS  |  "v2023.01"               |  Version of CSST relative Astrometry soft in CCRS                 | "v2023.01"            | str |csst_ms_mbi_astrometry  |
 | CCRSGATE  |  "  "                     |  Camera shutter information                                       | "   "                 | str |csst_ms_mbi_astrometry  |
 | CCRSCONF  |  "  "                     |  Configuration file for astrometry                                | "   "                 | str |csst_ms_mbi_astrometry  |
-| CCRSIM    |  " mormal"                |  Image classification for CSST Astrometry                         | " normal "            | str |csst_ms_mbi_astrometry  |
+| CCRSIM    |  " normal"                |  Image classification for CSST Astrometry                         | " normal "            | str |csst_ms_mbi_astrometry  |
 | CCRSTM    |  2023:02:03-12:03:04      |  Time of last CSST Astrometry in CCRS                             | 2023:02:03-12:03:04   | str |csst_ms_mbi_astrometry  |
 | CCRSREF   |  "Gaia dr3 v01"           |  Reference Catalogue for CSST Astrometry in CCRS                  | "Gaia dr3 v01"        | str |csst_ms_mbi_astrometry  |
 | CCRSHIS   |  1                        |  Astrometric solution Record for CCRS                             | 1                     | i8  |csst_ms_mbi_astrometry  |
