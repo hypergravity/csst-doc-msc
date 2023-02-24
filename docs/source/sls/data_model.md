@@ -112,7 +112,7 @@ CD1_1等系数在修改后挪到这一节
 |----------------|:--------------------------|------------------------------|------------|-------|---------------|
 | STA_QC1        | 0                         | 0 for success, 1 for failure | -1         | i8    | C7            |
 | VER_QC1        | '0.0.1'                   | QC1 pipeline version         | '0.0.1'    | str   | C7            |
-| QC1_FLAG       | 0                         | Quality flags                | -9999      | i16   | C7            |
+| FLG_QC1        | 0                         | Quality flags                | -9999      | i16   | C7            |
 | STM_QC1        | '2023-02-16T12:15:16'     | QC1 pipeline processing time | -          | str   | C7            | 
  
 ### HDU2
