@@ -134,7 +134,7 @@
 
 | keyword  | value                 | comment                                        | fill value | type  | module      |
 |----------|-----------------------|------------------------------------------------|------------|-------|-------------|
-| *STA_QC0 | 0                     | QC0 Status (0/1/2)                             | -1         | int   | csst_ms_qc0 |
+| STA_QC0 | 0                     | QC0 Status (0/1/2)                             | -1         | int   | csst_ms_qc0 |
 | VER_QC0  | '0.0.1'               | Pipeline version                               | '0.0.1'    | str   | csst_ms_qc0 |
 | STM_QC0  | '2022-12-30T18:36:05' | QC0 operation time                             | ---        | str   | csst_ms_qc0 |
 | Q_CHKSUM | 0                     | CRC checksum                                   | 1          | int   | csst_ms_qc0 |
