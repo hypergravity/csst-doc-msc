@@ -137,20 +137,20 @@
 | *STA_QC0 | 0                     | QC0 Status (0/1/2)                             | -1         | int   | csst_ms_qc0 |
 | VER_QC0  | '0.0.1'               | Pipeline version                               | '0.0.1'    | str   | csst_ms_qc0 |
 | STM_QC0  | '2022-12-30T18:36:05' | QC0 operation time                             | ---        | str   | csst_ms_qc0 |
-| S_CHKSUM | 0                     | CRC checksum                                   | 1          | int   | csst_ms_qc0 |
+| Q_CHKSUM | 0                     | CRC checksum                                   | 1          | int   | csst_ms_qc0 |
 | F_TELSCP | 0                     | Telescope flag (0/bit)                         | ?          | int   | csst_ms_qc0 |
-| S_SHUTTR | 0                     | indicating shutter status                      | 1          | int   | csst_ms_qc0 |
-| S_COOLNG | 0                     | indicating system cooling status               | 1          | int   | csst_ms_qc0 |
+| Q_SHUTTR | 0                     | indicating shutter status                      | 1          | int   | csst_ms_qc0 |
+| Q_COOLNG | 0                     | indicating system cooling status               | 1          | int   | csst_ms_qc0 |
 | F_GUIDER | 0                     | Guider flag (0/bit)                            | ?          | int   | csst_ms_qc0 |
-| S_GUIDER | 0                     | indicating guiding stars status                | 1          | int   | csst_ms_qc0 |
+| Q_GUIDER | 0                     | indicating guiding stars status                | 1          | int   | csst_ms_qc0 |
 | F_DETECT | 0                     | Detector flag (0/bit)                          | ?          | int   | csst_ms_qc0 |
-| S_DTDEAD | 0                     | indicating dead detector                       | 1          | int   | csst_ms_qc0 |
-| S_DTNOIS | 0                     | indicating higher detector noise level         | 1          | int   | csst_ms_qc0 |
-| S_DIFPAT | 0                     | indicating image diffraction pattern           | 1          | int   | csst_ms_qc0 |
-| S_XTALK  | 0                     | indicating significant image crosstalk         | 1          | int   | csst_ms_qc0 |
-| S_BADPIX | 0                     | CCD bad pixel fraction > 3 sigma               | 1          | int   | csst_ms_qc0 |
-| S_BRIBKG | 0                     | Significant stray light effect in this field   | 1          | int   | csst_ms_qc0 |
-| S_DTTEMP | 0                     | Large CCD temperature variation in this field  | 1          | int   | csst_ms_qc0 |
+| Q_DTDEAD | 0                     | indicating dead detector                       | 1          | int   | csst_ms_qc0 |
+| Q_DTNOIS | 0                     | indicating higher detector noise level         | 1          | int   | csst_ms_qc0 |
+| Q_DIFPAT | 0                     | indicating image diffraction pattern           | 1          | int   | csst_ms_qc0 |
+| Q_XTALK  | 0                     | indicating significant image crosstalk         | 1          | int   | csst_ms_qc0 |
+| Q_BADPIX | 0                     | CCD bad pixel fraction > 3 sigma               | 1          | int   | csst_ms_qc0 |
+| Q_BRIBKG | 0                     | Significant stray light effect in this field   | 1          | int   | csst_ms_qc0 |
+| Q_DTTEMP | 0                     | Large CCD temperature variation in this field  | 1          | int   | csst_ms_qc0 |
 
 #### Header of `csst_ms_qc0 qc1 check`
 
@@ -159,8 +159,8 @@
 | STA_QC1 | 0                     | QC1 Status (0/non-zero)  | -1         | int   | csst_ms_qc0    |
 | VER_QC1 | '0.0.1'               | Pipeline version         | '0.0.1'    | str   | csst_ms_qc0    |
 | STM_QC0 | '2022-12-30T18:36:05' | QC0 operation time       | ---        | str   | csst_ms_qc0    |
-| S_FOCUS | 0                     | focus status             | 1          | int   | csst_ms_qc0    |
-| S_WCS   | 0                     | WCS Calibration status   | 1          | int   | csst_ms_qc0    | 
+| Q_FOCUS | 0                     | focus status             | 1          | int   | csst_ms_qc0    |
+| Q_WCS   | 0                     | WCS Calibration status   | 1          | int   | csst_ms_qc0    | 
 
 
 ## File: *_cat.fits
