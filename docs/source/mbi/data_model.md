@@ -44,7 +44,7 @@
 |  VER_INST | '0.0.1   '            | Version of instrument processing                | '0.0.1   '   | str  | csst_ms_mbi_instrument   |
 |  STM_INST | '2022-12-30T10:18:53' | Time stamp of instrument processing             | ---          | str  | csst_ms_mbi_instrument   |
 |  STA_INST | 0                     | 0=done 1=wrong                                  | 1            | i8   | csst_ms_mbi_distortion   | 
-|  DATASUM  | '1352015684'          | *data unit checksum updated 2022-10-28T19:29:10 | ---          | str  | csst_ms_mbi_instrument   |
+|  DATASUM  | '1352015684'          | data unit checksum                              | ---          | str  | csst_ms_mbi_instrument   |
 
 #### Header of `csst_ms_mbi_distortion`
 
@@ -95,10 +95,10 @@
 | PV2_6     | 3.398895060382E-03       |                                            | -9999      | f32  | csst_ms_mbi_position    |
 | ASTRRMS1  | 6.458653303335E-06       | Astrom. dispersion RMS (ref., high S/N)    |            | f32  | csst_ms_mbi_position    |
 | ASTRRMS2  | 8.724734011714E-06       | Astrom. dispersion RMS (ref., high S/N)    |            | f32  | csst_ms_mbi_position    |       
-| STA_POSI | 0                        | 0=done                                     |            | i8   | csst_ms_mbi_position    | 
-| VER_POSI | '2.0.4   '               | Version of WCS calibration                 | '2.0.4   ' | str  | csst_ms_mbi_position    |        
-| CFG_POSI | 'default.scamp'          | Configure file name of WCS                 | ---        | str  | csst_ms_mbi_position    |                    
-| STM_POSI | '2022-12-30 18:32:46 PM' | Time of last wcs calibration               | ---        | str  | csst_ms_mbi_position    |             
+| STA_POSI  | 0                        | 0=done                                     |            | i8   | csst_ms_mbi_position    | 
+| VER_POSI  | '2.0.4   '               | Version of WCS calibration                 | '2.0.4   ' | str  | csst_ms_mbi_position    |        
+| CFG_POSI  | 'default.scamp'          | Configure file name of WCS                 | ---        | str  | csst_ms_mbi_position    |                    
+| STM_POSI  | '2022-12-30 18:32:46 PM' | Time of last wcs calibration               | ---        | str  | csst_ms_mbi_position    |             
 
 #### Header of `csst_ms_mbi_flux`
 
@@ -115,7 +115,6 @@
 | NS_MATCH    | 25                    | total number of matched stars in 2 arcsec      | ---             | i8   | csst_ms_mbi_flux   |
 | MED_CLR     | 0.0                   | median (BP-RP)_GAIA of matched stars           | -9999           | f32  | csst_ms_mbi_flux   |
 | SKY_MAG     | 0.0359                | mag/arcsec^2                                   | -9999           | f32  | csst_ms_mbi_flux   |                 
-| -SKY_RMS1   | 0.1766                | rms/pixel of the sky in unit of e-/s           | -9999           | f32  | csst_ms_mbi_flux   | 
 | MAG_LIM     | 21.83                 | magnitude limiting of 5-sigma galaxy detection | -9999           | f32  | csst_ms_mbi_flux   | 
 | STA_FLUX    | 0                     | flux calibration status                        | 1               | i8   | csst_ms_mbi_flux   |                       
 | VER_FLUX    | '1.3     '            | version of calibration code                    | '1.3'           | str  | csst_ms_mbi_flux   |
@@ -125,7 +124,7 @@
 
 | keyword  | value                 | comment                                        | fill value | type  | module      |
 |----------|-----------------------|------------------------------------------------|------------|-------|-------------|
-| STA_QC0 | 0                     | QC0 Status (0/1/2)                             | -1         | int   | csst_ms_qc0 |
+| STA_QC0  | 0                     | QC0 Status (0/1/2)                             | -1         | int   | csst_ms_qc0 |
 | VER_QC0  | '0.0.1'               | Pipeline version                               | '0.0.1'    | str   | csst_ms_qc0 |
 | STM_QC0  | '2022-12-30T18:36:05' | QC0 operation time                             | ---        | str   | csst_ms_qc0 |
 | Q_CHKSUM | 0                     | CRC checksum                                   | 1          | int   | csst_ms_qc0 |
