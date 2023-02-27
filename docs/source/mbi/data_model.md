@@ -93,21 +93,12 @@
 | PV2_4     | 1.561587727533E-03       |                                            | -9999      | f32  | csst_ms_mbi_position    |
 | PV2_5     | -4.159618376671E-03      |                                            | -9999      | f32  | csst_ms_mbi_position    |
 | PV2_6     | 3.398895060382E-03       |                                            | -9999      | f32  | csst_ms_mbi_position    |
-| -FGROUPNO | 1                        | SCAMP field group label                    |            | i8   | csst_ms_mbi_position    |
-| -ASTIRMS1 | 0.000000000000E+00       | Astrom. dispersion RMS (intern., high S/N) |            | f32  | csst_ms_mbi_position    |    
-| -ASTIRMS2 | 0.000000000000E+00       | Astrom. dispersion RMS (intern., high S/N) |            | f32  | csst_ms_mbi_position    |
-| *ASTRRMS1 | 6.458653303335E-06       | Astrom. dispersion RMS (ref., high S/N)    |            | f32  | csst_ms_mbi_position    |
-| *ASTRRMS2 | 8.724734011714E-06       | Astrom. dispersion RMS (ref., high S/N)    |            | f32  | csst_ms_mbi_position    |       
-| -ASTINST  | 1                        | SCAMP astrometric instrument label         |            | i8   | csst_ms_mbi_position    |
-| -FLXSCALE | 1.000000000000E+00       | SCAMP relative flux scale                  |            | f32  | csst_ms_mbi_position    |                     
-| -MAGZEROP | 0.00000000               | SCAMP zero-point                           |            | f32  | csst_ms_mbi_position    |                               
-| -PHOTIRMS | 0.00000000               | mag dispersion RMS (internal, high S/N)    |            | f32  | csst_ms_mbi_position    |
-| -PHOTINST | 1                        | SCAMP photometric instrument label         |            | i8   | csst_ms_mbi_position    |
-| -PHOTLINK | F                        | True if linked to a photometric field      |            | bool | csst_ms_mbi_position    |
-| *STA_POSI | 0                        | 0=done                                     |            | i8   | csst_ms_mbi_position    | 
-| *VER_POSI | '2.0.4   '               | Version of WCS calibration                 | '2.0.4   ' | str  | csst_ms_mbi_position    |        
-| *CFG_POSI | 'default.scamp'          | Configure file name of WCS                 | ---        | str  | csst_ms_mbi_position    |                    
-| *STM_POSI | '2022-12-30 18:32:46 PM' | Time of last wcs calibration               | ---        | str  | csst_ms_mbi_position    |             
+| ASTRRMS1  | 6.458653303335E-06       | Astrom. dispersion RMS (ref., high S/N)    |            | f32  | csst_ms_mbi_position    |
+| ASTRRMS2  | 8.724734011714E-06       | Astrom. dispersion RMS (ref., high S/N)    |            | f32  | csst_ms_mbi_position    |       
+| STA_POSI | 0                        | 0=done                                     |            | i8   | csst_ms_mbi_position    | 
+| VER_POSI | '2.0.4   '               | Version of WCS calibration                 | '2.0.4   ' | str  | csst_ms_mbi_position    |        
+| CFG_POSI | 'default.scamp'          | Configure file name of WCS                 | ---        | str  | csst_ms_mbi_position    |                    
+| STM_POSI | '2022-12-30 18:32:46 PM' | Time of last wcs calibration               | ---        | str  | csst_ms_mbi_position    |             
 
 #### Header of `csst_ms_mbi_flux`
 
