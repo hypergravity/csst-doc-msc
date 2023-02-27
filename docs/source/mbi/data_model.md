@@ -29,29 +29,29 @@
 
 | keyword   | value                 | comment                                         | fill value   | type | module                   |
 |-----------|:----------------------|-------------------------------------------------|--------------|------|--------------------------|
-| *STA_BIAS | 0                     | Status flag for bias frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
-| *STA_DARK | 0                     | Status flag for dark frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
-| *STA_FLAT | 0                     | Status flag for flat frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
-| *SKY_BKG  | 0.1                   | Estimated sky background (e-/s per pixel)       | -9999        | f32  | csst_ms_mbi_instrument   |
-| *SKY_RMS  | 10.0                  | *Standard dev of frame background (ADU) -> e-/s | -9999        | f32  | csst_ms_mbi_instrument   |        
+|  STA_BIAS | 0                     | Status flag for bias frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
+|  STA_DARK | 0                     | Status flag for dark frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
+|  STA_FLAT | 0                     | Status flag for flat frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
+|  SKY_BKG  | 0.1                   | Estimated sky background (e-/s per pixel)       | -9999        | f32  | csst_ms_mbi_instrument   |
+|  SKY_RMS  | 10.0                  | *Standard dev of frame background (ADU) -> e-/s | -9999        | f32  | csst_ms_mbi_instrument   |        
 | SATURATE  | 1833.333333333333     | The flux limit of saturated pixel (e-/s)        | -9999        | f32  | csst_ms_mbi_instrument   |
-| *STA_CTE  | 0                     | Status flag for CTE correction                  | 1            | i8   | csst_ms_mbi_instrument   |
-| *STA_SAT  | 0                     | Status flag for satellite correction            | 1            | i8   | csst_ms_mbi_instrument   |
-| *STA_CRS  | 0                     | Status flag for cosmic rays mask                | 1            | i8   | csst_ms_mbi_instrument   |
-| CRCOUNT   | 66791                 | Cosmic rays counts                              | -9999        | i8   | csst_ms_mbi_instrument   |
-| *STA_NLIN | 0                     | Status flag for non-linear correction           | 1            | i8   | csst_ms_mbi_instrument   |
-| *STA_SHUT | 0                     | Status flag for shutter effect correction       | 1            | i8   | csst_ms_mbi_instrument   |
-| *VER_INST | '0.0.1   '            | Version of instrument processing                | '0.0.1   '   | str  | csst_ms_mbi_instrument   |
-| *STM_INST | '2022-12-30T10:18:53' | Time stamp of instrument processing             | ---          | str  | csst_ms_mbi_instrument   |
-| *STA_INST | 0                     | 0=done 1=wrong                                  | 1            | i8   | csst_ms_mbi_distortion   | 
-| DATASUM   | '1352015684'          | *data unit checksum updated 2022-10-28T19:29:10 | ---          | str  | csst_ms_mbi_instrument   |
+|  STA_CTE  | 0                     | Status flag for CTE correction                  | 1            | i8   | csst_ms_mbi_instrument   |
+|  STA_SAT  | 0                     | Status flag for satellite correction            | 1            | i8   | csst_ms_mbi_instrument   |
+|  STA_CRS  | 0                     | Status flag for cosmic rays mask                | 1            | i8   | csst_ms_mbi_instrument   |
+|  CRCOUNT  | 66791                 | Cosmic rays counts                              | -9999        | i8   | csst_ms_mbi_instrument   |
+|  STA_NLIN | 0                     | Status flag for non-linear correction           | 1            | i8   | csst_ms_mbi_instrument   |
+|  STA_SHUT | 0                     | Status flag for shutter effect correction       | 1            | i8   | csst_ms_mbi_instrument   |
+|  VER_INST | '0.0.1   '            | Version of instrument processing                | '0.0.1   '   | str  | csst_ms_mbi_instrument   |
+|  STM_INST | '2022-12-30T10:18:53' | Time stamp of instrument processing             | ---          | str  | csst_ms_mbi_instrument   |
+|  STA_INST | 0                     | 0=done 1=wrong                                  | 1            | i8   | csst_ms_mbi_distortion   | 
+|  DATASUM  | '1352015684'          | *data unit checksum updated 2022-10-28T19:29:10 | ---          | str  | csst_ms_mbi_instrument   |
 
 #### Header of `csst_ms_mbi_distortion`
 
 | keyword  | value                 | comment                             | fill value | type | module                 |
 |----------|:----------------------|-------------------------------------|------------|------|------------------------|
-| *RADESYS | 'ICRS    '            |                                     | '?'        | str  | csst_ms_mbi_distortion |
-| *NS_DIST | 11                    | The number of stars used in fitting | ---        | i8   | csst_ms_mbi_distortion | 
+| RADESYS  | 'ICRS    '            |                                     | '?'        | str  | csst_ms_mbi_distortion |
+| NS_DIST  | 11                    | The number of stars used in fitting | ---        | i8   | csst_ms_mbi_distortion | 
 | PV1_0    | 0.003205383944913964  |                                     | -9999      | f32  | csst_ms_mbi_distortion |
 | PV1_1    | 0.8673020820536499    |                                     | -9999      | f32  | csst_ms_mbi_distortion |
 | PV1_2    | -0.2011989871377834   |                                     | -9999      | f32  | csst_ms_mbi_distortion |
@@ -118,17 +118,17 @@
 | ZPRMS       | 0.0101                | zpt rms of the matched objects                 | -9999           | f32  | csst_ms_mbi_flux   |                
 | APER_R      | 10                    | (pixels) photo-aperture radius                 | 10              | i8   | csst_ms_mbi_flux   |            
 | FWHM        | 2.147                 | FWHM in pixel                                  | -9999           | f32  | csst_ms_mbi_flux   |
-| *RA_OFF1    | -0.188                | median positional offset from GAIA, in arcsec  | -9999           | f32  | csst_ms_mbi_flux   |
-| *DEC_OFF1   | -0.1061               | median positional offset from GAIA, in arcsec  | -9999           | f32  | csst_ms_mbi_flux   | 
-| *NS_FLUX    | 49                    | total number of stars detected                 | ---             | i8   | csst_ms_mbi_flux   | 
-| *NS_MATCH   | 25                    | total number of matched stars in 2 arcsec      | ---             | i8   | csst_ms_mbi_flux   |
-| *MED_CLR    | 0.0                   | median (BP-RP)_GAIA of matched stars           | -9999           | f32  | csst_ms_mbi_flux   |
-| *SKY_MAG    | 0.0359                | mag/arcsec^2                                   | -9999           | f32  | csst_ms_mbi_flux   |                 
+| RA_OFF1     | -0.188                | median positional offset from GAIA, in arcsec  | -9999           | f32  | csst_ms_mbi_flux   |
+| DEC_OFF1    | -0.1061               | median positional offset from GAIA, in arcsec  | -9999           | f32  | csst_ms_mbi_flux   | 
+| NS_FLUX     | 49                    | total number of stars detected                 | ---             | i8   | csst_ms_mbi_flux   | 
+| NS_MATCH    | 25                    | total number of matched stars in 2 arcsec      | ---             | i8   | csst_ms_mbi_flux   |
+| MED_CLR     | 0.0                   | median (BP-RP)_GAIA of matched stars           | -9999           | f32  | csst_ms_mbi_flux   |
+| SKY_MAG     | 0.0359                | mag/arcsec^2                                   | -9999           | f32  | csst_ms_mbi_flux   |                 
 | -SKY_RMS1   | 0.1766                | rms/pixel of the sky in unit of e-/s           | -9999           | f32  | csst_ms_mbi_flux   | 
-| *MAG_LIM    | 21.83                 | magnitude limiting of 5-sigma galaxy detection | -9999           | f32  | csst_ms_mbi_flux   | 
-| *STA_FLUX   | 0                     | flux calibration status                        | 1               | i8   | csst_ms_mbi_flux   |                       
-| *VER_FLUX   | '1.3     '            | version of calibration code                    | '1.3'           | str  | csst_ms_mbi_flux   |
-| *STM_FLUX   | '2022-12-30 18:36:05' | flux calibration operation time                | ---             | str  | csst_ms_mbi_flux   |
+| MAG_LIM     | 21.83                 | magnitude limiting of 5-sigma galaxy detection | -9999           | f32  | csst_ms_mbi_flux   | 
+| STA_FLUX    | 0                     | flux calibration status                        | 1               | i8   | csst_ms_mbi_flux   |                       
+| VER_FLUX    | '1.3     '            | version of calibration code                    | '1.3'           | str  | csst_ms_mbi_flux   |
+| STM_FLUX    | '2022-12-30 18:36:05' | flux calibration operation time                | ---             | str  | csst_ms_mbi_flux   |
 
 #### Header of `csst_ms_qc0 qc0 check`
 
