@@ -35,8 +35,6 @@ COMMENT ==================================================================
 | EXTVER       | 1                        | Extension version number                     | 1          | int    | C7            |
 | BUNIT        | 'e-/s'                   | Brightness units                             | 'e-/s'     | str    | C7            |
 | R_GAIN       | '*.gain.fits'            | Gain reference file name                     | 'N/A'      | str    | C7            |
-| R_READN      | '*.rn.fits'              | Read noise reference file name               | 'N/A'      | str    | C7            |
-| R_SATURA     | '*.sat.fits'             | Saturation reference file name               | 'N/A'      | str    | C7            |
 | R_MASK       | '*.msk.fits'             | Mask reference file name                     | 'N/A'      | str    | C7            |
 | R_BIAS       | '*bias.fits'             | SuperBias reference file name                | 'N/A'      | str    | C7            |
 | R_DARK       | '*dark.fits'             | Dark reference file name                     | 'N/A'      | str    | C7            |
