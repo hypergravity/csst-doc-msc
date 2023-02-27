@@ -33,7 +33,7 @@ COMMENT ==================================================================
 | VER_CRDS     | '0.0.1 '                 | Version of CRDS file selection software used | -          | str    | C7            |
 | EXTNAME      | 'SCI'                    | Extension name                               | 'SCI'      | str    | C7            |
 | EXTVER       | 1                        | Extension version number                     | 1          | int    | C7            |
-| BUNIT        | 'e-/s'                   | Brightness units                             | 'e-/s'     | str    | C7            |
+| BUNIT        | 'e-/s'                   | Brightness units                             | 'ADU'     | str    | C7            |
 | R_GAIN       | '*.gain.fits'            | Gain reference file name                     | 'N/A'      | str    | C7            |
 | R_MASK       | '*.msk.fits'             | Mask reference file name                     | 'N/A'      | str    | C7            |
 | R_BIAS       | '*bias.fits'             | SuperBias reference file name                | 'N/A'      | str    | C7            |
@@ -119,7 +119,7 @@ CD1_1等系数在修改后挪到这一节
 | GCOUNT   | 1         | Number of groups           | -          | int       | C7            |                                       
 | EXTNAME  | 'ERR'     | Extension name             | 'ERR'      | str       | C7            |
 | EXTVER   | 1         | Extension version number   | 1          | int       | C7            |
-| BUNIT    | 'e-/s'    | Brightness units           | 'e-/s'     | str       | C7            |
+| BUNIT    | 'e-/s'    | Brightness units           | 'ADU'     | str       | C7            |
 
 ### HDU3
 
@@ -136,5 +136,5 @@ CD1_1等系数在修改后挪到这一节
 | GCOUNT   | 1           | Number of groups           | -              | int      | C7            |
 | EXTNAME  | 'DQ'        | Extension name             | 'DQ'           | str      | C7            |
 | EXTVER   | 1           | Extension version number   | 1              | int      | C7            |
-| BUNIT    | 'unitless'  | Brightness units           | 'unitless'     | str      | C7            |
+| BUNIT    | 'UNITLESS'  | Brightness units           | 'UNITLESS'     | str      | C7            |
 
