@@ -168,41 +168,38 @@
 
 | keyword            | value                             | comment                                     | fill value | type  | module                   |
 |--------------------|:----------------------------------|---------------------------------------------|------------|-------|--------------------------|
-| APERSIZE           | '3,4,5,6,8,10,13,16,20,25,30,40,' | aperture radii in pixels                    |            | str   | csst_ms_mbi_photometry   |   
-| NS_APER            | 75                                | number of stars used in aperture correction |            | i8    | csst_ms_mbi_photometry   | 
-| APCOR0             | -0.06074262037873268              | mag correction for aperture #0              |            | f32   | csst_ms_mbi_photometry   |              
-| APERR0             | 0.0                               | mag correction error for aperture #0        |            | f32   | csst_ms_mbi_photometry   |
-| APCOR1             | -0.01975813694298267              | mag correction for aperture #1              |            | f32   | csst_ms_mbi_photometry   |        
-| APERR1             | 0.0                               | mag correction error for aperture #1        |            | f32   | csst_ms_mbi_photometry   |        
-| APCOR2             | 0.0                               | mag correction for aperture #2              |            | f32   | csst_ms_mbi_photometry   |        
-| APERR2             | 0.0                               | mag correction error for aperture #2        |            | f32   | csst_ms_mbi_photometry   |        
-| APCOR3             | 0.01290098764002323               | mag correction for aperture #3              |            | f32   | csst_ms_mbi_photometry   |        
-| APERR3             | 0.0                               | mag correction error for aperture #3        |            | f32   | csst_ms_mbi_photometry   |        
-| APCOR4             | 0.02804811112582684               | mag correction for aperture #4              |            | f32   | csst_ms_mbi_photometry   |        
-| APERR4             | 0.0                               | mag correction error for aperture #4        |            | f32   | csst_ms_mbi_photometry   |        
-| APCOR5             | 0.03705496713519096               | mag correction for aperture #5              |            | f32   | csst_ms_mbi_photometry   |        
-| APERR5             | 0.0                               | mag correction error for aperture #5        |            | f32   | csst_ms_mbi_photometry   |        
-| APCOR6             | 0.04462624341249466               | mag correction for aperture #6              |            | f32   | csst_ms_mbi_photometry   |        
-| APERR6             | 0.0                               | mag correction error for aperture #6        |            | f32   | csst_ms_mbi_photometry   |        
-| APCOR7             | 0.05059236660599709               | mag correction for aperture #7              |            | f32   | csst_ms_mbi_photometry   |            
-| APERR7             | 0.0                               | mag correction error for aperture #7        |            | f32   | csst_ms_mbi_photometry   |        
-| APCOR8             | 0.05710481852293015               | mag correction for aperture #8              |            | f32   | csst_ms_mbi_photometry   |        
-| APERR8             | 0.0                               | mag correction error for aperture #8        |            | f32   | csst_ms_mbi_photometry   |        
-| APCOR9             | 0.06682745367288589               | mag correction for aperture #9              |            | f32   | csst_ms_mbi_photometry   |        
-| APERR9             | 0.0                               | mag correction error for aperture #9        |            | f32   | csst_ms_mbi_photometry   |        
-| APCOR10            | 0.07620415091514587               | mag correction for aperture #10             |            | f32   | csst_ms_mbi_photometry   |        
-| APERR10            | 0.0                               | mag correction error for aperture #10       |            | f32   | csst_ms_mbi_photometry   |        
-| APCOR11            | 0.0952027440071106                | mag correction for aperture #11             |            | f32   | csst_ms_mbi_photometry   |        
-| APERR11            | 0.0                               | mag correction error for aperture #11       |            | f32   | csst_ms_mbi_photometry   |        
-| HIERARCH ns_HYBRID | 328                               | number of stars used in HYBRID correction   |            | i8    | csst_ms_mbi_photometry   |          
-| HYBCOR             | 0.0498337559401989                | mag correction for HYBRID                   |            | f32   | csst_ms_mbi_photometry   |        
-| HYBERR             | 0.000711286964798456              | mag correction error                        |            | f32   | csst_ms_mbi_photometry   |        
-| NS_PSF             | 306                               | number of stars used in PSF correction      |            | i8    | csst_ms_mbi_photometry   |        
-| PSFCOR             | -0.00268870708532631              | mag correction for PSF                      |            | f32   | csst_ms_mbi_photometry   |        
-| PSFERR             | 0.000903990056504255              | mag correction error                        |            | f32   | csst_ms_mbi_photometry   |        
-| NS_MODEL           | 324                               | number of stars used in MODEL correction    |            | i8    | csst_ms_mbi_photometry   |       
-| MODCOR             | 0.04189466685056686               | mag correction for MODEL                    |            | f32   | csst_ms_mbi_photometry   |        
-| MODERR             | 0.000894258863834524              | mag correction error                        |            | f32   | csst_ms_mbi_photometry   |        
+| APERSIZE           | '3,4,5,6,8,10,13,16,20,25,30,40,' | aperture radii in pixels                    |  '3,4,5,6,8,10,13,16,20,25,30,40,'          | str   | csst_ms_mbi_photometry   |   
+| NS_APER            | 75                                | number of stars used in aperture correction |   0         | i8    | csst_ms_mbi_photometry   | 
+| APCOR0             | -0.06074262037873268              | mag correction for aperture #0              |   0.0         | f32   | csst_ms_mbi_photometry   |              
+| APERR0             | 0.0                               | mag correction error for aperture #0        |   0.0         | f32   | csst_ms_mbi_photometry   |
+| APCOR1             | -0.01975813694298267              | mag correction for aperture #1              |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APERR1             | 0.0                               | mag correction error for aperture #1        |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APCOR2             | 0.0                               | mag correction for aperture #2              |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APERR2             | 0.0                               | mag correction error for aperture #2        |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APCOR3             | 0.01290098764002323               | mag correction for aperture #3              |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APERR3             | 0.0                               | mag correction error for aperture #3        |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APCOR4             | 0.02804811112582684               | mag correction for aperture #4              |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APERR4             | 0.0                               | mag correction error for aperture #4        |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APCOR5             | 0.03705496713519096               | mag correction for aperture #5              |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APERR5             | 0.0                               | mag correction error for aperture #5        |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APCOR6             | 0.04462624341249466               | mag correction for aperture #6              |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APERR6             | 0.0                               | mag correction error for aperture #6        |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APCOR7             | 0.05059236660599709               | mag correction for aperture #7              |   0.0         | f32   | csst_ms_mbi_photometry   |            
+| APERR7             | 0.0                               | mag correction error for aperture #7        |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APCOR8             | 0.05710481852293015               | mag correction for aperture #8              |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APERR8             | 0.0                               | mag correction error for aperture #8        |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APCOR9             | 0.06682745367288589               | mag correction for aperture #9              |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APERR9             | 0.0                               | mag correction error for aperture #9        |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APCOR10            | 0.07620415091514587               | mag correction for aperture #10             |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APERR10            | 0.0                               | mag correction error for aperture #10       |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APCOR11            | 0.0952027440071106                | mag correction for aperture #11             |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| APERR11            | 0.0                               | mag correction error for aperture #11       |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| NS_PSF             | 306                               | number of stars used in PSF correction      |   0         | i8    | csst_ms_mbi_photometry   |        
+| PSFCOR             | -0.00268870708532631              | mag correction for PSF                      |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| PSFERR             | 0.000903990056504255              | mag correction error                        |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| NS_MODEL           | 324                               | number of stars used in MODEL correction    |   0         | i8    | csst_ms_mbi_photometry   |       
+| MODCOR             | 0.04189466685056686               | mag correction for MODEL                    |   0.0         | f32   | csst_ms_mbi_photometry   |        
+| MODERR             | 0.000894258863834524              | mag correction error                        |   0.0         | f32   | csst_ms_mbi_photometry   |        
 
 ### HDU1
 
@@ -231,26 +228,26 @@
 
 | keyword    | value        | comment                                       | fill value | type  | module             |
 |------------|:-------------|-----------------------------------------------|------------|-------|--------------------|
-| LOADED     | 579          | Number of loaded sources                      |            | I8    | csst_ooc_psf_mbi   |
-| ACCEPTED   | 573          | Number of accepted sources                    |            | I8    | csst_ooc_psf_mbi   |
-| CHI2       | 1.12832649   | Final reduced chi2                            |            | f32   | csst_ooc_psf_mbi   |
-| POLNAXIS   | 2            | Number of context parameters                  |            | I8    | csst_ooc_psf_mbi   |
-| POLGRP1    | 1            | Polynom group for this context parameter      |            | I8    | csst_ooc_psf_mbi   |
-| POLNAME1   | 'XWIN_IMAGE' | Name of this context parameter                |            | Str   | csst_ooc_psf_mbi   |
-| POLZERO1   | 4607.403434  | Offset value for this context parameter       |            | f32   | csst_ooc_psf_mbi   |
-| POLSCAL1   | 9161.359825  | Scale value for this context parameter        |            | f32   | csst_ooc_psf_mbi   |
-| POLGRP2    | 1            | Polynom group for this context parameter      |            | I8    | csst_ooc_psf_mbi   |
-| POLNAME2   | 'YWIN_IMAGE' | Name of this context parameter                |            | Str   | csst_ooc_psf_mbi   |
-| POLZERO2   | 4631.62895   | Offset value for this context parameter       |            | f32   | csst_ooc_psf_mbi   |
-| POLSCAL2   | 9174.347872  | Scale value for this context parameter        |            | f32   | csst_ooc_psf_mbi   |
-| POLNGRP    | 1            | Number of context groups                      |            | I8    | csst_ooc_psf_mbi   |
-| POLDEG1    | 2            | Polynom degree for this context group         |            | I8    | csst_ooc_psf_mbi   |
-| PSF_FWHM   | 2.31607056   | PSF FWHM in image pixels                      |            | f32   | csst_ooc_psf_mbi   |
-| PSF_SAMP   | 0.49278098   | Sampling step of the PSF data in image pixels |            | f32   | csst_ooc_psf_mbi   |
-| PSFNAXIS   | 3            | Dimensionality of the PSF data                |            | I8    | csst_ooc_psf_mbi   |
-| PSFAXIS1   | 71           | Number of element along this axis             |            | I8    | csst_ooc_psf_mbi   |
-| PSFAXIS2   | 71           | Number of element along this axis             |            | I8    | csst_ooc_psf_mbi   |
-| PSFAXIS3   | 6            | Number of element along this axis             |            | I8    | csst_ooc_psf_mbi   |
+| LOADED     | 579          | Number of loaded sources                      |   0         | I8    | csst_ooc_psf_mbi   |
+| ACCEPTED   | 573          | Number of accepted sources                    |   0         | I8    | csst_ooc_psf_mbi   |
+| CHI2       | 1.12832649   | Final reduced chi2                            |   0         | f32   | csst_ooc_psf_mbi   |
+| POLNAXIS   | 2            | Number of context parameters                  |   0         | I8    | csst_ooc_psf_mbi   |
+| POLGRP1    | 1            | Polynom group for this context parameter      |   0         | I8    | csst_ooc_psf_mbi   |
+| POLNAME1   | 'XWIN_IMAGE' | Name of this context parameter                |   'XWIN_IMAGE'         | Str   | csst_ooc_psf_mbi   |
+| POLZERO1   | 4607.403434  | Offset value for this context parameter       |   0         | f32   | csst_ooc_psf_mbi   |
+| POLSCAL1   | 9161.359825  | Scale value for this context parameter        |   0         | f32   | csst_ooc_psf_mbi   |
+| POLGRP2    | 1            | Polynom group for this context parameter      |   1         | I8    | csst_ooc_psf_mbi   |
+| POLNAME2   | 'YWIN_IMAGE' | Name of this context parameter                |  'YWIN_IMAGE'          | Str   | csst_ooc_psf_mbi   |
+| POLZERO2   | 4631.62895   | Offset value for this context parameter       |   0         | f32   | csst_ooc_psf_mbi   |
+| POLSCAL2   | 9174.347872  | Scale value for this context parameter        |   0         | f32   | csst_ooc_psf_mbi   |
+| POLNGRP    | 1            | Number of context groups                      |   1         | I8    | csst_ooc_psf_mbi   |
+| POLDEG1    | 2            | Polynom degree for this context group         |   2         | I8    | csst_ooc_psf_mbi   |
+| PSF_FWHM   | 2.31607056   | PSF FWHM in image pixels                      |   0         | f32   | csst_ooc_psf_mbi   |
+| PSF_SAMP   | 0.49278098   | Sampling step of the PSF data in image pixels |   0         | f32   | csst_ooc_psf_mbi   |
+| PSFNAXIS   | 3            | Dimensionality of the PSF data                |   0         | I8    | csst_ooc_psf_mbi   |
+| PSFAXIS1   | 71           | Number of element along this axis             |   0         | I8    | csst_ooc_psf_mbi   |
+| PSFAXIS2   | 71           | Number of element along this axis             |   0         | I8    | csst_ooc_psf_mbi   |
+| PSFAXIS3   | 6            | Number of element along this axis             |   0         | I8    | csst_ooc_psf_mbi   |
 
 #### Header of `csst_ooc_psf_strategy_crds`
 
