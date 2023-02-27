@@ -38,10 +38,10 @@ COMMENT ==================================================================
 | R_MASK       | '*.msk.fits'             | Mask reference file name                     | 'N/A'      | str    | C7            |
 | R_BIAS       | '*bias.fits'             | SuperBias reference file name                | 'N/A'      | str    | C7            |
 | R_DARK       | '*dark.fits'             | Dark reference file name                     | 'N/A'      | str    | C7            |
-| R_DFLAT      | '*flat.fits'             | Detector Flat reference file name            | 'N/A'      | str    | C7            |
-| STA_DQINI    | 0                        | Data Quality Initialization status           | 1          | int    | C7            |
-| STA_SATURA   | 0                        | Saturation Checking status                   | 1          | int    | C7            |
-| STA_ERRINI   | 0                        | Error Initialization status                  | 1          | int    | C7            |
+| R_DFLAT      | '*flat.fits'             | Detector flat reference file name            | 'N/A'      | str    | C7            |
+| STA_DQINI    | 0                        | Data quality initialization status           | 1          | int    | C7            |
+| STA_SATURA   | 0                        | Saturation checking status                   | 1          | int    | C7            |
+| STA_ERRINI   | 0                        | Error initialization status                  | 1          | int    | C7            |
 | STA_BIAS     | 0                        | Bias correction status                       | 1          | int    | C7            |
 | STA_DARK     | 0                        | Dark correction status                       | 1          | int    | C7            |
 | STA_FLAT     | 0                        | Flat field correction status                 | 1          | int    | C7            |
