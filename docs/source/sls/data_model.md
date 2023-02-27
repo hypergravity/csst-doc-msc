@@ -65,7 +65,7 @@ COMMENT ==================================================================
 CD1_1等系数在修改后挪到这一节
 
 | keyword  | value                 | comment                                  | fill value | type   | module                | last modified |
-|----------|:----------------------|------------------------------------------|------------|--------|-----------------------|---------------|
+|----------|:----------------------|------------------------------------------|------------|--------|-----------------------|---------|
 | CTYPE1   | 'RA---TPV'            | type of ra                               | 'RA---TAN' | str    | csst_ms_sls_position  | C7            |
 | CTYPE2   | 'DEC--TPV'            | type of dec                              | 'DEC--TAN' | str    | csst_ms_sls_position  | C7            |
 | CUNIT1   | 'deg  '               | unit of ra                               | 'deg'      | str    | csst_ms_sls_position  | C7            |
@@ -85,15 +85,15 @@ CD1_1等系数在修改后挪到这一节
 | PV2_4    | 0.07961855240788976   | pv coefficients                          | -9999      | f32    | csst_ms_sls_position  | C7            |
 | PV2_5    | -0.2009224365497067   | pv coefficients                          | -9999      | f32    | csst_ms_sls_position  | C7            |
 | PV2_6    | 0.1741954691884874    | pv coefficients                          | -9999      | f32    | csst_ms_sls_position  | C7            |
-| NS_POS   | 10                    | number of the stars                      | --         | i8     | csst_ms_sls_position  | C7            |
+| NS_POS   | 10                    | number of the stars                      | 0          | i8     | csst_ms_sls_position  | C7            |
 | RA_OFF   | -0.0                  | mas in unit                              | -9999      | f32    | csst_ms_sls_position  | C7            |
 | DEC_OFF  | 0.0                   | mas in unit                              | -9999      | f32    | csst_ms_sls_position  | C7            |
 | RA_RMS   | 127.1                 | mas in unit                              | -9999      | f32    | csst_ms_sls_position  | C7            |
 | DEC_RMS  | 60.4                  | mas in unit                              | -9999      | f32    | csst_ms_sls_position  | C7            |
-| RA_CEN   | 193.299027            | center of detector in ra                 | --         | f32    | csst_ms_sls_position  | C7            |
-| DEC_CEN  | 26.08851              | center of detector in dec                | --         | f32    | csst_ms_sls_position  | C7            |
-| VER_POS  | '1.0'                 | version of distortion                    | '1.0'      | str    | csst_ms_sls_position  | C7            |
-| STM_POS  | '2023-02-16 12:15:16' | time of last modification                | --         | str    | csst_ms_sls_position  | C7            |
+| RA_CEN   | 193.299027            | center of detector in ra                 | -9999      | f32    | csst_ms_sls_position  | C7            |
+| DEC_CEN  | 26.08851              | center of detector in dec                | -9999      | f32    | csst_ms_sls_position  | C7            |
+| VER_POS  | '1.0'                 | version of distortion                    | -          | str    | csst_ms_sls_position  | C7            |
+| STM_POS  | '2023-02-16 12:15:16' | time of last modification                | -          | str    | csst_ms_sls_position  | C7            |
 | STA_POS  | 0                     | 0 for done, 1 for failure                | 1          | i8     |  csst_ms_sls_position | C7            |
 
 
