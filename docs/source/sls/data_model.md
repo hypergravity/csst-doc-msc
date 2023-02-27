@@ -10,9 +10,7 @@
 | HDU1  | reduced SCI (9k x 9k)   | ImageHDU    |
 | HDU2  | reduced ERR (9k x 9k)   | ImageHDU    |
 | HDU3  | reduced DQ (9k x 9k)    | ImageHDU    |
-
-- 关键字 comment大写开头
-- 
+ 
 
 ### *HDU0 --> HDU1
 
@@ -26,12 +24,16 @@ COMMENT ==================================================================
 精简每个关键字的comment
 `-`表示不可能失败，不会使用fill value
 
+### HDU1
 
-### HDU1-1 (先不管)
+#### Header of `csst_ms_sls_instrument`
 
 | keyword      | value                    | comment                                      | fill value | type   | last modified |
 |--------------|:-------------------------|----------------------------------------------|------------|--------|---------------|
 | VER_CRDS     | '0.0.1 '                 | Version of CRDS file selection software used | -          | str    | C7            |
+| EXTNAME      | 'SCI'                    | Extension name                               | 'SCI'      | str    | C7            |
+| EXTVER       | 1                        | Extension version number                     | 1          | int    | C7            |
+| BUNIT        | 'e-/s'                   | Brightness units                             | 'e-/s'     | str    | C7            |
 | R_GAIN       | '*.gain.fits'            | Gain reference file name                     | 'N/A'      | str    | C7            |
 | R_READN      | '*.rn.fits'              | Read noise reference file name               | 'N/A'      | str    | C7            |
 | R_SATURA     | '*.sat.fits'             | Saturation reference file name               | 'N/A'      | str    | C7            |
@@ -45,32 +47,18 @@ COMMENT ==================================================================
 | STA_BIAS     | 0                        | Bias correction status                       | 1          | int    | C7            |
 | STA_DARK     | 0                        | Dark correction status                       | 1          | int    | C7            |
 | STA_FLAT     | 0                        | Flat field correction status                 | 1          | int    | C7            |
+| NGOODPIX     | 84794368                 | Number of good pixels                        | -9999      | float  | C7            |
+| GOODMAX      | 260.0                    | Maxmum value of good pixels                  | -9999      | float  | C7            |
+| GOODMIN      | -0.001                   | Minmum value of good pixels                  | -9999      | float  | C7            |
+| GOODMEAN     | 0.3                      | Mean value of good pixels                    | -9999      | float  | C7            |
+| SNRMIN       | 187.4                    | Minmum signal to noise of good pixels        | -9999      | float  | C7            |
+| SNRMAX       | 1.2                      | Maxmum signal to noise of good pixels        | -9999      | float  | C7            |
+| SNRMEAN      | 3.38                     | Average of the dark values subtracted        | -9999      | float  | C7            |
+| CRCOUNT      | 88988                    | Cosmic ray counts                            | -9999      | float  | C7            |
 | VER_INST     | '0.0.1 '                 | Instrument calibration pipeline version      | -          | str    | C7            |
 | STA_INST     | 0                        | Instrument calibration status                | 1          | int    | C7            |
 | STM_INST     | '2022-12-30T10:18:53'    | Instrument pipeline processing time          | -          | str    | C7            |
 | HISTORY      | '**step complete.'       | Record processing message                    | -          | str    | C7            |
-
-### HDU1
-
-#### Header of `csst_ms_sls_instrument`
-
-
-| keyword   | value                    | comment                                | fill value | type   | last modified |
-|-----------|:-------------------------|----------------------------------------|------------|--------|---------------|
-| EXTNAME   | 'SCI'                    | Extension name                         | 'SCI'      | str    | C7            |
-| EXTVER    | 1                        | Extension version number               | 1          | int    | C7            |
-| BUNIT     | 'e-/s'                   | Brightness units                       | 'e-/s'     | str    | C7            |
-| NGOODPIX  | 84794368                 | Number of good pixels                  | -9999      | float  | C7            |
-| GOODMAX   | 260.0                    | Maxmum value of good pixels            | -9999      | float  | C7            |
-| GOODMIN   | -0.001                   | Minmum value of good pixels            | -9999      | float  | C7            |
-| GOODMEAN  | 0.3                      | Mean value of good pixels              | -9999      | float  | C7            |
-| SNRMIN    | 187.4                    | Minmum signal to noise of good pixels  | -9999      | float  | C7            |
-| SNRMAX    | 1.2                      | Maxmum signal to noise of good pixels  | -9999      | float  | C7            |
-| SNRMEAN   | 3.38                     | Average of the dark values subtracted  | -9999      | float  | C7            |
-| CRCOUNT   | 88988                    | Cosmic ray counts                      | -9999      | float  | C7            |
-| VER_INST  | '0.0.1 '                 | Instrument calibration pipeline version| -          | str    | C7            |
-| STA_INST  | 0                        | Instrument calibration status          | 1          | int    | C7            |
-| STM_INST  | '2022-12-30T10:18:53'    | Instrument pipeline processing time    | -          | str    | C7            |
 
 #### Header of `csst_ms_sls_position`
 
