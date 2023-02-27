@@ -55,19 +55,22 @@ COMMENT ==================================================================
 #### Header of `csst_ms_sls_instrument`
 
 
-| keyword   | value    | comment                               | fill value | type   | last modified |
-|-----------|:---------|---------------------------------------|------------|--------|---------------|
-| EXTNAME   | 'SCI'    | Extension name                        | 'SCI'      | str    | C7            |
-| EXTVER    | 1        | Extension version number              | 1          | int    | C7            |
-| BUNIT     | 'e-/s'   | Brightness units                      | 'e-/s'     | str    | C7            |
-| NGOODPIX  | 84794368 | Number of good pixels                 | -9999      | float  | C7            |
-| GOODMAX   | 260.0    | Maxmum value of good pixels           | -9999      | float  | C7            |
-| GOODMIN   | -0.001   | Minmum value of good pixels           | -9999      | float  | C7            |
-| GOODMEAN  | 0.3      | Mean value of good pixels             | -9999      | float  | C7            |
-| SNRMIN    | 187.4    | Minmum signal to noise of good pixels | -9999      | float  | C7            |
-| SNRMAX    | 1.2      | Maxmum signal to noise of good pixels | -9999      | float  | C7            |
-| SNRMEAN   | 3.38     | Average of the dark values subtracted | -9999      | float  | C7            |
-| CRCOUNT   | 88988    | Cosmic ray counts                     | -9999      | float  | C7            |
+| keyword   | value                    | comment                                | fill value | type   | last modified |
+|-----------|:-------------------------|----------------------------------------|------------|--------|---------------|
+| EXTNAME   | 'SCI'                    | Extension name                         | 'SCI'      | str    | C7            |
+| EXTVER    | 1                        | Extension version number               | 1          | int    | C7            |
+| BUNIT     | 'e-/s'                   | Brightness units                       | 'e-/s'     | str    | C7            |
+| NGOODPIX  | 84794368                 | Number of good pixels                  | -9999      | float  | C7            |
+| GOODMAX   | 260.0                    | Maxmum value of good pixels            | -9999      | float  | C7            |
+| GOODMIN   | -0.001                   | Minmum value of good pixels            | -9999      | float  | C7            |
+| GOODMEAN  | 0.3                      | Mean value of good pixels              | -9999      | float  | C7            |
+| SNRMIN    | 187.4                    | Minmum signal to noise of good pixels  | -9999      | float  | C7            |
+| SNRMAX    | 1.2                      | Maxmum signal to noise of good pixels  | -9999      | float  | C7            |
+| SNRMEAN   | 3.38                     | Average of the dark values subtracted  | -9999      | float  | C7            |
+| CRCOUNT   | 88988                    | Cosmic ray counts                      | -9999      | float  | C7            |
+| VER_INST  | '0.0.1 '                 | Instrument calibration pipeline version| -          | str    | C7            |
+| STA_INST  | 0                        | Instrument calibration status          | 1          | int    | C7            |
+| STM_INST  | '2022-12-30T10:18:53'    | Instrument pipeline processing time    | -          | str    | C7            |
 
 #### Header of `csst_ms_sls_position`
 
