@@ -1,5 +1,7 @@
 # L1-CPI-C Data model
 
+- `---`表示在模块算法失败的情况下按照实际情况填写，比如无论模块是否成功，时间戳都应该填写实际值
+
 ## File: *_VIS_SCI_*.*fits
 
 ### File contents
@@ -8,7 +10,7 @@
 |------|-------------------------|------------|
 | HDU0 | None                    | PrimaryHDU |
 | HDU1 | reduced image (1k x 1k) | ImageHDU   |
-| HDU2 | mask image (9k x 9k)    | ImageHDU   |
+| HDU2 | mask image (1k x 1k)    | ImageHDU   |
 
 ### HDU0
 
@@ -17,8 +19,6 @@
 | SIMPLE  | True  | Fits standard | True          | bool | csst_sims |     
 
 ### HDU1
-
-#### Header of `csst_ms_mbi_instrument`
 
 | keyword   | value                 | comment                                         | fill value   | type | module                   |
 |-----------|:----------------------|-------------------------------------------------|--------------|------|--------------------------|
@@ -53,3 +53,14 @@
 |  CR_MOD   | 'lacosmic'            | mode of CR clean. 'lacosmic' or 'deepCR'        | -1           | str  | csst_cpic                |
 |  CR_NUM   | 10                    | number of cosmic ray                            | -1           | i16  | csst_cpic                | 
 
+### HDU2
+
+| keyword   | value                 | comment                                         | fill value   | type | module                   |
+|-----------|:----------------------|-------------------------------------------------|--------------|------|--------------------------|
+|  FLAG     | 0                     | normal pixels                                   | 0            | i8   | csst_cpic                |
+|  FLAG     | 1                     | bad pixels                                      | 0            | i8   | csst_cpic                |
+|  FLAG     | 2                     | hot pixels                                      | 0            | i8   | csst_cpic                |
+|  FLAG     | 4                     | warm pixels                                     | 0            | i8   | csst_cpic                |
+|  FLAG     | 8                     | saturated pixels                                | 0            | i8   | csst_cpic                |
+|  FLAG     | 16                    | pixels contaminated by cosmic ray               | 0            | i8   | csst_cpic                |
+|  FLAG     | 32                    | pixels contaminated by sputnik                  | 0            | i8   | csst_cpic                |
