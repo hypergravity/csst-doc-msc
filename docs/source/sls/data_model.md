@@ -45,7 +45,7 @@ COMMENT ==================================================================
 | STA_BIAS     | 0                        | Bias correction status                       | 1          | int    | C7            |
 | STA_DARK     | 0                        | Dark correction status                       | 1          | int    | C7            |
 | STA_FLAT     | 0                        | Flat field correction status                 | 1          | int    | C7            |
-| STA_CRREJ    | 0                        | Cosmic ray rejection status                  | 1          | int    | C7            |
+| STA_CR       | 0                        | Cosmic ray rejection status                  | 1          | int    | C7            |
 | NGOODPIX     | 84794368                 | Number of good pixels                        | -9999      | float  | C7            |
 | GOODMAX      | 260.0                    | Maxmum value of good pixels                  | -9999      | float  | C7            |
 | GOODMIN      | -0.001                   | Minmum value of good pixels                  | -9999      | float  | C7            |
