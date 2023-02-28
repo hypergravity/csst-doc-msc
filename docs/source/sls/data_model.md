@@ -40,7 +40,7 @@ COMMENT ==================================================================
 | R_DARK       | '*dark.fits'             | Dark reference file name                     | 'N/A'      | str    | C7            |
 | R_DFLAT      | '*flat.fits'             | Detector flat reference file name            | 'N/A'      | str    | C7            |
 | STA_DQI      | 0                        | Data quality initialization status           | 1          | int    | C7            |
-| STA_SAT      | 0                        | Saturation checking status                   | 1          | int    | C7            |
+| STA_SATC      | 0                        | Saturation checking status                   | 1          | int    | C7            |
 | STA_ERRI     | 0                        | Error initialization status                  | 1          | int    | C7            |
 | STA_BIAS     | 0                        | Bias correction status                       | 1          | int    | C7            |
 | STA_DARK     | 0                        | Dark correction status                       | 1          | int    | C7            |
