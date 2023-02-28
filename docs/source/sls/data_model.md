@@ -57,7 +57,6 @@ COMMENT ==================================================================
 | VER_INST     | '0.0.1 '                 | Instrument calibration pipeline version      | -          | str    | C7            |
 | STA_INST     | 0                        | Instrument calibration status                | 1          | int    | C7            |
 | STM_INST     | '2022-12-30T10:18:53'    | Instrument pipeline processing time          | -          | str    | C7            |
-| HISTORY      | '**step complete.'       | Record processing message                    | -          | str    | C7            |
 
 #### Header of `csst_ms_sls_position`
 
