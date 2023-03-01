@@ -32,7 +32,6 @@
 |  VER_INST | '0.0.1   '            | Version of instrument processing                | '0.0.1   '   | str  | csst_ms_mbi_instrument   |
 |  STA_INST | 0                     | 0=done 1=wrong                                  | 1            | i8   | csst_ms_mbi_distortion   | 
 |  STM_INST | '2022-12-30T10:18:53' | Time stamp of instrument processing             | ---          | str  | csst_ms_mbi_instrument   |
-|  DATASUM  | '1352015684'          | data unit checksum                              | ---          | str  | csst_ms_mbi_instrument   |
 |  STA_BIAS | 0                     | Status flag for bias frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
 |  STA_DARK | 0                     | Status flag for dark frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
 |  STA_FLAT | 0                     | Status flag for flat frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
