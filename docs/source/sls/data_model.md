@@ -64,10 +64,19 @@ COMMENT ==================================================================
 位置定标信息新开一节
 CD1_1等系数在修改后挪到这一节
 
+
 | keyword  | value                 | comment                                  | fill value | type   | module                | last modified |
 |----------|:----------------------|------------------------------------------|------------|--------|-----------------------|---------|
+| CRPIX1   |29758.0   | Coordinate reference pixel of x    | -          | f32    | csst_ms_sls_position  | C7            |
+| CRPIX2   | -15644.0 | Coordinate reference pixel of y    | -          | f32    | csst_ms_sls_position  | C7            |
+| CRVAL1   | 193.299027 | Coordinate reference value of x   | -          | f32    | csst_ms_sls_position  | C7            |
+| CRVAL2   | 26.08851   | Coordinate reference value of y   | -          | f32    | csst_ms_sls_position  | C7            |
 | CTYPE1   | 'RA---TPV'            | type of ra                               | 'RA---TAN' | str    | csst_ms_sls_position  | C7            |
 | CTYPE2   | 'DEC--TPV'            | type of dec                              | 'DEC--TAN' | str    | csst_ms_sls_position  | C7            |
+| CD1_1_L0    | -8.1745583617600E-06  | partial of first axis coordinate of x    | -          | f32    | csst_ms_sls_position  | C7            |
+| CD2_1_L0    | 1.88602083707394E-05  | partial of first axis coordinate of y    | -          | f32    | csst_ms_sls_position  | C7            |
+| CD1_2_L0    | -1.8860208370739E-05  | partial of second axis coordinate of x   | -          | f32    | csst_ms_sls_position  | C7            |
+| CD2_2_L0    | -8.1745583617600E-06  | partial of second axis coordinate of y   | -          | f32    | csst_ms_sls_position  | C7            |
 | CD1_1    | -8.1745583617600E-06  | partial of first axis coordinate of x    | -          | f32    | csst_ms_sls_position  | C7            |
 | CD2_1    | 1.88602083707394E-05  | partial of first axis coordinate of y    | -          | f32    | csst_ms_sls_position  | C7            |
 | CD1_2    | -1.8860208370739E-05  | partial of second axis coordinate of x   | -          | f32    | csst_ms_sls_position  | C7            |
