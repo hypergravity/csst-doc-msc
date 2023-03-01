@@ -6,11 +6,13 @@
 
 ### File contents
 
-| HDU  | data                    | note       |
-|------|-------------------------|------------|
-| HDU0 | None                    | PrimaryHDU |
-| HDU1 | reduced image (1k x 1k) | ImageHDU   |
-| HDU2 | mask image (1k x 1k)    | ImageHDU   |
+| HDU  | data                                            | note       |
+|------|-------------------------------------------------|------------|
+| HDU0 | None                                            | PrimaryHDU |
+| HDU1 | [reduced image (1k x 1k), mask image (1k x 1k)] | ImageHDU   |
+| HDU2 | [reduced image (1k x 1k), mask image (1k x 1k)] | ImageHDU   |
+| ...  | ...                                             | ImageHDU   |
+| HDUn | [reduced image (1k x 1k), mask image (1k x 1k)] | ImageHDU   |
 
 ### HDU0
 
@@ -18,7 +20,7 @@
 |---------|:------|---------------|---------------|------|-----------|
 | SIMPLE  | True  | Fits standard | True          | bool | csst_sims |     
 
-### HDU1
+### HDUn
 
 | keyword   | value                 | comment                                         | fill value   | type | module                   |
 |-----------|:----------------------|-------------------------------------------------|--------------|------|--------------------------|
@@ -53,7 +55,7 @@
 |  CR_MOD   | 'lacosmic'            | mode of CR clean. 'lacosmic' or 'deepCR'        | -1           | str  | csst_cpic                |
 |  CR_NUM   | 10                    | number of cosmic ray                            | -1           | i16  | csst_cpic                | 
 
-### HDU2
+
 
 | keyword   | value                 | comment                                         | fill value   | type | module                   |
 |-----------|:----------------------|-------------------------------------------------|--------------|------|--------------------------|
