@@ -56,6 +56,7 @@ COMMENT ==================================================================
 | SNRMIN       | 187.4                    | Minmum signal to noise of good pixels        | -9999      | float  | C7            |
 | SNRMAX       | 1.2                      | Maxmum signal to noise of good pixels        | -9999      | float  | C7            |
 | SNRMEAN      | 3.38                     | Average of the dark values subtracted        | -9999      | float  | C7            |
+| MEANDARK | 0.3                 | Average of the dark values subtracted  | -9999 | float  | C7            |
 | CRCOUNT      | 88988                    | Cosmic ray counts                            | -9999      | float  | C7            |
 
 #### Header of `csst_ms_sls_position`
