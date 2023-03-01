@@ -30,10 +30,13 @@ COMMENT ==================================================================
 
 | keyword      | value                    | comment                                      | fill value | type   | last modified |
 |--------------|:-------------------------|----------------------------------------------|------------|--------|---------------|
-| VER_CRDS     | '0.0.1 '                 | Version of CRDS file selection software used | -          | str    | C7            |
 | EXTNAME      | 'SCI'                    | Extension name                               | 'SCI'      | str    | C7            |
 | EXTVER       | 1                        | Extension version number                     | 1          | int    | C7            |
 | BUNIT        | 'e-/s'                   | Brightness units                             | 'ADU'     | str    | C7            |
+| VER_CRDS     | '0.0.1 '                 | Version of CRDS file selection software used | -          | str    | C7            |
+| VER_INST     | '0.0.1 '                 | Instrument calibration pipeline version      | -          | str    | C7            |
+| STA_INST     | 0                        | Instrument calibration status                | 1          | int    | C7            |
+| STM_INST     | '2022-12-30T10:18:53'    | Instrument pipeline processing time          | -          | str    | C7            |
 | R_GAIN       | '*.gain.fits'            | Gain reference file name                     | 'N/A'      | str    | C7            |
 | R_MASK       | '*.msk.fits'             | Mask reference file name                     | 'N/A'      | str    | C7            |
 | R_BIAS       | '*bias.fits'             | SuperBias reference file name                | 'N/A'      | str    | C7            |
@@ -54,9 +57,6 @@ COMMENT ==================================================================
 | SNRMAX       | 1.2                      | Maxmum signal to noise of good pixels        | -9999      | float  | C7            |
 | SNRMEAN      | 3.38                     | Average of the dark values subtracted        | -9999      | float  | C7            |
 | CRCOUNT      | 88988                    | Cosmic ray counts                            | -9999      | float  | C7            |
-| VER_INST     | '0.0.1 '                 | Instrument calibration pipeline version      | -          | str    | C7            |
-| STA_INST     | 0                        | Instrument calibration status                | 1          | int    | C7            |
-| STM_INST     | '2022-12-30T10:18:53'    | Instrument pipeline processing time          | -          | str    | C7            |
 
 #### Header of `csst_ms_sls_position`
 
