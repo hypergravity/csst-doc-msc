@@ -50,8 +50,8 @@ COMMENT ==================================================================
 | STA_FLAT     | 0                        | Flat field correction status                 | 1          | int    | C7            |
 | STA_CR       | 0                        | Cosmic ray rejection status                  | 1          | int    | C7            |
 | NGOODPIX     | 84794368                 | Number of good pixels                        | -9999      | float  | C7            |
-| GOODMAX      | 260.0                    | Maxmum value of good pixels                  | -9999      | float  | C7            |
 | GOODMIN      | -0.001                   | Minmum value of good pixels                  | -9999      | float  | C7            |
+| GOODMAX      | 260.0                    | Maxmum value of good pixels                  | -9999      | float  | C7            |
 | GOODMEAN     | 0.3                      | Mean value of good pixels                    | -9999      | float  | C7            |
 | SNRMIN       | 187.4                    | Minmum signal to noise of good pixels        | -9999      | float  | C7            |
 | SNRMAX       | 1.2                      | Maxmum signal to noise of good pixels        | -9999      | float  | C7            |
