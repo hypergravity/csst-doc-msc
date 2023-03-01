@@ -68,6 +68,10 @@ CD1_1等系数在修改后挪到这一节
 |----------|:----------------------|------------------------------------------|------------|--------|-----------------------|---------|
 | CTYPE1   | 'RA---TPV'            | type of ra                               | 'RA---TAN' | str    | csst_ms_sls_position  | C7            |
 | CTYPE2   | 'DEC--TPV'            | type of dec                              | 'DEC--TAN' | str    | csst_ms_sls_position  | C7            |
+| CD1_1    | -8.1745583617600E-06  | partial of first axis coordinate of x    | -          | f32    | csst_ms_sls_position  | C7            |
+| CD2_1    | 1.88602083707394E-05  | partial of first axis coordinate of y    | -          | f32    | csst_ms_sls_position  | C7            |
+| CD1_2    | -1.8860208370739E-05  | partial of second axis coordinate of x   | -          | f32    | csst_ms_sls_position  | C7            |
+| CD2_2    | -8.1745583617600E-06  | partial of second axis coordinate of y   | -          | f32    | csst_ms_sls_position  | C7            |
 | CUNIT1   | 'deg  '               | unit of ra                               | 'deg'      | str    | csst_ms_sls_position  | C7            |
 | CUNIT2   | 'deg  '               | unit of dec                              | 'deg'      | str    | csst_ms_sls_position  | C7            |
 | RADESYS  | 'ICRS '               | international celestial reference system | -          | str    | csst_ms_sls_position  | C7            |
