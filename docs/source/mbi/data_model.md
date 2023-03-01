@@ -54,6 +54,16 @@
 | STA_DIST | 0                     | 0=done 1=wrong                      | 1          | i8   | csst_ms_mbi_distortion | 
 | STM_DIST | '2022-12-29T16:36:47' | Time stamp of distortion            | ---        | str  | csst_ms_mbi_distortion |
 | RADESYS  | 'ICRS    '            |                                     | '?'        | str  | csst_ms_mbi_distortion |
+| CRPIX1   |                -267.0 | Coordinate reference pixel of x     | -267.0     | f32  | csst_ms_mbi_distortion |
+| CRPIX2   |               14746.0 | Coordinate reference pixel of y     | 14746.0    | f32  | csst_ms_mbi_distortion |  
+| CRVAL1   |                  90.0 | Coordinate reference value of x     | 90.0       | f32  | csst_ms_mbi_distortion |
+| CRVAL2   |                  24.5 | Coordinate reference value of y     | 24.5       | f32  | csst_ms_mbi_distortion |  
+| CTYPE1   | 'RA---TPV'            | the coordinate type                 | 'RA---TAN' | f32  | csst_ms_mbi_distortion |        
+| CTYPE2   | 'DEC--TPV'            | the coordinate type                 | 'DEC--TPV' | f32  | csst_ms_mbi_distortion |
+| CD1_1    | -8.1745583617600E-06  | partial of first axis coordinate of x | -8.1745583617600E-06 | f32 | csst_ms_mbi_distortion |
+| CD2_1    | 1.88602083707394E-05  | partial of first axis coordinate of y | 1.88602083707394E-05 | f32 | csst_ms_mbi_distortion |       
+| CD1_2    | -1.8860208370739E-05  | partial of second axis coordinate of x | -1.8860208370739E-05 | f32 | csst_ms_mbi_distortion |        
+| CD2_2    | -8.1745583617600E-06  | partial of second axis coordinate of y | -8.1745583617600E-06 | f32 | csst_ms_mbi_distortion |     
 | NS_DIST  | 11                    | The number of stars used in fitting | ---        | i8   | csst_ms_mbi_distortion | 
 | PV1_0    | 0.003205383944913964  |                                     | -9999      | f32  | csst_ms_mbi_distortion |
 | PV1_1    | 0.8673020820536499    |                                     | -9999      | f32  | csst_ms_mbi_distortion |
@@ -83,8 +93,17 @@
 | VER_POSI  | '2.0.4   '               | Version of WCS calibration                 | '2.0.4   ' | str  | csst_ms_mbi_position    |        
 | STA_POSI  | 0                        | 0=done                                     |            | i8   | csst_ms_mbi_position    | 
 | STM_POSI  | '2022-12-30 18:32:46 PM' | Time of last wcs calibration               | ---        | str  | csst_ms_mbi_position    |             
-| CFG_POSI  | 'default.scamp'          | Configure file name of WCS                 | ---        | str  | csst_ms_mbi_position    |                    
 | RADESYS   | 'ICRS    '               | should be always 'ICRS'                    | '?'        | str  | csst_ms_mbi_position    |
+| CRPIX1   |                -267.0 | Coordinate reference pixel of x     | -267.0     | f32  | csst_ms_mbi_position |
+| CRPIX2   |               14746.0 | Coordinate reference pixel of y     | 14746.0    | f32  | csst_ms_mbi_position |  
+| CRVAL1   |                  90.0 | Coordinate reference value of x     | 90.0       | f32  | csst_ms_mbi_position |
+| CRVAL2   |                  24.5 | Coordinate reference value of y     | 24.5       | f32  | csst_ms_mbi_position |  
+| CTYPE1   | 'RA---TPV'            | the coordinate type                 | 'RA---TAN' | f32  | csst_ms_mbi_position |        
+| CTYPE2   | 'DEC--TPV'            | the coordinate type                 | 'DEC--TPV' | f32  | csst_ms_mbi_position |
+| CD1_1    | -8.1745583617600E-06  | partial of first axis coordinate of x | -8.1745583617600E-06 | f32 | csst_ms_mbi_position |
+| CD2_1    | 1.88602083707394E-05  | partial of first axis coordinate of y | 1.88602083707394E-05 | f32 | csst_ms_mbi_position |       
+| CD1_2    | -1.8860208370739E-05  | partial of second axis coordinate of x | -1.8860208370739E-05 | f32 | csst_ms_mbi_position |        
+| CD2_2    | -8.1745583617600E-06  | partial of second axis coordinate of y | -8.1745583617600E-06 | f32 | csst_ms_mbi_position |     
 | PV1_0     | -7.032303876526E-04      |                                            | -9999      | f32  | csst_ms_mbi_position    |
 | PV1_1     | 9.986639936274E-01       |                                            | -9999      | f32  | csst_ms_mbi_position    |
 | PV1_2     | -3.506141592607E-03      |                                            | -9999      | f32  | csst_ms_mbi_position    |
