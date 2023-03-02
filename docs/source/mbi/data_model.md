@@ -150,7 +150,6 @@
 | Q_SHUTTR | 0                     | indicating shutter status                      | 1          | int   | csst_ms_qc0 |
 | Q_COOLNG | 0                     | indicating system cooling status               | 1          | int   | csst_ms_qc0 |
 | F_GUIDER | 0                     | Guider flag (0/bit)                            | ?          | int   | csst_ms_qc0 |
-| Q_GUIDER | 0                     | indicating guiding stars status                | 1          | int   | csst_ms_qc0 |
 | F_DETECT | 0                     | Detector flag (0/bit)                          | ?          | int   | csst_ms_qc0 |
 | Q_DTDEAD | 0                     | indicating dead detector                       | 1          | int   | csst_ms_qc0 |
 | Q_DTNOIS | 0                     | indicating higher detector noise level         | 1          | int   | csst_ms_qc0 |
