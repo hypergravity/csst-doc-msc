@@ -30,8 +30,8 @@
 | keyword   | value                 | comment                                         | fill value   | type | module                   |
 |-----------|:----------------------|-------------------------------------------------|--------------|------|--------------------------|
 |  VER_INST | '0.0.1   '            | Version of instrument processing                | '0.0.1   '   | str  | csst_ms_mbi_instrument   |
-|  STA_INST | 0                     | 0=done 1=wrong                                  | 1            | i8   | csst_ms_mbi_distortion   | 
 |  STM_INST | '2022-12-30T10:18:53' | Time stamp of instrument processing             | ---          | str  | csst_ms_mbi_instrument   |
+|  STA_INST | 0                     | 0=done 1=wrong                                  | 1            | i8   | csst_ms_mbi_distortion   | 
 |  STA_BIAS | 0                     | Status flag for bias frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
 |  STA_DARK | 0                     | Status flag for dark frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
 |  STA_FLAT | 0                     | Status flag for flat frame correction           | 1            | i8   | csst_ms_mbi_instrument   |
@@ -50,8 +50,8 @@
 | keyword  | value                 | comment                             | fill value | type | module                 |
 |----------|:----------------------|-------------------------------------|------------|------|------------------------|
 | VER_DIST | '1.0     '            | Version of distortion               | '1.0'      | str  | csst_ms_mbi_distortion |
-| STA_DIST | 0                     | 0=done 1=wrong                      | 1          | i8   | csst_ms_mbi_distortion | 
 | STM_DIST | '2022-12-29T16:36:47' | Time stamp of distortion            | ---        | str  | csst_ms_mbi_distortion |
+| STA_DIST | 0                     | 0=done 1=wrong                      | 1          | i8   | csst_ms_mbi_distortion | 
 | RADESYS  | 'ICRS    '            |                                     | '?'        | str  | csst_ms_mbi_distortion |
 | CRPIX1   |                -267.0 | Coordinate reference pixel of x     | -267.0     | f32  | csst_ms_mbi_distortion |
 | CRPIX2   |               14746.0 | Coordinate reference pixel of y     | 14746.0    | f32  | csst_ms_mbi_distortion |  
@@ -90,8 +90,8 @@
 | keyword   | value                    | comment                                    | fill value | type | module                  |
 |-----------|:-------------------------|--------------------------------------------|------------|------|-------------------------|
 | VER_POSI  | '2.0.4   '               | Version of WCS calibration                 | '2.0.4   ' | str  | csst_ms_mbi_position    |        
-| STA_POSI  | 0                        | 0=done                                     |            | i8   | csst_ms_mbi_position    | 
 | STM_POSI  | '2022-12-30 18:32:46 PM' | Time of last wcs calibration               | ---        | str  | csst_ms_mbi_position    |             
+| STA_POSI  | 0                        | 0=done                                     |            | i8   | csst_ms_mbi_position    | 
 | RADESYS   | 'ICRS    '               | should be always 'ICRS'                    | '?'        | str  | csst_ms_mbi_position    |
 | CRPIX1   |                -267.0 | Coordinate reference pixel of x     | -267.0     | f32  | csst_ms_mbi_position |
 | CRPIX2   |               14746.0 | Coordinate reference pixel of y     | 14746.0    | f32  | csst_ms_mbi_position |  
@@ -123,8 +123,8 @@
 | keyword     | value                 | comment                                        | fill value      | type | module             |
 |-------------|:----------------------|------------------------------------------------|-----------------|------|--------------------|
 | VER_FLUX    | '1.3     '            | version of calibration code                    | '1.3'           | str  | csst_ms_mbi_flux   |
-| STA_FLUX    | 0                     | flux calibration status                        | 1               | i8   | csst_ms_mbi_flux   |                       
 | STM_FLUX    | '2022-12-30 18:36:05' | flux calibration operation time                | ---             | str  | csst_ms_mbi_flux   |
+| STA_FLUX    | 0                     | flux calibration status                        | 1               | i8   | csst_ms_mbi_flux   |                       
 | REF_FLUX    | 'GAIA_DR3  '          | the reference database for calibration         | '?'             | str  | csst_ms_mbi_flux   |
 | ZP          | 23.8435               | photometric zero point in magnitude            | -9999           | f32  | csst_ms_mbi_flux   |
 | ZPRMS       | 0.0101                | zpt rms of the matched objects                 | -9999           | f32  | csst_ms_mbi_flux   |                
@@ -143,8 +143,8 @@
 | keyword  | value                 | comment                                        | fill value | type  | module      |
 |----------|-----------------------|------------------------------------------------|------------|-------|-------------|
 | VER_QC0  | '0.0.1'               | Pipeline version                               | '0.0.1'    | str   | csst_ms_qc0 |
-| STA_QC0  | 0                     | QC0 Status (0/1/2)                             | -1         | int   | csst_ms_qc0 |
 | STM_QC0  | '2022-12-30T18:36:05' | QC0 operation time                             | ---        | str   | csst_ms_qc0 |
+| STA_QC0  | 0                     | QC0 Status (0/1/2)                             | -1         | int   | csst_ms_qc0 |
 | Q_CHKSUM | 0                     | CRC checksum                                   | 1          | int   | csst_ms_qc0 |
 | F_TELSCP | 0                     | Telescope flag (0/bit)                         | ?          | int   | csst_ms_qc0 |
 | Q_SHUTTR | 0                     | indicating shutter status                      | 1          | int   | csst_ms_qc0 |
@@ -165,11 +165,10 @@
 | keyword | value                 | comment                  | fill value | type  | module         |
 |---------|:----------------------|--------------------------|------------|-------|----------------|
 | VER_QC1 | '0.0.1'               | Pipeline version         | '0.0.1'    | str   | csst_ms_qc0    |
-| STA_QC1 | 0                     | QC1 Status (0/non-zero)  | -1         | int   | csst_ms_qc0    |
 | STM_QC0 | '2022-12-30T18:36:05' | QC0 operation time       | ---        | str   | csst_ms_qc0    |
+| STA_QC1 | 0                     | QC1 Status (0/non-zero)  | -1         | int   | csst_ms_qc0    |
 | Q_FOCUS | 0                     | focus status             | 1          | int   | csst_ms_qc0    |
 | Q_WCS   | 0                     | WCS Calibration status   | 1          | int   | csst_ms_qc0    | 
-
 
 ## File: *_cat.fits
 
@@ -289,13 +288,12 @@
 | P6_ FOCUS  | 28025.63452           | parameter 6 of focal length (in mm)                                                                                                    |            | f32    | csst_ooc_psf_strategy_crds   |
 | FSM_STAT   | T                     | working state of fast-steering mirror (FSM)                                                                                            |            | bool   | csst_ooc_psf_strategy_crds   |
 
-
 #### Header of `csst_ms_mbi_astrometry`
 
 | keyword   | value                     | comment                       | fallback_value | type | module                  |
 |-----------|:--------------------------|-------------------------------|----------------|------|-------------------------|
-| STA_CCRS  |  0                        |  Completion degree of relative astrometric solution in CCRS       | 1                     | i8  |csst_ms_mbi_astrometry  |
 | VER_CCRS  |  "v2023.01"               |  Version of CSST relative Astrometry soft in CCRS                 | "v2023.01"            | str |csst_ms_mbi_astrometry  |
+| STA_CCRS  |  0                        |  Completion degree of relative astrometric solution in CCRS       | 1                     | i8  |csst_ms_mbi_astrometry  |
 | CCRSGATE  |  "  "                     |  Camera shutter information                                       | "   "                 | str |csst_ms_mbi_astrometry  |
 | CCRSCONF  |  "  "                     |  Configuration file for astrometry                                | "   "                 | str |csst_ms_mbi_astrometry  |
 | CCRSIM    |  " normal"                |  Image classification for CSST Astrometry                         | " normal "            | str |csst_ms_mbi_astrometry  |

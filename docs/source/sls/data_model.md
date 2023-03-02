@@ -33,10 +33,10 @@ COMMENT ==================================================================
 | EXTNAME      | 'SCI'                    | Extension name                               | 'SCI'      | str    | C7            |
 | EXTVER       | 1                        | Extension version number                     | 1          | int    | C7            |
 | BUNIT        | 'e-/s'                   | Brightness units                             | 'ADU'     | str    | C7            |
-| VER_CRDS     | '0.0.1 '                 | Version of CRDS file selection software used | -          | str    | C7            |
 | VER_INST     | '0.0.1 '                 | Instrument calibration pipeline version      | -          | str    | C7            |
-| STA_INST     | 0                        | Instrument calibration status                | 1          | int    | C7            |
 | STM_INST     | '2022-12-30T10:18:53'    | Instrument pipeline processing time          | -          | str    | C7            |
+| STA_INST     | 0                        | Instrument calibration status                | 1          | int    | C7            |
+| VER_CRDS     | '0.0.1 '                 | Version of CRDS file selection software used | -          | str    | C7            |
 | R_GAIN       | '*.gain.fits'            | Gain reference file name                     | 'N/A'      | str    | C7            |
 | R_MASK       | '*.msk.fits'             | Mask reference file name                     | 'N/A'      | str    | C7            |
 | R_BIAS       | '*bias.fits'             | SuperBias reference file name                | 'N/A'      | str    | C7            |
@@ -67,6 +67,9 @@ CD1_1等系数在修改后挪到这一节
 
 | keyword  | value                 | comment                                  | fill value | type   | module                | last modified |
 |----------|:----------------------|------------------------------------------|------------|--------|-----------------------|---------|
+| VER_POS  | '1.0'                 | version of distortion                    | -          | str    | csst_ms_sls_position  | C7            |
+| STM_POS  | '2023-02-16 12:15:16' | time of last modification                | -          | str    | csst_ms_sls_position  | C7            |
+| STA_POS  | 0                     | 0 for done, 1 for failure                | 1          | i8     |  csst_ms_sls_position | C7            |
 | CRPIX1   |29758.0   | Coordinate reference pixel of x    | -          | f32    | csst_ms_sls_position  | C7            |
 | CRPIX2   | -15644.0 | Coordinate reference pixel of y    | -          | f32    | csst_ms_sls_position  | C7            |
 | CRVAL1   | 193.299027 | Coordinate reference value of x   | -          | f32    | csst_ms_sls_position  | C7            |
@@ -105,9 +108,6 @@ CD1_1等系数在修改后挪到这一节
 | DEC_RMS  | 60.4                  | mas in unit                              | -9999      | f32    | csst_ms_sls_position  | C7            |
 | RA_CEN   | 193.299027            | center of detector in ra                 | -9999      | f32    | csst_ms_sls_position  | C7            |
 | DEC_CEN  | 26.08851              | center of detector in dec                | -9999      | f32    | csst_ms_sls_position  | C7            |
-| VER_POS  | '1.0'                 | version of distortion                    | -          | str    | csst_ms_sls_position  | C7            |
-| STM_POS  | '2023-02-16 12:15:16' | time of last modification                | -          | str    | csst_ms_sls_position  | C7            |
-| STA_POS  | 0                     | 0 for done, 1 for failure                | 1          | i8     |  csst_ms_sls_position | C7            |
 
 
 #### Header of `csst_ms_sls_qc1`
