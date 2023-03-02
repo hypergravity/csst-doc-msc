@@ -156,7 +156,7 @@
 | Q_DTNOIS | 0                     | indicating higher detector noise level         | 1          | int   | csst_ms_qc0 |
 | Q_DIFPAT | 0                     | indicating image diffraction pattern           | 1          | int   | csst_ms_qc0 |
 | Q_XTALK  | 0                     | indicating significant image crosstalk         | 1          | int   | csst_ms_qc0 |
-| Q_BADPIX | 0                     | CCD bad pixel fraction > 3 sigma               | 1          | int   | csst_ms_qc0 |
+| Q_BADPIX | 0                     | CCD bad pixel fraction > 50% pixels            | 1          | int   | csst_ms_qc0 |
 | Q_BRIBKG | 0                     | Significant stray light effect in this field   | 1          | int   | csst_ms_qc0 |
 | Q_DTTEMP | 0                     | Large CCD temperature variation in this field  | 1          | int   | csst_ms_qc0 |
 
