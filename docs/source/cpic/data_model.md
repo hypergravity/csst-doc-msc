@@ -22,14 +22,16 @@
 
 ### HDUn
 
+#### Science image related
+
 | keyword   | value                 | comment                                         | fill value   | type | module                   |
 |-----------|:----------------------|-------------------------------------------------|--------------|------|--------------------------|
 |  VER_PIPE | '0.01'                | version of CPI-C pipeline                       | '0.01'       | str  | csst_cpic                |
 |  VER_QC0  | '0.01'                | version of CPI-C QC0                            | '0.01'       | str  | csst_cpic                |
 |  VER_QC1  | '0.01'                | version of CPI-C QC1                            | '0.01'       | str  | csst_cpic                |
-|  STA_PIPE | 0                     | state of CPI-C pipeline                         | 1            | i8   | csst_cpic                |
-|  STA_QC0  | 0                     | state of CPI-C QC0                              | 1            | i8   | csst_cpic                |
-|  STA_QC1  | 0                     | state of CPI-C QC1                              | 1            | i8   | csst_cpic                |
+|  STA_PIPE | 0                     | state of CPI-C pipeline                         | -1            | i8   | csst_cpic                |
+|  STA_QC0  | 0                     | state of CPI-C QC0                              | -1            | i8   | csst_cpic                |
+|  STA_QC1  | 0                     | state of CPI-C QC1                              | -1            | i8   | csst_cpic                |
 |  STM_PIPE | '2022-12-30T10:18:53' | Time stamp of CPI-C pipeline processing         | ---          | str  | csst_cpic                |
 |  NAME     | 'HR 8799'             | name of target                                  | ---          | str  | csst_cpic                |
 |  I_MEAN   | 10.0                  | mean value of total noise of dark zone          | -9999        | f32  | csst_cpic                |        
@@ -40,7 +42,7 @@
 |  CTEH_VAL | 99.99                 | value of horizontal CTE                         | -9999        | f32  | csst_cpic                |
 |  BP_NAM   | 'mask.fits'           | name of mask reference file                     | '-1'         | f32  | csst_cpic                |
 |  BP_NUM   | 10                    | number of bad pixel                             | -1           | i16  | csst_cpic                |
-|  B_NAM    | 'bias.fits'           | name of bias reference file                     | -1           | str  | csst_cpic                |
+|  B_NAM    | 'bias.fits'           | name of bias reference file                     | -1     s      | str  | csst_cpic                |
 |  B_MEAN   | 5.1                   | mean value of bias reference image              | -9999        | f32  | csst_cpic                |
 |  B_STD    | 1.2                   | std value of bias reference image               | -9999        | f32  | csst_cpic                | 
 |  SP_NUM   | 10                    | number of saturated pixels                      | -1           | i16  | csst_cpic                |
@@ -50,19 +52,19 @@
 |  F_NAM    | 'flat.fits'           | name of flat reference file                     | -1           | str  | csst_cpic                |
 |  F_MEAN   | 10.0                  | mean value of flat reference image              | -9999        | f32  | csst_cpic                |
 |  F_STD    | 5.0                   | std value of flat reference image               | -9999        | f32  | csst_cpic                |
-|  NL_NAM   | 'nonlin.fits'         | name of nonlinear correction reference file     | -1           | str  | csst_cpic                |
-|  BG_NAM   | 'bg.fits'             | name of background reference file               | -1           | str  | csst_cpic                |
-|  CR_MOD   | 'lacosmic'            | mode of CR clean. 'lacosmic' or 'deepCR'        | -1           | str  | csst_cpic                |
+|  NL_NAM   | 'nonlin.fits'         | name of nonlinear correction reference file     | '-1'           | str  | csst_cpic                |
+|  BG_NAM   | 'bg.fits'             | name of background reference file               | '-1'           | str  | csst_cpic                |s
+|  CR_MOD   | 'lacosmic'            | mode of CR clean                                |' -1'           | str  | csst_cpic                |
 |  CR_NUM   | 10                    | number of cosmic ray                            | -1           | i16  | csst_cpic                | 
 
-
+#### mask image related
 
 | keyword   | value                 | comment                                         | fill value   | type | module                   |
 |-----------|:----------------------|-------------------------------------------------|--------------|------|--------------------------|
-|  FLAG     | 0                     | normal pixels                                   | 0            | i8   | csst_cpic                |
-|  FLAG     | 1                     | bad pixels                                      | 0            | i8   | csst_cpic                |
-|  FLAG     | 2                     | hot pixels                                      | 0            | i8   | csst_cpic                |
-|  FLAG     | 4                     | warm pixels                                     | 0            | i8   | csst_cpic                |
-|  FLAG     | 8                     | saturated pixels                                | 0            | i8   | csst_cpic                |
-|  FLAG     | 16                    | pixels contaminated by cosmic ray               | 0            | i8   | csst_cpic                |
-|  FLAG     | 32                    | pixels contaminated by sputnik                  | 0            | i8   | csst_cpic                |
+|  FLAG1     | 0                     | normal pixels                                   | 0            | i8   | csst_cpic                |
+|  FLAG2     | 1                     | bad pixels                                      | 1            | i8   | csst_cpic                |
+|  FLAG3     | 2                     | hot pixels                                      | 2            | i8   | csst_cpic                |
+|  FLAG4     | 4                     | warm pixels                                     | 4            | i8   | csst_cpic                |
+|  FLAG5     | 8                     | saturated pixels                                | 8            | i8   | csst_cpic                |
+|  FLAG6     | 16                    | pixels contaminated by cosmic ray               | 16            | i8   | csst_cpic                |
+|  FLAG7     | 32                    | pixels contaminated by sputnik                  | 32            | i8   | csst_cpic                |
