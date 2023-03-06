@@ -72,6 +72,26 @@ class： csst_ms_sls_instrument.steps.BiasCorrStep
 
 class： csst_ms_sls_instrument.steps.ToElectronsStep
 
+**Uncertainty Initialization**
+
+class: csst_ms_sls_instrument.steps.UncertaintyInitStep
+
+**Dark correction**
+
+class: csst_ms_sls_instrument.steps.DarkCorrStep
+
+**Flatfield correction**
+
+class: csst_ms_sls_instrument.steps.FlatCorrStep
+
+**CR rejection**
+
+class: csst_ms_sls_instrument.steps.CRrejStep
+
+**To electrons/sec**
+
+class: csst_ms_sls_instrument.steps.CPSStep
+
 
 Position calibration
 ---------------------
