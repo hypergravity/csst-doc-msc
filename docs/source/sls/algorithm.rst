@@ -56,6 +56,7 @@ Output
 
 .. _DQFlags: https://？
 
+
 ===========  =======  ===============================================
 TTYPE        TFORM    Description
 ===========  =======  ===============================================
@@ -64,6 +65,7 @@ VALUE        integer  The equivalent base-10 value of BIT
 NAME         string   The mnemonic name of the data quality condition
 DESCRIPTION  string   A description of the data quality condition
 ===========  =======  ================================================
+
 
 =====  =====  =======
 A      B      A and B
@@ -84,7 +86,7 @@ class： csst_ms_sls_instrument.steps.DQIstep
 
 reference file： Badpixel table(map)、Saturation file
 
-DQ Initialization实现两部分内容，一是利用参考文件Badpixel table或是Badpixel map对DQ扩展进行标记，该参考文件记录着存在问题的像素点，可能是探测器的坏点、热像素。二是根据Saturation file对观测数据进行判定，并在DQ扩展中标记。Saturation file的形式需要根据后续测试结果来定，如果能测出每个像素的饱和值即可做成map，现阶段用的是常值。DQ标记的详情参见DQFlags_。
+DQ Initialization实现两部分内容，一是利用参考文件Badpixel table或是Badpixel map对DQ扩展进行标记，该参考文件记录着存在问题的像素点，可能是探测器的坏点、热像素。二是根据Saturation file对观测数据进行判定，并在DQ扩展中标记。Saturation file的形式需要根据后续测试结果来定，如果能测出每个像素的饱和值即可做成map，现阶段用的是常值。DQ标记的详情参见 DQFlags_。
 
 **Bias correction**
 
