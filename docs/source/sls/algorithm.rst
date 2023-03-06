@@ -70,10 +70,10 @@ DESCRIPTION  string   A description of the data quality condition
 =====  =====  =======
 TTYPE  TFORM  Description
 =====  =====  =======
-False  False  False
-True   False  False
-False  True   False
-True   True   True
+BIT  False  False
+VALUE   False  False
+NAME  True   False
+DESCRIPTION   string   A description of the data quality condition
 =====  =====  =======
 
 Data Calibration Steps
