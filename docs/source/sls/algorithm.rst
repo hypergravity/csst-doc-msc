@@ -9,15 +9,18 @@ Instrument correction
 ``````````````````
 `csst_ms_sls_instrument` 程序包是应用于CSST无缝光谱模块的仪器效应改正程序，无缝光谱模块包含12个探测器，每4块探测器对应1个波段，每个波段的部分仪器参数如下：
 
-    - GU: 660×660″ field of view from 255-400nm with a plate scale of 0.07″/pixel
-    - GV: 660×660″ field of view from 400-620nm with a plate scale of 0.07″/pixel
-    - GI: 660×660″ field of view from 620-1000nm with a plate scale of 0.07″/pixel
-该程序将顺序执行一系列的探测器效应改正，生成单次曝光的改正后数据产品。该程序是用Python语言实现，代码地址：code_。
+    - GU: 660×660″ field of view from 255-400nm with a plate scale of 0.074″/pixel
+    - GV: 660×660″ field of view from 400-620nm with a plate scale of 0.074″/pixel
+    - GI: 660×660″ field of view from 620-1000nm with a plate scale of 0.074″/pixel
+`csst_ms_sls_instrument` 将顺序执行一系列的探测器效应改正，生成单次曝光的改正后数据产品。该程序是用Python语言实现，代码地址：code_。
 
 .. _code: https://csst-tb.bao.ac.cn/code/csst-l1/sls/csst_ms_sls_instrument
 
 数据产品
 ``````````````````
+`csst_ms_sls_instrument` 将从`csst_common.CsstMsDataManager` 获取0级数据和参考文件。0级数据是有一个扩展的fits文件，头文件中存放着观测天区、曝光信息、探测器信息等，具体关键字说明参见DataModel_。
+
+.. _DataModel: https://csst-tb.bao.ac.cn/code/csst-l1/csst-l1doc/-/blob/main/docs/source/sls/data_model.md
 
 
 Position calibration
