@@ -19,6 +19,7 @@ Instrument correction
 数据产品
 ``````````````````
 `csst_ms_sls_instrument` 将从`csst_common.CsstMsDataManager` 获取0级数据和参考文件。0级数据是有一个扩展的fits文件，头文件中存放着观测天区、曝光信息、探测器信息等，具体关键字说明参见 DataModel_，扩展的数据单元存放着原始观测图像。参考文件列表如下：
+
 +-----------------+---------+-------------------+
 | Extension name  |  Bunit  | Comment           |
 +=================+=========+===================+
