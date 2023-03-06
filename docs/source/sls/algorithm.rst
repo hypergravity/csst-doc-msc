@@ -10,8 +10,8 @@ Instrument correction
     - GU: ″ field of view from 255-400nm with a plate scale of ″/pixel.
     - GV: ″ field of view from 400-620nm with a plate scale of ″/pixel.
     - GI: ″ field of view from 620-1000nm with a plate scale of ″/pixel.
-该程序将顺序执行一系列的效应改正，生成单次曝光的改正后数据产品。该程序是用Python语言实现，开源地址：_reference。
-_reference: https://csst-tb.bao.ac.cn/code/csst-l1/sls/csst_ms_sls_instrument
+该程序将顺序执行一系列的效应改正，生成单次曝光的改正后数据产品。该程序是用Python语言实现，开源地址：reference_。
+.. _reference: https://csst-tb.bao.ac.cn/code/csst-l1/sls/csst_ms_sls_instrument
 
 Position calibration
 ---------------------
