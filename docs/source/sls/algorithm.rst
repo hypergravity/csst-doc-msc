@@ -18,35 +18,43 @@ Instrument correction
 
 数据产品
 ``````````````````
-`csst_ms_sls_instrument` 将从`csst_common.CsstMsDataManager` 获取0级数据和参考文件。0级数据是有一个扩展的fits文件，头文件中存放着观测天区、曝光信息、探测器信息等，具体关键字说明参见 DataModel_，扩展的数据单元存放着原始观测图像。参考文件列表如下：
+`csst_ms_sls_instrument` 生成的数据产品是三个扩展fits文件，扩展内容如下表所示：
 
 +-----------------+---------+-------------------+
 | Extension name  |  Bunit  | Comment           |
 +=================+=========+===================+
-| SCI             | e-/s    | science image     |
+| SCI             | e-/s    | Science image     |
 +-----------------+---------+-------------------+
-| ERR             | e-/s    | error array       |
+| ERR             | e-/s    | Error array       |
 +-----------------+---------+-------------------+
-| DQ              | unitless| data quality array|
-+-----------------+---------+-------------------+
-
-.. _DataModel: https://csst-tb.bao.ac.cn/code/csst-l1/csst-l1doc/-/blob/main/docs/source/sls/data_model.md
-
-CSST无缝光谱模块的1级数据产品是三个扩展的fits文件，扩展内容如下表所示：
-
-+-----------------+---------+-------------------+
-| Extension name  |  Bunit  | Comment           |
-+=================+=========+===================+
-| SCI             | e-/s    | science image     |
-+-----------------+---------+-------------------+
-| ERR             | e-/s    | error array       |
-+-----------------+---------+-------------------+
-| DQ              | unitless| data quality array|
+| DQ              | unitless| Data quality array|
 +-----------------+---------+-------------------+
 
 第一个扩展(SCI)的数据单元存放着仪器效应改正后的光谱图像，第二扩展(ERR)的数据单元存放着光谱图像误差，第三个扩展（DQ）的数据单元存放着光谱图像每个像素的数据质量标志位，具体参见 DQFlags_。
 
 .. _DQFlags: https://？
+
+处理过程
+``````````````````
+`csst_ms_sls_instrument` 将从`csst_common.CsstMsDataManager` 获取0级数据和参考文件。0级数据是有一个扩展的fits文件，头文件中存放着观测天区、曝光信息、探测器信息等，具体关键字说明参见 DataModel_，扩展的数据单元存放着原始观测图像。参考文件列表如下,第一列是参考文件类型，第二列是文件说明，第三列是数据产品中记录文件名的关键字：
+
++-----------------+----------------------------+-----------------+
+| Reference file  | Description                | Keyword         |
++=================+============================+=================+
+| Gain map        | gain array(9k×9k)          | R_GAIN          |
++-----------------+----------------------------+-----------------+
+| Superbias       | superbias file(9k×9k)      | R_BIAS          |
++-----------------+----------------------------+-----------------+
+| Superdark       | superdark file(9k×9k)      | R_DARK          |
++-----------------+----------------------------+-----------------+
+| Superflat       | super flatfield file(9k×9k)| R_DFLAT         |
++-----------------+----------------------------+-----------------+
+| Badpixel table  | Bad/hot Pixel table or map | R_MASK          |
++-----------------+----------------------------+-----------------+
+
+.. _DataModel: https://csst-tb.bao.ac.cn/code/csst-l1/csst-l1doc/-/blob/main/docs/source/sls/data_model.md
+
+
 
 Position calibration
 ---------------------
