@@ -52,9 +52,19 @@ Output
 | DQ              | unitless| Data quality array|
 +-----------------+---------+-------------------+
 
-第一个扩展(SCI)的数据单元存放着仪器效应改正后的光谱图像，第二扩展(ERR)的数据单元存放着光谱图像误差，第三个扩展（DQ）的数据单元存放着光谱图像每个像素的数据质量标志位，具体参见 DQFlags_。仪器效应改正过程中，同时会记录下处理时间、状态信息等关键字，具体参见 DataModel_。
+第一个扩展(SCI)的数据单元存放着仪器效应改正后的光谱图像，第二扩展(ERR)的数据单元存放着光谱图像误差，第三个扩展（DQ）的数据单元存放着光谱图像每个像素的数据质量标志位，具体参见 DQFlags_（任娟娟提供？）。仪器效应改正过程中，同时会记录下处理时间、状态信息等关键字，具体参见 DataModel_。
 
 .. _DQFlags: https://？
+
+====== ======= =======
+TTYPE TFORM Description
+====== ======= =======
+BIT  integer The bit number, starting at zero
+VALUE integer The equivalent base-10 value of BIT
+NAME string The mnemonic name of the data quality condition
+DESCRIPTION string A description of the data quality condition
+====== ======= =======
+
 
 Data Calibration Steps
 ``````````````````
@@ -63,6 +73,10 @@ Data Calibration Steps
 **DQ Initialization**
 
 class： csst_ms_sls_instrument.steps.DQIstep
+
+reference file： Badpixel table(map)、Saturation file
+
+DQ Initialization实现两部分内容，一是利用参考文件Badpixel table或是Badpixel map对DQ扩展进行标记，该参考文件记录着存在问题的像素点，可能是探测器的坏点、热像素。二是根据Saturation file对观测数据进行判定，并在DQ扩展中标记。Saturation file的形式需要根据后续测试结果来定，如果能测出每个像素的饱和值即可做成map，现阶段用的是常值。DQ标记的详情参见DQFlags_。
 
 **Bias correction**
 
