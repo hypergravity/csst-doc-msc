@@ -70,7 +70,7 @@ Data Calibration Steps
 ``````````````````
 仪器效应改正包括以下步骤：
 
-`**DQ Initialization**`
+**DQ Initialization**
 
 class： csst_ms_sls_instrument.steps.DQIstep
 
@@ -81,6 +81,10 @@ DQ Initialization实现两部分内容，一是利用参考文件Badpixel table�
 **Bias correction**
 
 class： csst_ms_sls_instrument.steps.BiasCorrStep
+
+reference file：Superbias
+
+Bias correction通过减去superbias的操作，去除掉原始科学数据中的探测器本底。Superbias的文件格式与output一致，为包含三个扩展的fits。该步会对superbias的误差和DQ进行传递。
 
 **To electrons**
 
