@@ -5,7 +5,7 @@ SLS pipeline
 Instrument correction
 ---------------------
 
-`csst_ms_sls_instrument`程序包是应用于CSST无缝光谱模块的仪器效应改正程序，无缝光谱模块包含12个探测器，每4块探测器对应1个波段，每个波段的部分仪器参数如下：
+`csst_ms_sls_instrument` 程序包是应用于CSST无缝光谱模块的仪器效应改正程序，无缝光谱模块包含12个探测器，每4块探测器对应1个波段，每个波段的部分仪器参数如下：
 
     - GU: ″ field of view from 255-400nm with a plate scale of ″/pixel.
     - GV: ″ field of view from 400-620nm with a plate scale of ″/pixel.
