@@ -65,6 +65,14 @@ NAME        string   The mnemonic name of the data quality condition
 DESCRIPTION string   A description of the data quality condition
 =========== ======= ================================================
 
+=====  =====  =======
+A      B      A and B
+=====  =====  =======
+False  False  False
+True   False  False
+False  True   False
+True   True   True
+=====  =====  =======
 
 Data Calibration Steps
 ``````````````````
