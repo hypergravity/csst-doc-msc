@@ -5,7 +5,7 @@ SLS pipeline
 Instrument correction
 ---------------------
 
-概述
+Description
 ``````````````````
 `csst_ms_sls_instrument` 程序包是应用于CSST无缝光谱模块的仪器效应改正程序，无缝光谱模块包含12块9k×9k探测器，每4块探测器对应1个波段，每个波段的部分仪器参数如下：
 
@@ -19,26 +19,26 @@ Input
 ``````````````````
 `csst_ms_sls_instrument` 将从csst_common.CsstMsDataManager获取0级数据和参考文件。
 
-1. 0级数据是包含一个扩展的fits文件，头文件中存放着观测天区、曝光信息、探测器信息等，具体关键字说明参见 DataModel_，扩展的数据单元存放着原始观测图像。
-#. 参考文件列表如下,第一列是参考文件类型，第二列是文件说明，第三列是数据产品中记录文件名的关键字：
+1. 0级数据: 包含一个扩展的fits文件，头文件中存放着观测天区、曝光信息、探测器信息等，具体关键字说明参见 DataModel_，扩展的数据单元存放着原始观测图像。
+#. 参考文件: 仪器效应改正中所需的参考文件如下表所示。
 
-+-----------------+----------------------------+-----------------+
-| Reference file  | Description                | Keyword         |
-+=================+============================+=================+
-| Gain map        | gain array(9k×9k)          | R_GAIN          |
-+-----------------+----------------------------+-----------------+
-| Superbias       | superbias file(9k×9k)      | R_BIAS          |
-+-----------------+----------------------------+-----------------+
-| Superdark       | superdark file(9k×9k)      | R_DARK          |
-+-----------------+----------------------------+-----------------+
-| Superflat       | super flatfield file(9k×9k)| R_DFLAT         |
-+-----------------+----------------------------+-----------------+
-| Badpixel table  | Bad/hot Pixel table or map | R_MASK          |
-+-----------------+----------------------------+-----------------+
++-----------------+----------------------------+
+| Reference file  | Description                |
++=================+============================+
+| Gain map        | gain array(9k×9k)          | 
++-----------------+----------------------------+
+| Superbias       | superbias file(9k×9k)      | 
++-----------------+----------------------------+
+| Superdark       | superdark file(9k×9k)      |
++-----------------+----------------------------+
+| Superflat       | super flatfield file(9k×9k)|
++-----------------+----------------------------+
+| Badpixel table  | Bad/hot Pixel table or map |
++-----------------+----------------------------+
 
 .. _DataModel: https://csst-tb.bao.ac.cn/code/csst-l1/csst-l1doc/-/blob/main/docs/source/sls/data_model.md
 
-数据产品
+Output
 ``````````````````
 `csst_ms_sls_instrument` 生成的数据产品是包含三个扩展的fits文件，扩展内容如下表所示：
 
@@ -56,6 +56,11 @@ Input
 
 .. _DQFlags: https://？
 
+Data Calibration Steps
+``````````````````
+仪器效应改正包括以下步骤：
+DQ Initialization
+""""""""
 
 
 
