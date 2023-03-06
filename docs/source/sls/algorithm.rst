@@ -56,14 +56,14 @@ Output
 
 .. _DQFlags: https://？
 
-====== ======= =======
-TTYPE TFORM Description
-====== ======= =======
-BIT  integer The bit number, starting at zero
-VALUE integer The equivalent base-10 value of BIT
-NAME string The mnemonic name of the data quality condition
-DESCRIPTION string A description of the data quality condition
-====== ======= =======
+=========== ======= ===============================================
+TTYPE       TFORM   Description
+=========== ======= ===============================================
+BIT         integer  The bit number, starting at zero
+VALUE       integer  The equivalent base-10 value of BIT
+NAME        string   The mnemonic name of the data quality condition
+DESCRIPTION string   A description of the data quality condition
+=========== ======= ================================================
 
 
 Data Calibration Steps
