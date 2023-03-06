@@ -15,6 +15,27 @@ Instrument correction
 `csst_ms_sls_instrument` 将顺序执行一系列的探测器效应改正，生成单次曝光图像预处理后的数据产品。该程序是用Python语言实现，代码地址：code_。
 
 .. _code: https://csst-tb.bao.ac.cn/code/csst-l1/sls/csst_ms_sls_instrument
+Input
+``````````````````
+`csst_ms_sls_instrument` 将从csst_common.CsstMsDataManager获取0级数据和参考文件。
+0级数据是包含一个扩展的fits文件，头文件中存放着观测天区、曝光信息、探测器信息等，具体关键字说明参见 DataModel_，扩展的数据单元存放着原始观测图像。
+参考文件列表如下,第一列是参考文件类型，第二列是文件说明，第三列是数据产品中记录文件名的关键字：
+
++-----------------+----------------------------+-----------------+
+| Reference file  | Description                | Keyword         |
++=================+============================+=================+
+| Gain map        | gain array(9k×9k)          | R_GAIN          |
++-----------------+----------------------------+-----------------+
+| Superbias       | superbias file(9k×9k)      | R_BIAS          |
++-----------------+----------------------------+-----------------+
+| Superdark       | superdark file(9k×9k)      | R_DARK          |
++-----------------+----------------------------+-----------------+
+| Superflat       | super flatfield file(9k×9k)| R_DFLAT         |
++-----------------+----------------------------+-----------------+
+| Badpixel table  | Bad/hot Pixel table or map | R_MASK          |
++-----------------+----------------------------+-----------------+
+
+.. _DataModel: https://csst-tb.bao.ac.cn/code/csst-l1/csst-l1doc/-/blob/main/docs/source/sls/data_model.md
 
 数据产品
 ``````````````````
@@ -34,25 +55,6 @@ Instrument correction
 
 .. _DQFlags: https://？
 
-处理过程
-``````````````````
-`csst_ms_sls_instrument` 将从csst_common.CSSTMsDataManager获取0级数据和参考文件。0级数据是有一个扩展的fits文件，头文件中存放着观测天区、曝光信息、探测器信息等，具体关键字说明参见 DataModel_，扩展的数据单元存放着原始观测图像。参考文件列表如下,第一列是参考文件类型，第二列是文件说明，第三列是数据产品中记录文件名的关键字：
-
-+-----------------+----------------------------+-----------------+
-| Reference file  | Description                | Keyword         |
-+=================+============================+=================+
-| Gain map        | gain array(9k×9k)          | R_GAIN          |
-+-----------------+----------------------------+-----------------+
-| Superbias       | superbias file(9k×9k)      | R_BIAS          |
-+-----------------+----------------------------+-----------------+
-| Superdark       | superdark file(9k×9k)      | R_DARK          |
-+-----------------+----------------------------+-----------------+
-| Superflat       | super flatfield file(9k×9k)| R_DFLAT         |
-+-----------------+----------------------------+-----------------+
-| Badpixel table  | Bad/hot Pixel table or map | R_MASK          |
-+-----------------+----------------------------+-----------------+
-
-.. _DataModel: https://csst-tb.bao.ac.cn/code/csst-l1/csst-l1doc/-/blob/main/docs/source/sls/data_model.md
 
 
 
