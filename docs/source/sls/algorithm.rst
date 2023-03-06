@@ -23,6 +23,7 @@ Instrument correction
 .. _DataModel: https://csst-tb.bao.ac.cn/code/csst-l1/csst-l1doc/-/blob/main/docs/source/sls/data_model.md
 
 CSST无缝光谱的1级数据产品是三个扩展的fits文件，扩展内容如下表所示：
+
 +-----------------+---------+-------------------+
 | Extension name  |  Bunit  | Comment           |
 +=================+=========+===================+
