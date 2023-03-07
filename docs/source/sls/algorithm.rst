@@ -103,9 +103,9 @@ reference file: readnoise file
 ERR数据单元构造误差数据，该步误差公式：
 
 .. math::
-
-$ \sigma = \sqrt{(SCI-bias)+{\sigma_bias}^2 + readnoise^2)} $
-
+\begin{equation*}
+\sigma = \sqrt{(SCI-bias)+{\sigma_bias}^2 + readnoise^2)} 
+\end{equation*}
 
 **Dark correction**
 
