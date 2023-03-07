@@ -129,7 +129,7 @@ class: csst_ms_sls_instrument.steps.CRrejStep
 
 reference file：cr model 
 
-CR rejection基于无缝光谱图像训练的模型，利用deepCR_ 对单次曝光的科学数据进行宇宙线检测，在DQ中进行标记，标记详情见DQFlags_ 。
+CR rejection基于无缝光谱图像训练的模型，利用 deepCR_ 对单次曝光的科学数据进行宇宙线检测，在DQ中进行标记，标记详情见 DQFlags_ 。
 
 .. _deepCR: https://deepcr.readthedocs.io/en/latest/
 
