@@ -1,3 +1,6 @@
+.. role:: raw-math(raw)
+    :format: latex html
+
 SLS pipeline
 ============
 
@@ -102,13 +105,8 @@ reference file: readnoise file
 
 ERR数据单元构造误差数据，该步误差公式：
 
-.. math::
+:raw-math:`$$ \sigma = \sqrt{(SCI-bias)+{\sigma_bias}^2 + readnoise^2)} $$`
 
-\begin{displaymath}
-v = {\sigma}_1 \cdot {\sigma}_2
-\end{displaymath}
-
-\sigma = \sqrt{((SCI-bias)+\sigma^2 + readnoise^2)}
 
 **Dark correction**
 
