@@ -104,7 +104,7 @@ ERR数据单元构造误差数据，该步误差公式：
 
 .. math::
 
-   \sigma = \sqrt{((SCI-bias)+\sigmabias^2 + readnoise^2)}
+   \sigma = \sqrt{((SCI-bias)+\sigma^2 + readnoise^2)}
 
 
 **Dark correction**
