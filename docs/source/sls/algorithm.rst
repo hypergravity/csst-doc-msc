@@ -103,25 +103,44 @@ reference file: readnoise file
 ERR数据单元构造误差数据，该步误差公式：
 
 .. math::
-\begin{equation*}
-\sigma = \sqrt{(SCI-bias)+{\sigma_bias}^2 + readnoise^2)} 
-\end{equation*}
+
+ \sigma = \sqrt{(SCI-bias)+{\sigma_bias}^2 + readnoise^2)} 
+
 
 **Dark correction**
 
 class: csst_ms_sls_instrument.steps.DarkCorrStep
 
+reference file：Superdark
+
+Dark correction通过减去superdark的操作，去除掉原始科学数据中的探测器暗电流。Superdark的文件格式与输出文件一致，为包含三个扩展的fits。该步会对superdark的误差和DQ进行传递。
+
 **Flatfield correction**
 
 class: csst_ms_sls_instrument.steps.FlatCorrStep
+
+reference file：Superflat
+
+Flatfield correction通过除flatfield的操作，去除掉像素不均匀性。Superflat的文件格式与输出文件一致，为包含三个扩展的fits。该步会对superflat的误差和DQ进行传递。
 
 **CR rejection**
 
 class: csst_ms_sls_instrument.steps.CRrejStep
 
+reference file：cr model 
+
+CR rejection基于无缝光谱图像训练的模型，利用deepCR_ 对单次曝光的科学数据进行宇宙线检测，在DQ中进行标记，标记详情见DQFlags_ 。
+
+.. _deepCR: https://deepcr.readthedocs.io/en/latest/
+
 **To electrons/sec**
 
 class: csst_ms_sls_instrument.steps.CPSStep
+
+reference file：无
+
+数据除以曝光时间，SCI数据单元和ERR数据单元的单位由e转换为e/s。
+
 
 
 Position calibration
