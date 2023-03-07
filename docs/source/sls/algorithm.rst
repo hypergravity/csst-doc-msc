@@ -84,15 +84,28 @@ class： csst_ms_sls_instrument.steps.BiasCorrStep
 
 reference file：Superbias
 
-Bias correction通过减去superbias的操作，去除掉原始科学数据中的探测器本底。Superbias的文件格式与output一致，为包含三个扩展的fits。该步会对superbias的误差和DQ进行传递。
+Bias correction通过减去superbias的操作，去除掉原始科学数据中的探测器本底。Superbias的文件格式与输出文件一致，为包含三个扩展的fits。该步会对superbias的误差和DQ进行传递。
 
 **To electrons**
 
 class： csst_ms_sls_instrument.steps.ToElectronsStep
 
+reference file: Gain map
+
+数据乘以增益，SCI数据单元和ERR数据单元的单位由ADU转换为电子。
+
 **Uncertainty Initialization**
 
 class: csst_ms_sls_instrument.steps.UncertaintyInitStep
+
+reference file: readnoise file
+
+ERR数据单元构造误差数据，该步误差公式：
+
+.. math::
+
+   \sigma = \sqrt{((SCI-bias)+\sigmabias^2 + readnoise^2)}
+
 
 **Dark correction**
 
