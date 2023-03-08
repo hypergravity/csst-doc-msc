@@ -32,7 +32,7 @@ COMMENT ==================================================================
 |--------------|:-------------------------|----------------------------------------------|------------|--------|---------------|
 | EXTNAME      | 'SCI'                    | Extension name                               | 'SCI'      | str    | C7            |
 | EXTVER       | 1                        | Extension version number                     | 1          | int    | C7            |
-| BUNIT        | 'e-/s'                   | Brightness units                             | 'ADU'     | str    | C7            |
+| BUNIT        | 'e-/s'                   | Physical units of the data array values      | 'ADU'     | str    | C7            |
 | VER_INST     | '0.0.1 '                 | Instrument calibration pipeline version      | -          | str    | C7            |
 | STM_INST     | '2022-12-30T10:18:53'    | Instrument pipeline processing time          | -          | str    | C7            |
 | STA_INST     | 0                        | Instrument calibration status                | 1          | int    | C7            |
@@ -133,7 +133,7 @@ CD1_1等系数在修改后挪到这一节
 | GCOUNT   | 1         | Number of groups           | -          | int       | C7            |                                       
 | EXTNAME  | 'ERR'     | Extension name             | 'ERR'      | str       | C7            |
 | EXTVER   | 1         | Extension version number   | 1          | int       | C7            |
-| BUNIT    | 'e-/s'    | Brightness units           | 'ADU'     | str       | C7            |
+| BUNIT    | 'e-/s'    | Physical units of the data array values | 'ADU'     | str       | C7            |
 
 ### HDU3
 
@@ -150,5 +150,5 @@ CD1_1等系数在修改后挪到这一节
 | GCOUNT   | 1           | Number of groups           | -              | int      | C7            |
 | EXTNAME  | 'DQ'        | Extension name             | 'DQ'           | str      | C7            |
 | EXTVER   | 1           | Extension version number   | 1              | int      | C7            |
-| BUNIT    | 'UNITLESS'  | Brightness units           | 'UNITLESS'     | str      | C7            |
+| BUNIT    | 'UNITLESS'  | physical units of the data array values | 'UNITLESS'     | str      | C7            |
 
