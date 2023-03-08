@@ -150,5 +150,5 @@ CD1_1等系数在修改后挪到这一节
 | GCOUNT   | 1           | Number of groups           | -              | int      | C7            |
 | EXTNAME  | 'DQ'        | Extension name             | 'DQ'           | str      | C7            |
 | EXTVER   | 1           | Extension version number   | 1              | int      | C7            |
-| BUNIT    | 'UNITLESS'  | physical units of the data array values | 'UNITLESS'     | str      | C7            |
+| BUNIT    | 'UNITLESS'  | Physical units of the data array values | 'UNITLESS'     | str      | C7            |
 
