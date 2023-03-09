@@ -1,4 +1,4 @@
-# SLS L1 Data model
+# SLS L1 Data Model
 
 - **General Description** 
   - SLS L1 file contains image data.

@@ -1,4 +1,4 @@
-# L1-MBI Data model
+# MBI L1 Data Model
 
 - 每一个模块的结果单独开一个section，以COMMENT分隔（参考0级数据）
 - 精简、丰富、修改每个关键字定义的comment
@@ -8,9 +8,17 @@
 - flux模块中的天光背景测量已经移动到instrumens，请把该数值利用zp转换为SKY_MAG（单位mag/arcsed^2）
 - 版本，完成时间，状态三个参数的name进行了统一，分别以VER_，STM_，STA_开头
 
-## File: *_{img/wht/flg}_L1_1.fits
-
-### File contents
+- **General Description** 
+  - SLS L1 file contains image data.
+- **Naming convention**
+  - **Format**: `CSST_{facility}_{project}_{data_type}_{t_start}[14]_{t_end}[14]_{obs_id}[9]_{detector}[2]_L{level}[1]_{version}.fits`
+  - **Example**: CSST_MSC_MS_SCI_20270626203558_20270626203828_100000066_06_L0_1.fits
+  - **Tips**: Click [here](https://csst-proto.readthedocs.io/en/latest/ch07_simulation.html#naming-conventions) for regular expression.
+- **Approximate Size**: 700MB
+- **File Type**: FITS
+- **Written by**:
+- **Required by**:
+- **Sections**:
 
 | HDU  | data                    | note       |
 |------|-------------------------|------------|
