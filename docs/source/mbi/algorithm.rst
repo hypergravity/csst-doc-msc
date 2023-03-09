@@ -3,13 +3,13 @@ MBI pipeline
 
 
 仪器改正
--------
+--------
 
 `csst_ms_mbi_instrument` package.
 
 
 位置定标
--------
+--------
 `csst_ms_mbi_distortion` and `csst_ms_mbi_position` package.
 
 
@@ -32,7 +32,7 @@ MBI pipeline
 
 
 流量定标
-----------------
+--------
 
 `csst_ms_mbi_flux` package.
 
@@ -42,7 +42,7 @@ MBI pipeline
 
 
 测光
----
+----
 
 `csst_ms_mbi_photometry` package.
 
