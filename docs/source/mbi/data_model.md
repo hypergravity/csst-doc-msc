@@ -106,7 +106,7 @@
 | CRVAL1   |                  90.0 | Coordinate reference value of x     | 90.0       | f32  | csst_ms_mbi_position |
 | CRVAL2   |                  24.5 | Coordinate reference value of y     | 24.5       | f32  | csst_ms_mbi_position |  
 | CTYPE1   | 'RA---TPV'            | the coordinate type                 | 'RA---TAN' | f32  | csst_ms_mbi_position |        
-| CTYPE2   | 'DEC--TPV'            | the coordinate type                 | 'DEC--TPV' | f32  | csst_ms_mbi_position |
+| CTYPE2   | 'DEC--TPV'            | the coordinate type                 | 'DEC--TAN' | f32  | csst_ms_mbi_position |
 | CD1_1    | -8.1745583617600E-06  | partial of first axis coordinate of x | -8.1745583617600E-06 | f32 | csst_ms_mbi_position |
 | CD2_1    | 1.88602083707394E-05  | partial of first axis coordinate of y | 1.88602083707394E-05 | f32 | csst_ms_mbi_position |       
 | CD1_2    | -1.8860208370739E-05  | partial of second axis coordinate of x | -1.8860208370739E-05 | f32 | csst_ms_mbi_position |        
