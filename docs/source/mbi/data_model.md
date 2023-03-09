@@ -14,7 +14,7 @@
   - **Format**: `CSST_{facility}_{project}_{data_type}_{t_start}[14]_{t_end}[14]_{obs_id}[9]_{detector}[2]_L{level}[1]_{version}.fits`
   - **Example**: CSST_MSC_MS_SCI_20270626203558_20270626203828_100000066_06_L0_1.fits
   - **Tips**: Click [here](https://csst-proto.readthedocs.io/en/latest/ch07_simulation.html#naming-conventions) for regular expression.
-- **Approximate Size**: 700MB
+- **Approximate Size**: 350MB
 - **File Type**: FITS
 - **Written by**:
 - **Required by**:
