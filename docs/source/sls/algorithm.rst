@@ -12,6 +12,7 @@ Description
     - GU: 660×660″ field of view from 255-400nm with a plate scale of 0.074″/pixel
     - GV: 660×660″ field of view from 400-620nm with a plate scale of 0.074″/pixel
     - GI: 660×660″ field of view from 620-1000nm with a plate scale of 0.074″/pixel
+
 `csst_ms_sls_instrument` 将顺序执行一系列的探测器效应改正，生成单次曝光图像预处理后的数据产品。该程序是用Python语言实现，代码地址：code_。
 
 .. _code: https://csst-tb.bao.ac.cn/code/csst-l1/sls/csst_ms_sls_instrument
@@ -139,7 +140,6 @@ class: csst_ms_sls_instrument.steps.CPSStep
 reference file：无
 
 数据除以曝光时间，SCI数据单元和ERR数据单元的单位由e转换为e/s。
-
 
 
 Position calibration
