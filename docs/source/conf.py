@@ -61,3 +61,10 @@ html_static_path = ['_static']
 html_css_files = [
     'custom.css',
 ]
+
+# -- Support Chinese -------------------------------------------------------
+latex_engine = 'xelatex'
+latex_use_xindy = False
+latex_elements = {
+    'preamble': '\\usepackage[UTF8]{ctex}\n',
+}
