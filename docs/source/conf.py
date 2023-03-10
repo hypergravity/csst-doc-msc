@@ -67,8 +67,8 @@ latex_use_xindy = True
 latex_elements = {
     'preamble': r'''
 \\usepackage[UTF8]{ctex}\n
-\\usepackage[paperwidth=10cm, paperheight=10cm]{geometry}
 ''',
+    'geometry': '\\usepackage[paperwidth=10cm, paperheight=10cm]{geometry}'
     # 'papersize': 'a4paper',
     # 'pointsize': '9pt',
     # 'fvset': '\\fvset{fontsize=\\small}'
