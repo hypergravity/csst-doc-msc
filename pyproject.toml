@@ -1,5 +1,5 @@
 [project]
-name = "csst-l1doc"
+name = "csst-doc-msc"
 description = "CSST L1 Pipeline Documentation"
 version = "0.0.1"
 authors = [
