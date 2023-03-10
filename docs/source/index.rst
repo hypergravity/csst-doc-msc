@@ -15,9 +15,7 @@ Welcome to csst-l1doc's documentation!
    :caption: MBI
    :hidden:
 
-   mbi/algorithm.rst
-   mbi/data_model/l1.rst
-   mbi/api.rst
+   mbi/index.rst
 
 
 .. toctree::

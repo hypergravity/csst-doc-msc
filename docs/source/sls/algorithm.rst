@@ -155,7 +155,8 @@ Description
 `csst_ms_sls_position` 程序包是应用于CSST无缝光谱模块的位置定标程序，无缝光谱模块包含12块9k×9k探测器，分为3个波段GU
 、GV、GI，执行一系列的探测器效应改正，生成单次曝光图像预处理后的数据产品。该程序依赖Python 3.9+实现，代码地址：code_。
 
-.. _code: https://csst-tb.bao.ac.cn/code/csst-l1/sls/csst_ms_sls_position
+code: https://csst-tb.bao.ac.cn/code/csst-l1/sls/csst_ms_sls_position
+
 Input
 ``````````````````
 `csst_ms_sls_position` 将从csst_common.CsstMsDataManager获取仪器效应改正后的L0.5级数据和定标参考文件。
@@ -257,20 +258,24 @@ Output
 +----------+-----------------------+------------------------------------------+
 
 
-Position Calibration Steps
-``````````````````
+Position Calibration
+^^^^^^^^^^^^^^^^^^^^
+
 `csst_ms_sls_position` 模块主要定标过程分以下四部分组成：
 
 1.点源目标提取
-    由于CSST无缝光谱和多色成像共焦面排布，对于无缝光谱的位置定标只能选取无缝光谱视场内的点源零级像作为目标天体，`csst_ms_sls_position`模块选取photutils模块中的DAOStarFinder提取零级像点源目标。获得零级像后的目标，根据目标所在CCD位置的区域（2/5,3/5）对应的色散关系反推零级像的直接像的像素位置。
+
+    由于CSST无缝光谱和多色成像共焦面排布，对于无缝光谱的位置定标只能选取无缝光谱视场内的点源零级像作为目标天体，csst_ms_sls_position模块选取photutils模块中的DAOStarFinder提取零级像点源目标。获得零级像后的目标，根据目标所在CCD位置的区域（2/5,3/5）对应的色散关系反推零级像的直接像的像素位置。
 
 2.和位置定标参考星标匹配
+
     获得零级像的直接像像素位置（x, y）星表后，通过L05数据中望远镜观测wcs信息CD系数、CRVAL、CRPIX，可获取直接像UV平面的位置信息，同时也可将参考星表历元改正后的（ra,dec），通过wcs信息映射到UV平面，通过xyxy_match方法在对上述直接像和参考星在UV平面进行匹配配对。
 
 3.迭代拟合畸变模式
+
     获得配对后的位置星表，拟合二元二阶多项式畸变关系，并使用畸变关系改正初始直接像星表的uv位置，进一步同参考星表进行步骤2的匹配配对，配对后再次拟合畸变关系，迭代上述过程直到在给定范围内匹配得到的恒星数量不再变化，最终拟合得到相应的畸变系数。
 
 4.输出更新header中位置定标关键字
-    通过判定步骤3中最终位置定标所采用的恒星数量是否大于10颗，将判定拟合过程是否正常运行，如大于10，表示正常运行，按照data model定义更新L1 header文件中的position calibration information关键字信息；否则，按照data model默认值更新L1 header文件中的position calibration information关键字信息；最终输出保存L1级fits文件。
 
+    通过判定步骤3中最终位置定标所采用的恒星数量是否大于10颗，将判定拟合过程是否正常运行，如大于10，表示正常运行，按照data model定义更新L1 header文件中的position calibration information关键字信息；否则，按照data model默认值更新L1 header文件中的position calibration information关键字信息；最终输出保存L1级fits文件。
 
