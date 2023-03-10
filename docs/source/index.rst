@@ -28,24 +28,6 @@ Welcome to csst-l1doc's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: MCI
-   :hidden:
-
-   mci/algorithm.rst
-   mci/data_model.md
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: IFS
-   :hidden:
-
-   ifs/algorithm.rst
-   ifs/data_model.md
-
-
-.. toctree::
-   :maxdepth: 2
    :caption: CPIC
    :hidden:
 

@@ -17,13 +17,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'csst-l1doc'
+project = 'csst-doc-msc'
 copyright = '2023, CSST DAS'
 author = 'CSST DAS'
 
 # The full version, including alpha/beta/rc tags
 release = '0.0.1'
-
 
 # -- General configuration ---------------------------------------------------
 
@@ -31,7 +30,7 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'myst_parser','sphinx.ext.mathjax'
+    'myst_parser', 'sphinx.ext.mathjax'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
