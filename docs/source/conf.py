@@ -63,8 +63,9 @@ html_css_files = [
 
 # -- Support Chinese -------------------------------------------------------
 latex_engine = 'xelatex'
-latex_use_xindy = False
+latex_use_xindy = True
 latex_elements = {
     'preamble': '\\usepackage[UTF8]{ctex}\n',
+    'papersize': 'a4paper',
 }
 latex_table_style = ['booktabs', 'colorrows']
