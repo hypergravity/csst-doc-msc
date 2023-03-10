@@ -67,5 +67,6 @@ latex_use_xindy = True
 latex_elements = {
     'preamble': '\\usepackage[UTF8]{ctex}\n',
     'papersize': 'a4paper',
+    'pointsize': '9pt',
 }
 latex_table_style = ['booktabs', 'colorrows']
