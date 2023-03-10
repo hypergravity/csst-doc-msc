@@ -1,3 +1,5 @@
+Slit-less Spectra
+=================
 
 .. toctree::
    :maxdepth: 2

@@ -1,3 +1,5 @@
+Multi-band Imaging
+==================
 
 .. toctree::
    :maxdepth: 2
