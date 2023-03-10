@@ -65,9 +65,7 @@ html_css_files = [
 latex_engine = 'xelatex'
 latex_use_xindy = True
 latex_elements = {
-    'preamble': r'''
-\\usepackage[UTF8]{ctex}\n
-''',
+    'preamble': '\\usepackage[UTF8]{ctex}',
     'geometry': '\\usepackage[paperwidth=25cm, paperheight=29.7cm]{geometry}',
     # 'papersize': 'a4paper',
     # 'pointsize': '9pt',
