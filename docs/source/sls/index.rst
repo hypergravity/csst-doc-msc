@@ -5,5 +5,4 @@
 
    algorithm.rst
    data_model/l1.rst
-   data_model/l2.rst
    api.rst

@@ -1,12 +1,12 @@
-SLS pipeline
-============
-
+Algorithm
+=========
 
 Instrument correction
 ---------------------
 
 Description
-``````````````````
+"""""""""""
+
 `csst_ms_sls_instrument` 程序包是应用于CSST无缝光谱模块的仪器效应改正程序，无缝光谱模块包含12块9k×9k探测器，每4块探测器对应1个波段，每个波段的部分仪器参数如下：
 
     - GU: 660×660″ field of view from 255-400nm with a plate scale of 0.074″/pixel
@@ -18,7 +18,8 @@ Description
 .. _code: https://csst-tb.bao.ac.cn/code/csst-l1/sls/csst_ms_sls_instrument
 
 Input
-``````````````````
+"""""
+
 `csst_ms_sls_instrument` 将从csst_common.CsstMsDataManager获取0级数据和参考文件。
 
 1. 0级数据: 包含一个扩展的fits文件，头文件中存放着观测天区、曝光信息、探测器信息等，具体关键字说明参见 DataModel_，扩展的数据单元存放着原始观测图像。
@@ -41,7 +42,8 @@ Input
 .. _DataModel: https://csst-tb.bao.ac.cn/code/csst-l1/csst-l1doc/-/blob/main/docs/source/sls/data_model.md
 
 Output
-``````````````````
+""""""
+
 `csst_ms_sls_instrument` 生成的数据产品是包含三个扩展的fits文件，扩展内容如下表所示：
 
 +-----------------+---------+-------------------+
@@ -68,8 +70,9 @@ Output
 | DESCRIPTION    | string  |  A description of the data quality condition|
 +----------------+---------+---------------------------------------------+
 
-Data Calibration Steps
-````````````````````````
+Data Calibration
+""""""""""""""""
+
 仪器效应改正包括以下步骤：
 
 **DQ Initialization**
@@ -150,15 +153,18 @@ Position calibration
 
 API
 ---
+
 Description
-``````````````````
+"""""""""""
+
 `csst_ms_sls_position` 程序包是应用于CSST无缝光谱模块的位置定标程序，无缝光谱模块包含12块9k×9k探测器，分为3个波段GU
 、GV、GI，执行一系列的探测器效应改正，生成单次曝光图像预处理后的数据产品。该程序依赖Python 3.9+实现，代码地址：code_。
 
 code: https://csst-tb.bao.ac.cn/code/csst-l1/sls/csst_ms_sls_position
 
 Input
-``````````````````
+"""""
+
 `csst_ms_sls_position` 将从csst_common.CsstMsDataManager获取仪器效应改正后的L0.5级数据和定标参考文件。
 
 1. L0.5级数据: 包含一个扩展的fits文件，header文件中望远镜观测指向信息：CD系数、CRVAL、CRPIX数据等； 扩展的data单元存放着仪器效应改正后的观测SCI图像、ERR、DQ数据。
@@ -166,7 +172,8 @@ Input
 
 
 Output
-``````````````````
+""""""
+
 `csst_ms_sls_position` 生成的结果主要包含位置信息参数、畸变系数、位置定标评估信息、状态信息，更新在SCI扩展的header文件中，具体DataModel如下：
 
 .. _DataModel: https://csst-tb.bao.ac.cn/code/csst-l1/csst-l1doc/-/blob/main/docs/source/sls/data_model.md

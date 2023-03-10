@@ -12,7 +12,7 @@ Welcome to csst-l1doc's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: MBI
+   :caption: Multi-Band Imaging
    :hidden:
 
    mbi/index.rst
@@ -20,12 +20,10 @@ Welcome to csst-l1doc's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: SLS
+   :caption: Slit-Less Spectra
    :hidden:
 
-   sls/algorithm.rst
-   sls/data_model.md
-   sls/api.rst
+   sls/index.rst
 
 
 .. toctree::
