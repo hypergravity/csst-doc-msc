@@ -16,7 +16,7 @@ Welcome to csst-l1doc's documentation!
    :hidden:
 
    mbi/algorithm.rst
-   mbi/data_model.md
+   mbi/data_model/l1.rst
    mbi/api.rst
 
 
