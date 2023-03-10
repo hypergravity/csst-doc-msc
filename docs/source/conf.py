@@ -68,7 +68,7 @@ latex_elements = {
     'preamble': r'''
 \\usepackage[UTF8]{ctex}\n
 ''',
-    'geometry': '\\usepackage[paperwidth=10cm, paperheight=10cm]{geometry}'
+    'geometry': '\\usepackage[paperwidth=25cm, paperheight=29.7cm]{geometry}',
     # 'papersize': 'a4paper',
     # 'pointsize': '9pt',
     # 'fvset': '\\fvset{fontsize=\\small}'
